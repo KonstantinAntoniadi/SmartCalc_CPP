@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "number.h": "c",
+        "s21_smartcalc.h": "c",
+        "stdlib.h": "c",
+        "operation.h": "c",
+        "string.h": "c",
+        "calc.h": "c"
+    }
+}

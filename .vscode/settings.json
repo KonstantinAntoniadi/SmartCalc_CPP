@@ -1,0 +1,7 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/src/s21_smartcalc",
+    "files.associations": {
+        "s21_smartcalc.h": "c",
+        "check.h": "c"
+    }
+}
