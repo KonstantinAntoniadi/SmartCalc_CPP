@@ -50,14 +50,11 @@ dist:
 	tar -cvzf Archive_calc.tar.gz Archive_calc
 
 format:
-	@cp ../materials/linters/.clang-format ./
-	clang-format -i */*.c */*/*.c */*.h */*/*.h */*.cpp
-	@rm .clang-format
+	clang-format -style=Google -i */*.cc */*/*.cc */*.h */*/*.h */*.cpp
+
 
 check: 
-	@cp ../materials/linters/.clang-format ./
 	clang-format -n */*.c */*/*.c */*.h */*/*.h */*.cpp
-	@rm .clang-format
 
 clean:
 	@rm -rf *.o

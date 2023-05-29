@@ -6,7 +6,7 @@ int checkPriority(char c) {
     pr = 1;
   else if (c == '*' || c == '/')
     pr = 2;
-  else if (c == '^' || c == '|' || c == '~')
+  else if (c == '^' || c == '|' || c == '~') // | можно убрать
     pr = 3;
   else if (c == 'c' || c == 's' || c == 't' || c == 'a' || c == 'l' ||
            c == 'o' || c == 'i' || c == 'n' || c == 'q' || c == 'g')
