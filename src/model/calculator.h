@@ -43,6 +43,7 @@ class Calculator {
   class Lexema {
    public:
     Lexema(Operation operation) : operation_(operation) {}
+    int GetPriority() { return priority_; }
 
    private:
     Operation operation_{};
@@ -70,12 +71,4 @@ class Calculator {
   Operation op_;
 };
 
-};
-
-// класс Lexema
-- тип лексемы -
-    приоритет
-
-        // класс Calculator
-        в нем содержится массив лексем -
-    обратная польская нотация
+};  // namespace s21
