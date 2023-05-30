@@ -1,8 +1,8 @@
 // add headers
+#include <cstring>
 #include <iostream>
 #include <stack>
 #include <vector>
-#include <cstring>
 namespace s21 {
 
 // add enums
@@ -34,7 +34,8 @@ class Expression {
 
  public:
   Expression() = delete;
-  Expression(const std::string infix) : infix_(infix){};
+  Expression(const std::string infix)
+      : infix_(infix){};  // добавить сюда сразу перевод в лексемы
   Expression(const Expression &other) = delete;
   Expression(Expression &&other) = delete;
 
@@ -46,17 +47,19 @@ class Expression {
  private:
   class Lexeme {
    public:
-    Lexeme(Operation operation)
-        : operation_(operation){SetPrirority();} Lexeme(Operation operation,
-                                                       double value)
+    Lexeme(Operation operation) : operation_(operation) { SetPrirority(); }
+    Lexeme(Operation operation, double value)
         : operation_(operation), value_(value) {}
     int GetPriority() { return priority_; }
+    Operation GetOperation() { return operation_; }
+    double GetValue() { return value_; }
 
    private:
     Operation operation_{};
     double value_{};
     unsigned int priority_{};
     void SetPrirority() {
+      // для дефолтных нужно сделать 0
       if (operation_ == PLUS || operation_ == MINUS || operation_ == MOD) {
         priority_ = 1;
       } else if (operation_ == MUL || operation_ == DIV) {
@@ -68,6 +71,8 @@ class Expression {
       }
     }
   };
+  bool ProcessOperator(Lexeme &lexema);
+  bool CheckAssociativity(Lexeme &lexeme);
   std::string ReadNumber();
   bool IsOperator(const char check);
   bool ValidateOperator();
@@ -79,13 +84,14 @@ class Expression {
   std::string::iterator cur_it_;
   std::string postfix_;
   std::string infix_;
-  std::stack<Operation> operations_;
+  std::stack<Lexeme> operations_;
   std::stack<double> calculate_;
   bool good_to_go_ = true;
   Operation op_;
   size_t expresion_size_ = infix_.size();
   double x_{};
   std::vector<Lexeme> lexemes_{};
+  std::vector<Lexeme> postfix_{};
 };
 
 };  // namespace s21

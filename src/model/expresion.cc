@@ -2,8 +2,13 @@
 
 namespace s21 {
 double Expression::Calculate(double x) {
-  GetPostfix();
+  ConvertToLexemes();
   // std::cout <<
+  if (good_to_go_) GetPostfix();
+  if (good_to_go_)
+    std::cout << "good" << std::endl;
+  else
+    std::cout << "bad" << std::endl;
   return x;
 }
 
@@ -71,12 +76,12 @@ bool Expression::ValidateOperator() {
   return result;
 }
 
-std::string Expression::ReadNumber(){
+std::string Expression::ReadNumber() {
   unsigned int dot_count = 0;
   std::string temp;
   while (good_to_go_ && (isdigit(*cur_it_) || *cur_it_ == '.')) {
     if (*cur_it_ == '.') dot_count++;
-    if (dot_count <= 1){
+    if (dot_count <= 1) {
       temp += *cur_it_;
       cur_it_ += 1;
     } else {
@@ -97,7 +102,7 @@ void Expression::ConvertToLexemes() {
       lexemes_.emplace_back(OPENBRACKET);
     } else if (cur == ')') {
       lexemes_.emplace_back(CLOSEBRACKET);
-    } else if (IsFunc(cur)) { // можно попробовать объединить с функций ниже
+    } else if (IsFunc(cur)) {  // можно попробовать объединить с функций ниже
       good_to_go_ = ValidateFunc();
     } else if (IsOperator(cur)) {
       good_to_go_ = ValidateOperator();
@@ -108,7 +113,50 @@ void Expression::ConvertToLexemes() {
   }
 }
 
-void Expression::GetPostfix() {}
+void Expression::GetPostfix() {
+  for (auto it = lexemes_.begin(); it != lexemes_.end() && good_to_go_; it++) {
+    Operation cur_op = it->GetOperation();
+    if (cur_op == NUMBER)
+      postfix_.push_back(*it);
+    else if (cur_op == OPENBRACKET)
+      operations_.push(*it);
+    else if (cur_op == COS || cur_op == SIN || cur_op == TAN ||
+             cur_op == ACOS || cur_op == ASIN || cur_op == ATAN ||
+             cur_op == SQRT || cur_op == LN || cur_op == LOG) {
+      operations_.push(*it);
+    } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
+               cur_op == DIV || cur_op == EXP || cur_op == MOD) {
+      ProcessOperator(*it);
+    }
+  }
+}
+
+bool Expression::ProcessOperator(Lexeme &lexeme) {
+  int pr_head = 0;
+  if (!operations_.empty()) pr_head = operations_.top().GetPriority();
+  int pr_c = lexeme.GetPriority();  // измени название
+  while (!operations_.empty() &&
+         (pr_head > pr_c || (pr_head == pr_c && CheckAssociativity(lexeme))))
+}
+
+bool Expression::CheckAssociativity(Lexeme &lexeme) {
+  Operation add_operation = lexeme.GetOperation();
+  Operation stack_operation = operations_.top().GetOperation();
+  return (add_operation == PLUS || add_operation == MINUS ||
+          add_operation == MUL || add_operation == DIV ||
+          add_operation == COS || add_operation == SIN ||
+          add_operation == TAN || add_operation == ACOS ||
+          add_operation == ASIN || add_operation == ATAN ||
+          add_operation == SQRT || add_operation == LN ||
+          add_operation == LOG) &&
+         (stack_operation == PLUS || stack_operation == MINUS ||
+          stack_operation == MUL || stack_operation == DIV ||
+          stack_operation == COS || stack_operation == SIN ||
+          stack_operation == TAN || stack_operation == ACOS ||
+          stack_operation == ASIN || stack_operation == ATAN ||
+          stack_operation == SQRT || stack_operation == LN ||
+          stack_operation == LOG);
+}
 
 bool Expression::IsFunc(const char check) {  // НЕ ООП
   // перепиши и используй итератор
