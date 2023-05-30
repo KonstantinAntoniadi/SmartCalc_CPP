@@ -42,9 +42,33 @@ bool Expression::ValidateFunc() {
   return result;
 }
 
-bool Expression::IsOperator(const char check) {
+bool Expression::IsOperator(const char check) { // НЕ ООП
   std::string operators = "+-*/^m";
   return (operators.find(check) != std::string::npos);
+}
+
+bool Expression::ValidateOperator() {
+  bool result = true;
+
+  if (*cur_it_ == '+') {
+    lexemes_.emplace_back(PLUS);
+  } else if (*cur_it_ == '-') {
+    lexemes_.emplace_back(MINUS);
+  } else if (*cur_it_ == '*') {
+    lexemes_.emplace_back(MUL);
+  } else if (*cur_it_ == '/') {
+    lexemes_.emplace_back(DIV);
+  } else if (*cur_it_ == '^') {
+    lexemes_.emplace_back(EXP);
+  } 
+  else if (!strncmp(&cur_it_[0], "mod", 3)) {
+    lexemes_.emplace_back(MOD);
+    cur_it_ += 2;
+  } else {
+    result = false;
+  }
+
+  return result;
 }
 
 void Expression::ConvertToLexemes() {
@@ -68,7 +92,7 @@ void Expression::GetPostfix() {
 
 }
 
-bool Expression::IsFunc(const char check) {
+bool Expression::IsFunc(const char check) { // НЕ ООП
   // перепиши и используй итератор
   std::string funcs = "cstal";
   return (funcs.find(check) != std::string::npos);

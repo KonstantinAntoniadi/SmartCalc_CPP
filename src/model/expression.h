@@ -66,6 +66,7 @@ class Expression {
     }
   };
   bool IsOperator(const char check);
+  bool ValidateOperator();
   bool IsFunc(const char check);
   bool ValidateFunc();
   void GetPostfix();
