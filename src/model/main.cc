@@ -1,10 +1,11 @@
-#include "expression.h"
 #include <cstring>
 
-  int v(){
-    std::cout << "calc" << std::endl;
-    return 10;
-  }
+#include "expression.h"
+
+int v() {
+  std::cout << "calc" << std::endl;
+  return 10;
+}
 
 int main() {
   // s21::Calculator calc("test");
@@ -15,9 +16,7 @@ int main() {
 
   std::cout << !strncmp(&it[0], "123", 3) << std::endl;
 
-
   // for (int i = 0; i < v(); i++) {
   //   std::cout << i << std::endl;
   // }
 }
-

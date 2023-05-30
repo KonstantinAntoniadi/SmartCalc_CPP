@@ -39,14 +39,16 @@ class Expression {
 
   double Calculate(double x);
   // стоит объединить функции ниже
-  
+
   bool IsValidFunc();
 
  private:
   class Lexeme {
    public:
-    Lexeme(Operation operation) : operation_(operation) {SetPrirority()}
-    Lexeme(Operation operation, double value) : operation_(operation), value_(value) {}
+    Lexeme(Operation operation)
+        : operation_(operation){SetPrirority()} Lexeme(Operation operation,
+                                                       double value)
+        : operation_(operation), value_(value) {}
     int GetPriority() { return priority_; }
 
    private:

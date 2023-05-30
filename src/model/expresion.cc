@@ -8,7 +8,7 @@ double Expression::Calculate(double x) {
 
 bool Expression::ValidateFunc() {
   bool result = true;
-    if (!strncmp(&cur_it_[0], "cos", 3)) {
+  if (!strncmp(&cur_it_[0], "cos", 3)) {
     lexemes_.emplace_back(COS);
     cur_it_ += 2;
   } else if (!strncmp(&cur_it_[0], "sin", 3)) {
@@ -42,7 +42,7 @@ bool Expression::ValidateFunc() {
   return result;
 }
 
-bool Expression::IsOperator(const char check) { // НЕ ООП
+bool Expression::IsOperator(const char check) {  // НЕ ООП
   std::string operators = "+-*/^m";
   return (operators.find(check) != std::string::npos);
 }
@@ -60,8 +60,7 @@ bool Expression::ValidateOperator() {
     lexemes_.emplace_back(DIV);
   } else if (*cur_it_ == '^') {
     lexemes_.emplace_back(EXP);
-  } 
-  else if (!strncmp(&cur_it_[0], "mod", 3)) {
+  } else if (!strncmp(&cur_it_[0], "mod", 3)) {
     lexemes_.emplace_back(MOD);
     cur_it_ += 2;
   } else {
@@ -72,7 +71,8 @@ bool Expression::ValidateOperator() {
 }
 
 void Expression::ConvertToLexemes() {
-  for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_; cur_it_++) {
+  for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_;
+       cur_it_++) {
     char cur = *cur_it_;
     if (cur == 'x') {
       lexemes_.emplace_back(NUMBER, x_);
@@ -83,25 +83,18 @@ void Expression::ConvertToLexemes() {
     } else if (IsFunc(cur)) {
       good_to_go_ = ValidateFunc();
     } else if (IsOperator(cur)) {
-
     }
   }
 }
 
-void Expression::GetPostfix() {
+void Expression::GetPostfix() {}
 
-}
-
-bool Expression::IsFunc(const char check) { // НЕ ООП
+bool Expression::IsFunc(const char check) {  // НЕ ООП
   // перепиши и используй итератор
   std::string funcs = "cstal";
   return (funcs.find(check) != std::string::npos);
 }
 
-bool Expression::IsValidFunc() {
-  
-
-  return true;
-}
+bool Expression::IsValidFunc() { return true; }
 
 };  // namespace s21
