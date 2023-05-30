@@ -4,6 +4,7 @@ namespace s21 {
 double Expression::Calculate(double x) {
   GetPostfix();
   // std::cout <<
+  return x;
 }
 
 bool Expression::ValidateFunc() {
@@ -70,6 +71,22 @@ bool Expression::ValidateOperator() {
   return result;
 }
 
+std::string Expression::ReadNumber(){
+  unsigned int dot_count = 0;
+  std::string temp;
+  while (good_to_go_ && (isdigit(*cur_it_) || *cur_it_ == '.')) {
+    if (*cur_it_ == '.') dot_count++;
+    if (dot_count <= 1){
+      temp += *cur_it_;
+      cur_it_ += 1;
+    } else {
+      good_to_go_ = 0;
+    }
+  }
+  cur_it_--;
+  return temp;
+}
+
 void Expression::ConvertToLexemes() {
   for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_;
        cur_it_++) {
@@ -80,9 +97,13 @@ void Expression::ConvertToLexemes() {
       lexemes_.emplace_back(OPENBRACKET);
     } else if (cur == ')') {
       lexemes_.emplace_back(CLOSEBRACKET);
-    } else if (IsFunc(cur)) {
+    } else if (IsFunc(cur)) { // можно попробовать объединить с функций ниже
       good_to_go_ = ValidateFunc();
     } else if (IsOperator(cur)) {
+      good_to_go_ = ValidateOperator();
+    } else if (isdigit(cur)) {
+      std::string str_number = ReadNumber();
+      lexemes_.emplace_back(NUMBER, strtod(str_number.data(), 0));
     }
   }
 }

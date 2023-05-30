@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stack>
 #include <vector>
+#include <cstring>
 namespace s21 {
 
 // add enums
@@ -46,7 +47,7 @@ class Expression {
   class Lexeme {
    public:
     Lexeme(Operation operation)
-        : operation_(operation){SetPrirority()} Lexeme(Operation operation,
+        : operation_(operation){SetPrirority();} Lexeme(Operation operation,
                                                        double value)
         : operation_(operation), value_(value) {}
     int GetPriority() { return priority_; }
@@ -67,6 +68,7 @@ class Expression {
       }
     }
   };
+  std::string ReadNumber();
   bool IsOperator(const char check);
   bool ValidateOperator();
   bool IsFunc(const char check);
