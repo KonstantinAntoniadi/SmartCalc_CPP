@@ -1,12 +1,14 @@
 // add headers
 #include <iostream>
 #include <stack>
+#include <vector>
 namespace s21 {
 
 // add enums
-class Expresion {
+class Expression {
   enum Operation {
-    BRACKET,
+    OPENBRACKET,
+    CLOSEBRACKET,
     COS,
     SIN,
     TAN,
@@ -25,28 +27,31 @@ class Expresion {
     EXP,
     // unar
     UNARMINUS,
+    NUMBER
 
   };
 
  public:
-  Expresion() = delete;
-  Expresion(const std::string infix) : infix_(infix){};
-  Expresion(const Expresion &other) = delete;
-  Expresion(Expresion &&other) = delete;
+  Expression() = delete;
+  Expression(const std::string infix) : infix_(infix){};
+  Expression(const Expression &other) = delete;
+  Expression(Expression &&other) = delete;
 
-  void Calculate();
+  double Calculate(double x);
   // стоит объединить функции ниже
-  bool IsValidFunc(const char check);
+  
   bool IsValidFunc();
 
  private:
-  class Lexema {
+  class Lexeme {
    public:
-    Lexema(Operation operation) : operation_(operation) {}
+    Lexeme(Operation operation) : operation_(operation) {SetPrirority()}
+    Lexeme(Operation operation, double value) : operation_(operation), value_(value) {}
     int GetPriority() { return priority_; }
 
    private:
     Operation operation_{};
+    double value_{};
     unsigned int priority_{};
     void SetPrirority() {
       if (operation_ == PLUS || operation_ == MINUS || operation_ == MOD) {
@@ -60,15 +65,22 @@ class Expresion {
       }
     }
   };
+  bool IsOperator(const char check);
+  bool IsFunc(const char check);
+  bool ValidateFunc();
   void GetPostfix();
+  void ConvertToLexemes();
   // переделать на текущий итератор
-  std::string::iterator cur_pos_;
+  std::string::iterator cur_it_;
   std::string postfix_;
   std::string infix_;
   std::stack<Operation> operations_;
   std::stack<double> calculate_;
   bool good_to_go_ = true;
   Operation op_;
+  size_t expresion_size_ = infix_.size();
+  double x_{};
+  std::vector<Lexeme> lexemes_{};
 };
 
 };  // namespace s21
