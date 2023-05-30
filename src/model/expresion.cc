@@ -59,7 +59,12 @@ bool Expression::ValidateOperator() {
   if (*cur_it_ == '+') {
     lexemes_.emplace_back(PLUS);
   } else if (*cur_it_ == '-') {
-    lexemes_.emplace_back(MINUS);
+    if (lexemes_.empty() ||
+        lexemes_.at(lexemes_.size() - 2).GetOperation() == OPENBRACKET) {
+      lexemes_.emplace_back(UNARMINUS);
+    } else {
+      lexemes_.emplace_back(MINUS);
+    }
   } else if (*cur_it_ == '*') {
     lexemes_.emplace_back(MUL);
   } else if (*cur_it_ == '/') {
@@ -126,9 +131,42 @@ void Expression::GetPostfix() {
       operations_.push(*it);
     } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
                cur_op == DIV || cur_op == EXP || cur_op == MOD) {
-      ProcessOperator(*it);
+      good_to_go_ = ProcessOperator(*it);
+    } else if (cur_op == CLOSEBRACKET) {
+      good_to_go_ = ProcessBracket();
     }
   }
+
+  if (good_to_go_) ProcessRemains();
+  // if (good_to_go_)
+}
+
+void Expression::ProcessRemains() {
+  if (!operations_.empty() && good_to_go_) {
+    if (operations_.top().GetOperation() == OPENBRACKET ||
+        operations_.top().GetOperation() == CLOSEBRACKET) {
+      good_to_go_ = 0;
+    }
+    if (good_to_go_) {
+      postfix_.push_back(operations_.top());
+      operations_.pop();
+    }
+  }
+}
+
+bool Expression::ProcessBracket() {
+  if (!operations_.empty()) {
+    while (!operations_.empty() &&
+           operations_.top().GetOperation() != OPENBRACKET) {
+      postfix_.push_back(operations_.top());
+      operations_.pop();
+    }
+    operations_.pop();
+  } else {
+    good_to_go_ = false;
+  }
+
+  return good_to_go_;  // убрать это
 }
 
 bool Expression::ProcessOperator(Lexeme &lexeme) {
@@ -136,10 +174,18 @@ bool Expression::ProcessOperator(Lexeme &lexeme) {
   if (!operations_.empty()) pr_head = operations_.top().GetPriority();
   int pr_c = lexeme.GetPriority();  // измени название
   while (!operations_.empty() &&
-         (pr_head > pr_c || (pr_head == pr_c && CheckAssociativity(lexeme))))
+         (pr_head > pr_c || (pr_head == pr_c && CheckAssociativity(lexeme)))) {
+    postfix_.push_back(operations_.top());
+    operations_.pop();
+    if (!operations_.empty()) pr_head = operations_.top().GetPriority();
+  }
+  operations_.push(lexeme);
+
+  return true;  // избавься потом от возврата
 }
 
 bool Expression::CheckAssociativity(Lexeme &lexeme) {
+  // пожалуйста замени это на что-то нормальное
   Operation add_operation = lexeme.GetOperation();
   Operation stack_operation = operations_.top().GetOperation();
   return (add_operation == PLUS || add_operation == MINUS ||

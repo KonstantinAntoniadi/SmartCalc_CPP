@@ -71,6 +71,8 @@ class Expression {
       }
     }
   };
+  bool ProcessBracket();
+  void ProcessRemains();
   bool ProcessOperator(Lexeme &lexema);
   bool CheckAssociativity(Lexeme &lexeme);
   std::string ReadNumber();
