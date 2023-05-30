@@ -71,6 +71,7 @@ class Expression {
       }
     }
   };
+  bool ValidateRPN();
   bool ProcessBracket();
   void ProcessRemains();
   bool ProcessOperator(Lexeme &lexema);

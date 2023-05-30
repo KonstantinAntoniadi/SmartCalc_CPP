@@ -138,7 +138,33 @@ void Expression::GetPostfix() {
   }
 
   if (good_to_go_) ProcessRemains();
-  // if (good_to_go_)
+  if (good_to_go_) ValidateRPN();
+}
+
+bool Expression::ValidateRPN() {
+  bool good_rpn = true;
+  int value = 0;
+  int size = 0;
+  for (auto it : postfix_) {
+    Operation op = it.GetOperation();
+    if (op == NUMBER) {
+      value = 0;
+    } else if (op == COS || op == SIN || op == TAN || op == ACOS ||
+               op == ASIN || op == ATAN || op == SQRT || op == LN ||
+               op == LOG) {
+      value = 1;
+    } else if (op == PLUS || op == MINUS || op == MUL || op == DIV ||
+               op == EXP || op == MOD) {
+      value = 2;
+    }
+
+    size = size + 1 - value;
+    if (size <= 0) good_rpn = false;
+  }
+
+  good_rpn = size == 1;
+
+  return good_rpn;
 }
 
 void Expression::ProcessRemains() {
