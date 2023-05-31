@@ -9,8 +9,8 @@ int v() {
 
 int main() {
   // s21::Calculator calc("test");
-  s21::Expression expression("2+2");
-  std::cout << expression.Calculate(0) << std::endl;
+  s21::Expression expression("2+(2* cos(5))", 0);
+  std::cout << expression.Calculate() << std::endl;
   // std::string str = "123456789asd";
   // auto it = str.begin();
   // std::cout << str.at(10) << std::endl;

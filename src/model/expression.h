@@ -1,4 +1,5 @@
 // add headers
+#include <cmath>
 #include <cstring>
 #include <iostream>
 #include <stack>
@@ -34,12 +35,14 @@ class Expression {
 
  public:
   Expression() = delete;
-  Expression(const std::string infix)
-      : infix_(infix){};  // добавить сюда сразу перевод в лексемы
+  Expression(const std::string infix, const double x) : infix_(infix), x_(x) {
+    ConvertToLexemes();
+    GetPostfix();
+  };  // добавить сюда сразу перевод в лексемы
   Expression(const Expression &other) = delete;
   Expression(Expression &&other) = delete;
 
-  double Calculate(double x);
+  double Calculate();
   // стоит объединить функции ниже
 
   bool IsValidFunc();
@@ -60,18 +63,23 @@ class Expression {
     unsigned int priority_{};
     void SetPrirority() {
       // для дефолтных нужно сделать 0
+
       if (operation_ == PLUS || operation_ == MINUS || operation_ == MOD) {
         priority_ = 1;
       } else if (operation_ == MUL || operation_ == DIV) {
         priority_ = 2;
       } else if (operation_ == EXP || operation_ == UNARMINUS) {
         priority_ = 3;
-      } else {
+      } else if (operation_ == COS || operation_ == SIN || operation_ == TAN ||
+                 operation_ == ACOS || operation_ == ASIN || operation_ == ATAN ||
+                 operation_ == SQRT || operation_ == LN || operation_ == LOG) {
         priority_ = 4;
       }
     }
   };
   bool ValidateRPN();
+  void CalcOperand(Operation op);
+  void CalcFunc(Operation op);
   bool ProcessBracket();
   void ProcessRemains();
   bool ProcessOperator(Lexeme &lexema);
@@ -85,7 +93,7 @@ class Expression {
   void ConvertToLexemes();
   // переделать на текущий итератор
   std::string::iterator cur_it_;
-  std::string postfix_;
+  // std::string postfix_;
   std::string infix_;
   std::stack<Lexeme> operations_;
   std::stack<double> calculate_;

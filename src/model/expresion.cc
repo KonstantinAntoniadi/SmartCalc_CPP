@@ -1,15 +1,73 @@
 #include "expression.h"
 
 namespace s21 {
-double Expression::Calculate(double x) {
-  ConvertToLexemes();
+double Expression::Calculate() {
   // std::cout <<
-  if (good_to_go_) GetPostfix();
-  if (good_to_go_)
-    std::cout << "good" << std::endl;
-  else
-    std::cout << "bad" << std::endl;
-  return x;
+  double res = 0;
+  if (good_to_go_) {
+    for (auto it = postfix_.begin(); it != postfix_.end(); it++) {
+      Operation cur_op = it->GetOperation();
+      if (cur_op == NUMBER) {
+        calculate_.push(it->GetValue());
+      } else if (cur_op == UNARMINUS) {
+        calculate_.top() *= -1;
+      } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
+                 cur_op == DIV || cur_op == EXP || cur_op == MOD) {
+        CalcOperand(cur_op);
+      } else if (cur_op == COS || cur_op == SIN || cur_op == TAN ||
+                 cur_op == ACOS || cur_op == ASIN || cur_op == ATAN ||
+                 cur_op == SQRT || cur_op == LN || cur_op == LOG) {
+        CalcFunc(cur_op);
+      }
+    }
+  }
+  res = calculate_.top();
+  return res;
+}
+
+void Expression::CalcFunc(Operation op) {
+  double a = calculate_.top();
+  calculate_.pop();
+  if (op == COS) {
+    calculate_.push(std::cos(a));
+  } else if (op == SIN) {
+    calculate_.push(std::sin(a));
+  } else if (op == TAN) {
+    calculate_.push(std::tan(a));
+  } else if (op == ACOS) {
+    calculate_.push(std::acos(a));
+  } else if (op == ASIN) {
+    calculate_.push(std::asin(a));
+  } else if (op == ATAN) {
+    calculate_.push(std::atan(a));
+  } else if (op == SQRT) {
+    calculate_.push(std::sqrt(a));
+  } else if (op == LN) {
+    calculate_.push(std::log(a));
+  } else if (op == LOG) {
+    calculate_.push(std::log10(a));
+  }
+}
+
+void Expression::CalcOperand(Operation op) {
+  double b = calculate_.top();
+  calculate_.pop();
+  double a = calculate_.top();
+  calculate_.pop();
+
+  if (op == PLUS) {
+    calculate_.push(a + b);
+  } else if (op == MINUS) {
+    calculate_.push(a - b);
+  } else if (op == MUL) {
+    calculate_.push(a * b);
+  } else if (op == DIV) {
+    calculate_.push(a / b);
+  } else if (op == EXP) {
+    calculate_.push(std::pow(a, b));
+  } else if (op == MOD) {
+    calculate_.push(std::fmod(a, b));
+  }
 }
 
 bool Expression::ValidateFunc() {
