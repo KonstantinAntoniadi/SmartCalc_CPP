@@ -1,4 +1,5 @@
 // add headers
+#pragma once
 #include <cstring>
 #include <iostream>
 #include <stack>
@@ -85,7 +86,7 @@ class Expression {
   void ConvertToLexemes();
   // переделать на текущий итератор
   std::string::iterator cur_it_;
-  std::string postfix_;
+  // std::string postfix_;
   std::string infix_;
   std::stack<Lexeme> operations_;
   std::stack<double> calculate_;

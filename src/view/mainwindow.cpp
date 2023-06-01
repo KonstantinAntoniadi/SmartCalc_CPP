@@ -10,7 +10,8 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
   ui->setupUi(this);
-  ui->stackedWidget->addWidget(new Calculator());
+  Calculator* calculator = new Calculator();
+  ui->stackedWidget->addWidget(calculator);
   ui->stackedWidget->addWidget(new Credit());
   this->setFixedSize(1080, 500);
 }

@@ -325,6 +325,15 @@ CMakeFiles/calc.dir/calc_autogen/mocs_compilation.cpp.o: calc_autogen/mocs_compi
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
+  /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.h \
+  /home/kosant/Desktop/Smartcalc_CPP/src/model/expression.h \
+  /usr/include/c++/9/cstring \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/stack \
+  /usr/include/c++/9/deque \
+  /usr/include/c++/9/bits/stl_deque.h \
+  /usr/include/c++/9/bits/deque.tcc \
+  /usr/include/c++/9/bits/stl_stack.h \
   calc_autogen/OTUN7GXZT4/moc_credit.cpp \
   /home/kosant/Desktop/Smartcalc_CPP/src/view/credit.h \
   calc_autogen/OTUN7GXZT4/moc_mainwindow.cpp \
@@ -3007,6 +3016,12 @@ CMakeFiles/calc.dir/view/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/s
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/QtGui:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtimeline.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qitemdelegate.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h:
@@ -3060,6 +3075,12 @@ CMakeFiles/calc.dir/view/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/s
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCommonStyle:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qprintpreviewwidget.h:
 
@@ -3219,6 +3240,10 @@ CMakeFiles/calc.dir/view/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/s
 
 /usr/include/ctype.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtcoreversion.h:
+
+/usr/include/c++/9/bits/exception.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qopengl.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h:
@@ -3238,6 +3263,8 @@ CMakeFiles/calc.dir/view/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/s
 /usr/include/c++/9/bits/stl_bvector.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/c++/9/bits/stl_deque.h:
 
 /usr/include/c++/9/bits/stl_uninitialized.h:
 
@@ -3304,6 +3331,10 @@ CMakeFiles/calc.dir/view/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/s
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h:
 
 /usr/include/c++/9/bits/stl_algobase.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h:
 
@@ -3438,8 +3469,6 @@ calc_autogen/OTUN7GXZT4/moc_qcustomplot.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbitarray.h:
 
 /usr/include/c++/9/iosfwd:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qxmlstream.h:
 
 /usr/include/c++/9/bits/memoryfwd.h:
 
@@ -3635,6 +3664,8 @@ calc_autogen/mocs_compilation.cpp:
 
 /usr/include/locale.h:
 
+/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstorageinfo.h:
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
@@ -3646,6 +3677,12 @@ calc_autogen/mocs_compilation.cpp:
 /usr/include/c++/9/bits/hash_bytes.h:
 
 /usr/include/c++/9/bits/streambuf.tcc:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qundoview.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h:
+
+/usr/include/c++/9/backward/binders.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsanchorlayout.h:
 
@@ -3669,8 +3706,6 @@ calc_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/9/bits/uniform_int_dist.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h:
-
 /usr/include/c++/9/pstl/glue_algorithm_defs.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtPrintSupport/qprinter.h:
@@ -3690,6 +3725,8 @@ calc_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/home/kosant/Desktop/Smartcalc_CPP/src/model/expression.h:
 
 /usr/include/c++/9/string:
 
@@ -3767,10 +3804,6 @@ calc_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/9/pstl/glue_numeric_defs.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h:
-
 /usr/include/c++/9/istream:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h:
@@ -3785,17 +3818,17 @@ calc_autogen/mocs_compilation.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
 
+/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwhatsthis.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlibrary.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCommonStyle:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h:
 
@@ -3821,6 +3854,10 @@ calc_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/9/map:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h:
+
+/usr/include/c++/9/bits/stl_stack.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbar.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h:
@@ -3836,6 +3873,8 @@ calc_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleditemdelegate.h:
 
 /usr/include/c++/9/bits/parse_numbers.h:
+
+/usr/include/c++/9/iostream:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglpixeltransferoptions.h:
 
@@ -3856,6 +3895,8 @@ calc_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h:
+
+/usr/include/c++/9/stack:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qglyphrun.h:
 
@@ -3925,9 +3966,17 @@ calc_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtimezone.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcborarray.h:
+
 /usr/include/c++/9/bits/basic_ios.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h:
+
+/usr/include/c++/9/cstring:
 
 /usr/include/c++/9/debug/assertions.h:
 
@@ -4011,6 +4060,8 @@ calc_autogen/OTUN7GXZT4/moc_mainwindow.cpp:
 
 /usr/include/c++/9/tr1/bessel_function.tcc:
 
+/usr/include/c++/9/bits/deque.tcc:
+
 /usr/include/c++/9/tr1/ell_integral.tcc:
 
 /usr/include/c++/9/tr1/riemann_zeta.tcc:
@@ -4028,6 +4079,8 @@ calc_autogen/OTUN7GXZT4/moc_mainwindow.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QCache:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizegrip.h:
+
+/usr/include/c++/9/deque:
 
 /usr/include/c++/9/bits/stl_function.h:
 
@@ -4231,12 +4284,6 @@ calc_autogen/OTUN7GXZT4/moc_mainwindow.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadstorage.h:
 
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qcborarray.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtimezone.h:
-
 /usr/include/c++/9/optional:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qpluginloader.h:
@@ -4298,23 +4345,3 @@ calc_autogen/OTUN7GXZT4/moc_mainwindow.cpp:
 /usr/include/c++/9/bits/atomic_futex.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadpool.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtimeline.h:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h:
-
-/usr/include/x86_64-linux-gnu/bits/local_lim.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qundoview.h:
-
-/usr/include/c++/9/backward/binders.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qwaitcondition.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qwineventnotifier.h:
-
-/usr/include/c++/9/bits/exception.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qtcoreversion.h:

@@ -190,6 +190,30 @@ calc_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/calc_autogen/mocs_compilation.cpp.s
 .PHONY : calc_autogen/mocs_compilation.cpp.s
 
+controller/controllercalculator.o: controller/controllercalculator.cc.o
+.PHONY : controller/controllercalculator.o
+
+# target to build an object file
+controller/controllercalculator.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/controller/controllercalculator.cc.o
+.PHONY : controller/controllercalculator.cc.o
+
+controller/controllercalculator.i: controller/controllercalculator.cc.i
+.PHONY : controller/controllercalculator.i
+
+# target to preprocess a source file
+controller/controllercalculator.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/controller/controllercalculator.cc.i
+.PHONY : controller/controllercalculator.cc.i
+
+controller/controllercalculator.s: controller/controllercalculator.cc.s
+.PHONY : controller/controllercalculator.s
+
+# target to generate assembly for a file
+controller/controllercalculator.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/controller/controllercalculator.cc.s
+.PHONY : controller/controllercalculator.cc.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -213,6 +237,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+model/expression.o: model/expression.cc.o
+.PHONY : model/expression.o
+
+# target to build an object file
+model/expression.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/expression.cc.o
+.PHONY : model/expression.cc.o
+
+model/expression.i: model/expression.cc.i
+.PHONY : model/expression.i
+
+# target to preprocess a source file
+model/expression.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/expression.cc.i
+.PHONY : model/expression.cc.i
+
+model/expression.s: model/expression.cc.s
+.PHONY : model/expression.s
+
+# target to generate assembly for a file
+model/expression.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/expression.cc.s
+.PHONY : model/expression.cc.s
 
 view/calculator.o: view/calculator.cpp.o
 .PHONY : view/calculator.o
@@ -326,9 +374,15 @@ help:
 	@echo "... calc_autogen/mocs_compilation.o"
 	@echo "... calc_autogen/mocs_compilation.i"
 	@echo "... calc_autogen/mocs_compilation.s"
+	@echo "... controller/controllercalculator.o"
+	@echo "... controller/controllercalculator.i"
+	@echo "... controller/controllercalculator.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/expression.o"
+	@echo "... model/expression.i"
+	@echo "... model/expression.s"
 	@echo "... view/calculator.o"
 	@echo "... view/calculator.i"
 	@echo "... view/calculator.s"

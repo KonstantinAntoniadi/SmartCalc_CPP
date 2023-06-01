@@ -177,7 +177,19 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/calc_en_US.ts.rule">
 			<Option target="calc"/>
 		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.cc">
+			<Option target="calc"/>
+		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.h">
+			<Option target="calc"/>
+		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/main.cpp">
+			<Option target="calc"/>
+		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/model/expression.cc">
+			<Option target="calc"/>
+		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/model/expression.h">
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/resources/icons/icon.icns">

@@ -326,6 +326,15 @@ CMakeFiles/calc.dir/calc_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
+ /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.h
+ /home/kosant/Desktop/Smartcalc_CPP/src/model/expression.h
+ /usr/include/c++/9/cstring
+ /usr/include/c++/9/iostream
+ /usr/include/c++/9/stack
+ /usr/include/c++/9/deque
+ /usr/include/c++/9/bits/stl_deque.h
+ /usr/include/c++/9/bits/deque.tcc
+ /usr/include/c++/9/bits/stl_stack.h
  /home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/calc_autogen/OTUN7GXZT4/moc_credit.cpp
  /home/kosant/Desktop/Smartcalc_CPP/src/view/credit.h
  /home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/calc_autogen/OTUN7GXZT4/moc_mainwindow.cpp

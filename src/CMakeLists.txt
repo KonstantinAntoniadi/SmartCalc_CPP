@@ -52,6 +52,10 @@ set(PROJECT_SOURCES
         view/mainwindow.cpp
         view/mainwindow.h
         view/mainwindow.ui
+        controller/controllercalculator.cc
+        controller/controllercalculator.h
+        model/expression.h
+        model/expression.cc
         ${TS_FILES}
 )
 

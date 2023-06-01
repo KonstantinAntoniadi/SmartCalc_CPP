@@ -162,6 +162,18 @@
 			null
 		],
 		[
+			"/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.h",
+			"MU",
+			"NPUKSKGWT2/moc_controllercalculator.cpp",
+			null
+		],
+		[
+			"/home/kosant/Desktop/Smartcalc_CPP/src/model/expression.h",
+			"MU",
+			"NLOY5YBGEN/moc_expression.cpp",
+			null
+		],
+		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.h",
 			"MU",
 			"OTUN7GXZT4/moc_calculator.cpp",
@@ -280,7 +292,17 @@
 			"MU",
 			null
 		],
+		[
+			"/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.cc",
+			"MU",
+			null
+		],
 		[ "/home/kosant/Desktop/Smartcalc_CPP/src/main.cpp", "MU", null ],
+		[
+			"/home/kosant/Desktop/Smartcalc_CPP/src/model/expression.cc",
+			"MU",
+			null
+		],
 		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.cpp",
 			"MU",

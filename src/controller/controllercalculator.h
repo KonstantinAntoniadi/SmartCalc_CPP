@@ -1,9 +1,12 @@
 // ifndef
+#pragma once
 #include "model/expression.h"
 
 namespace s21 {
-class Controller {
+class ControllerCalculator {
  public:
+  ControllerCalculator() = default;
+  ~ControllerCalculator() = default;
  private:
   Expression expression_{};
 };
