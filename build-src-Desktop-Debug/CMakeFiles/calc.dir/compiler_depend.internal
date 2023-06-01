@@ -2154,21 +2154,6 @@ CMakeFiles/calc.dir/view/calculator.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.c
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.h
- /usr/include/c++/9/math.h
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/checkFuncs.c
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/getPostfix.c
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/processFuncs.c
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.c
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.c
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/validateFunc.c
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/validateOperator.c
- /home/kosant/Desktop/Smartcalc_CPP/src/backend/validateRPN.c
  /home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/calc_autogen/include/ui_calculator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h

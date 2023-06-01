@@ -2148,21 +2148,6 @@ CMakeFiles/calc.dir/view/calculator.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/sr
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.c \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.h \
-  /usr/include/c++/9/math.h \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/checkFuncs.c \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/getPostfix.c \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/processFuncs.c \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.c \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.c \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/validateFunc.c \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/validateOperator.c \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/validateRPN.c \
   calc_autogen/include/ui_calculator.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -4588,6 +4573,10 @@ CMakeFiles/calc.dir/view/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/s
 
 calc_autogen/include/ui_mainwindow.h:
 
+/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h:
+
+/home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.h:
+
 /home/kosant/Desktop/Smartcalc_CPP/src/view/credit.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit:
@@ -4597,22 +4586,6 @@ calc_autogen/include/ui_mainwindow.h:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox:
 
 calc_autogen/include/ui_calculator.h:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/validateRPN.c:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/validateOperator.c:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/validateFunc.c:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.c:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/getPostfix.c:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/checkFuncs.c:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QRegularExpression:
 
@@ -5284,8 +5257,6 @@ calc_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 calc_autogen/OTUN7GXZT4/moc_calculator.cpp:
 
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/processFuncs.c:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h:
@@ -5730,8 +5701,6 @@ calc_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlibrary.h:
 
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.c:
-
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h:
@@ -5749,8 +5718,6 @@ calc_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.c:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h:
 
