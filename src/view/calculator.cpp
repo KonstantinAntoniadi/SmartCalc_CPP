@@ -3,15 +3,7 @@
 #include <QRegularExpression>
 #include <QRegularExpressionValidator>
 
-#include "../backend/calc.c"
-#include "../backend/checkFuncs.c"
-#include "../backend/getPostfix.c"
-#include "../backend/processFuncs.c"
-#include "../backend/stacks/number.c"
-#include "../backend/stacks/operation.c"
-#include "../backend/validateFunc.c"
-#include "../backend/validateOperator.c"
-#include "../backend/validateRPN.c"
+
 #include "model/expression.h"
 #include "ui_calculator.h"
 
@@ -125,7 +117,7 @@ void Calculator::on_calcButtonClicked() {
   controller_.SetExpression(expression);
   if (controller_.IsValidExpression()) {
     ui->lineEdit->setText(QString::number(
-        controller_.Calculate(0)));  // добавить сюда подстановку икса
+        controller_.Calculate(ui->doubleSpinBox->value())));  // добавить сюда подстановку икса
   } else {
     ui->lineEdit->setText("Error");
   }
