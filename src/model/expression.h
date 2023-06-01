@@ -33,7 +33,7 @@ class Expression {
   };
 
  public:
-  Expression() = delete;
+  Expression() : infix_("0") {}
   Expression(const std::string infix)
       : infix_(infix){};  // добавить сюда сразу перевод в лексемы
   Expression(const Expression &other) = delete;
