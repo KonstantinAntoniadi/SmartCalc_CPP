@@ -91,6 +91,12 @@
         "xmemory0": "cpp",
         "xstddef": "cpp",
         "xtr1common": "cpp",
-        "validaterpn.c": "cpp"
+        "validaterpn.c": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "fstream": "cpp",
+        "future": "cpp",
+        "cinttypes": "cpp",
+        "variant": "cpp"
     }
 }

@@ -30,7 +30,8 @@ class Expression {
     EXP,
     // unar
     UNARMINUS,
-    NUMBER
+    NUMBER,
+    X
 
   };
 

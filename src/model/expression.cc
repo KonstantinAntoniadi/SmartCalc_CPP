@@ -10,6 +10,8 @@ double Expression::Calculate(const double x) {
       Operation cur_op = it->GetOperation();
       if (cur_op == NUMBER) {
         calculate_.push(it->GetValue());
+      } else if (cur_op == X) {
+        calculate_.push(x_);
       } else if (cur_op == UNARMINUS) {
         calculate_.top() *= -1;
       } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
@@ -169,7 +171,7 @@ void Expression::ConvertToLexemes() {
        cur_it_++) {
     char cur = *cur_it_;
     if (cur == 'x') {
-      lexemes_.emplace_back(NUMBER, x_);
+      lexemes_.emplace_back(X, x_);
     } else if (cur == '(') {
       lexemes_.emplace_back(OPENBRACKET);
     } else if (cur == ')') {
@@ -188,7 +190,7 @@ void Expression::ConvertToLexemes() {
 void Expression::GetPostfix() {
   for (auto it = lexemes_.begin(); it != lexemes_.end() && good_to_go_; it++) {
     Operation cur_op = it->GetOperation();
-    if (cur_op == NUMBER)
+    if (cur_op == NUMBER || cur_op == X)
       postfix_.push_back(*it);
     else if (cur_op == OPENBRACKET)
       operations_.push(*it);
@@ -216,7 +218,7 @@ bool Expression::ValidateRPN() {
   int size = 0;
   for (auto it : postfix_) {
     Operation op = it.GetOperation();
-    if (op == NUMBER) {
+    if (op == NUMBER || op == X) {
       value = 0;
     } else if (op == COS || op == SIN || op == TAN || op == ACOS ||
                op == ASIN || op == ATAN || op == SQRT || op == LN ||

@@ -119,31 +119,16 @@ void Calculator::buttonInput_clicked() {
 }
 
 void Calculator::on_calcButtonClicked() {
-  QString expressionLine = ui->lineEdit->text();
-  QByteArray ba = expressionLine.toLocal8Bit();
+  QString expression_str = ui->lineEdit->text();
+  QByteArray ba = expression_str.toLocal8Bit();
   std::string expression = ba.data();
   controller_.SetExpression(expression);
-  //   ui->lineEdit->setText(QString::number(controller_.Calculate(expression,
-  //   0)));
   if (controller_.IsValidExpression()) {
-    ui->lineEdit->setText(QString::number(controller_.Calculate(0)));
+    ui->lineEdit->setText(QString::number(
+        controller_.Calculate(0)));  // добавить сюда подстановку икса
   } else {
     ui->lineEdit->setText("Error");
   }
-  //   char *expression = ba.data();
-  //   char polish[512] = {0};
-  //   int good = getPostfix(expression, polish);
-  //   if (good) {
-  //     double x = ui->doubleSpinBox->value();
-  //     double res = 0;
-  //     good = calculate(polish, x, &res);
-  //     if (good)
-  //       ui->lineEdit->setText(QString::number(res));
-  //     else
-  //       ui->lineEdit->setText("Error");
-  //   } else {
-  //     ui->lineEdit->setText("Error");
-  //   }
 }
 
 void Calculator::on_lineEdit_textChanged(const QString &arg1) {
@@ -157,10 +142,12 @@ void Calculator::on_lineEdit_textEdited(const QString &arg1) {
 void Calculator::on_pushButton_graph_clicked() {
   QString expressionLine = ui->lineEdit->text();
   QByteArray ba = expressionLine.toLocal8Bit();
-  char *expression = ba.data();
-  char polish[512] = {0};
 
-  if (getPostfix(expression, polish)) {
+  std::string expression = ba.data();
+  char polish[512] = {0};
+  controller_.SetExpression(expression);
+
+  if (controller_.IsValidExpression()) {
     ui->customPlot->clearGraphs();
     x.clear();
     y.clear();
@@ -177,18 +164,20 @@ void Calculator::on_pushButton_graph_clicked() {
     int graph_counter = 0;
     int non_nun_count = 0;
     int non_nun = 0;
-    int good_to_go = SUCCSESS;
-    double res = 0;
-    for (X = xBegin; X <= xEnd && good_to_go; X += h) {
+    //     int good_to_go = SUCCSESS;
+    //     double res = 0;
+    //     for (X = xBegin; X <= xEnd && good_to_go; X += h) {
+    for (X = xBegin; X <= xEnd; X += h) {
       x.push_back(X);
-      good_to_go = calculate(polish, X, &res);
-      if (good_to_go) y.push_back(res);
+      y.push_back(controller_.Calculate(X));
+      //       good_to_go = calculate(polish, X, &res);
+      //       if (good_to_go) y.push_back(res);
     }
     ui->customPlot->addGraph();
     ui->customPlot->graph(0)->setPen(QPen(Qt::black));
     ui->customPlot->graph(0)->addData(x, y);
     ui->customPlot->replot();
-    if (!good_to_go) ui->lineEdit->setText("Error");
+    //     if (!good_to_go) ui->lineEdit->setText("Error");
   } else {
     ui->lineEdit->setText("Error");
     ui->customPlot->clearGraphs();
