@@ -1,7 +1,8 @@
 #include "expression.h"
 
 namespace s21 {
-double Expression::Calculate() {
+double Expression::Calculate(const double x) {
+  x_ = x;
   // std::cout <<
   double res = 0;
   if (good_to_go_) {
@@ -22,6 +23,10 @@ double Expression::Calculate() {
     }
     res = calculate_.top();
   }
+
+  // while (!calculate_.empty()) {
+  //   calculate_.pop();
+  // }
   return res;
 }
 

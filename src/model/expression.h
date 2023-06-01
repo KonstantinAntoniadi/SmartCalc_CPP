@@ -35,15 +35,32 @@ class Expression {
   };
 
  public:
-  Expression() = delete;
-  Expression(const std::string infix, const double x) : infix_(infix), x_(x) {
-    ConvertToLexemes();
-    GetPostfix();
-  };  // добавить сюда сразу перевод в лексемы
+  Expression() = default;
+  // Expression(const std::string infix, const double x) : infix_(infix), x_(x)
+  // {
+  //   ConvertToLexemes();
+  //   GetPostfix();
+  // };  // добавить сюда сразу перевод в лексемы
   Expression(const Expression &other) = delete;
   Expression(Expression &&other) = delete;
+  void SetExpression(const std::string &infix) {
+    infix_ = infix;
+    good_to_go_ = true;
+    while (!calculate_.empty()) {
+      calculate_.pop();
+    }
+    while (!operations_.empty()) {
+      operations_.pop();
+    }
+    lexemes_.clear();
+    postfix_.clear();
+    ConvertToLexemes();
+    GetPostfix();
+  }
 
-  double Calculate();
+  bool IsValid() { return good_to_go_; }
+
+  double Calculate(const double x);
   // стоит объединить функции ниже
 
   bool IsValidFunc();
@@ -107,7 +124,7 @@ class Expression {
   std::string infix_;
   std::stack<Lexeme> operations_;
   std::stack<double> calculate_;
-  bool good_to_go_ = true;
+  bool good_to_go_ = false;
   Operation op_;
   size_t expresion_size_ = infix_.size();
   double x_{};

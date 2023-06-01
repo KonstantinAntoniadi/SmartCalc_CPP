@@ -9,6 +9,10 @@ class ControllerCalculator {
   ~ControllerCalculator() = default;
 
   double Calculate(const std::string &infix, const double x);
+  double Calculate(const double x);
+  void SetExpression(const std::string &infix);
+  bool IsValidExpression();
+
  private:
   Expression expression_{};
 };

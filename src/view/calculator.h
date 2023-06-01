@@ -2,6 +2,7 @@
 #define CALCULATOR_H
 
 #include <QWidget>
+
 #include "../controller/controllercalculator.h"
 #define FAILTURE 0
 #define SUCCSESS 1
@@ -33,8 +34,6 @@ class Calculator : public QWidget {
   double xBegin, xEnd, h, X;
   int N;
   s21::ControllerCalculator controller_;
-  
-
 
   QVector<double> x, y;
 };
