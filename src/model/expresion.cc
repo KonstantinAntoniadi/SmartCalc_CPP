@@ -20,12 +20,12 @@ double Expression::Calculate() {
         CalcFunc(cur_op);
       }
     }
+    res = calculate_.top();
   }
-  res = calculate_.top();
   return res;
 }
 
-void Expression::CalcFunc(Operation op) {
+void Expression::CalcFunc(Operation op) {  // переделай это на возврат значения
   double a = calculate_.top();
   calculate_.pop();
   if (op == COS) {
@@ -115,11 +115,15 @@ bool Expression::ValidateOperator() {
   bool result = true;
 
   if (*cur_it_ == '+') {
-    lexemes_.emplace_back(PLUS);
+    if (!lexemes_.empty() &&
+        !lexemes_.at(lexemes_.size() - 1).GetOperation() == OPENBRACKET) {
+      lexemes_.emplace_back(PLUS);
+    }
   } else if (*cur_it_ == '-') {
     if (lexemes_.empty() ||
-        lexemes_.at(lexemes_.size() - 2).GetOperation() == OPENBRACKET) {
-      lexemes_.emplace_back(UNARMINUS);
+        lexemes_.at(lexemes_.size() - 1).GetOperation() == OPENBRACKET) {
+      lexemes_.emplace_back(
+          UNARMINUS);  // может стоит вынести это в польскую нотацию
     } else {
       lexemes_.emplace_back(MINUS);
     }
@@ -188,15 +192,17 @@ void Expression::GetPostfix() {
              cur_op == SQRT || cur_op == LN || cur_op == LOG) {
       operations_.push(*it);
     } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
-               cur_op == DIV || cur_op == EXP || cur_op == MOD) {
-      good_to_go_ = ProcessOperator(*it);
+               cur_op == DIV || cur_op == EXP || cur_op == MOD ||
+               cur_op == UNARMINUS) {
+      ProcessOperator(*it);
     } else if (cur_op == CLOSEBRACKET) {
-      good_to_go_ = ProcessBracket();
+      ProcessBracket();
     }
   }
 
   if (good_to_go_) ProcessRemains();
-  if (good_to_go_) ValidateRPN();
+  if (good_to_go_)
+    good_to_go_ = ValidateRPN();  // возможно стоит флаг внутрь функции записать
 }
 
 bool Expression::ValidateRPN() {
@@ -209,7 +215,7 @@ bool Expression::ValidateRPN() {
       value = 0;
     } else if (op == COS || op == SIN || op == TAN || op == ACOS ||
                op == ASIN || op == ATAN || op == SQRT || op == LN ||
-               op == LOG) {
+               op == LOG || op == UNARMINUS) {
       value = 1;
     } else if (op == PLUS || op == MINUS || op == MUL || op == DIV ||
                op == EXP || op == MOD) {
@@ -226,7 +232,7 @@ bool Expression::ValidateRPN() {
 }
 
 void Expression::ProcessRemains() {
-  if (!operations_.empty() && good_to_go_) {
+  while (!operations_.empty() && good_to_go_) {
     if (operations_.top().GetOperation() == OPENBRACKET ||
         operations_.top().GetOperation() == CLOSEBRACKET) {
       good_to_go_ = 0;
@@ -238,22 +244,27 @@ void Expression::ProcessRemains() {
   }
 }
 
-bool Expression::ProcessBracket() {
+void Expression::ProcessBracket() {
   if (!operations_.empty()) {
     while (!operations_.empty() &&
            operations_.top().GetOperation() != OPENBRACKET) {
       postfix_.push_back(operations_.top());
       operations_.pop();
     }
-    operations_.pop();
+    if (operations_.empty()) {
+      good_to_go_ = false;
+    } else if (operations_.top().GetOperation() == OPENBRACKET) {
+      operations_.pop();
+    }
+
   } else {
     good_to_go_ = false;
   }
 
-  return good_to_go_;  // убрать это
+  // return good_to_go_;  // убрать это
 }
 
-bool Expression::ProcessOperator(Lexeme &lexeme) {
+void Expression::ProcessOperator(Lexeme &lexeme) {
   int pr_head = 0;
   if (!operations_.empty()) pr_head = operations_.top().GetPriority();
   int pr_c = lexeme.GetPriority();  // измени название
@@ -265,7 +276,7 @@ bool Expression::ProcessOperator(Lexeme &lexeme) {
   }
   operations_.push(lexeme);
 
-  return true;  // избавься потом от возврата
+  // return true;  // избавься потом от возврата
 }
 
 bool Expression::CheckAssociativity(Lexeme &lexeme) {

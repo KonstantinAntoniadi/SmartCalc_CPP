@@ -66,23 +66,32 @@ class Expression {
 
       if (operation_ == PLUS || operation_ == MINUS || operation_ == MOD) {
         priority_ = 1;
+        // std::cout << "1" << std::endl;
       } else if (operation_ == MUL || operation_ == DIV) {
         priority_ = 2;
+        // std::cout << "2" << std::endl;
+
       } else if (operation_ == EXP || operation_ == UNARMINUS) {
         priority_ = 3;
+        // std::cout << "3" << std::endl;
+
       } else if (operation_ == COS || operation_ == SIN || operation_ == TAN ||
-                 operation_ == ACOS || operation_ == ASIN || operation_ == ATAN ||
-                 operation_ == SQRT || operation_ == LN || operation_ == LOG) {
+                 operation_ == ACOS || operation_ == ASIN ||
+                 operation_ == ATAN || operation_ == SQRT || operation_ == LN ||
+                 operation_ == LOG) {
         priority_ = 4;
+        // std::cout << "4" << std::endl;
+      } else {
+        // std::cout << "0" << std::endl;
       }
     }
   };
   bool ValidateRPN();
   void CalcOperand(Operation op);
   void CalcFunc(Operation op);
-  bool ProcessBracket();
+  void ProcessBracket();
   void ProcessRemains();
-  bool ProcessOperator(Lexeme &lexema);
+  void ProcessOperator(Lexeme &lexema);
   bool CheckAssociativity(Lexeme &lexeme);
   std::string ReadNumber();
   bool IsOperator(const char check);

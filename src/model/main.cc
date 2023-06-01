@@ -9,11 +9,11 @@ int v() {
 
 int main() {
   // s21::Calculator calc("test");
-  s21::Expression expression("2+(2* cos(5))", 0);
+  s21::Expression expression("-1", 1.124);
   std::cout << expression.Calculate() << std::endl;
   // std::string str = "123456789asd";
   // auto it = str.begin();
-  // std::cout << str.at(10) << std::endl;
+  // std::cout << str.at(10) << zstd::endl;
 
   // std::cout << strtod(&it[0], &it[0]) << std::endl;
 
