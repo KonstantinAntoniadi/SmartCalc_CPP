@@ -3,7 +3,6 @@
 #include <QRegularExpression>
 #include <QRegularExpressionValidator>
 
-
 #include "model/expression.h"
 #include "ui_calculator.h"
 
@@ -116,8 +115,8 @@ void Calculator::on_calcButtonClicked() {
   std::string expression = ba.data();
   controller_.SetExpression(expression);
   if (controller_.IsValidExpression()) {
-    ui->lineEdit->setText(QString::number(
-        controller_.Calculate(ui->doubleSpinBox->value())));  // добавить сюда подстановку икса
+    ui->lineEdit->setText(QString::number(controller_.Calculate(
+        ui->doubleSpinBox->value())));  // добавить сюда подстановку икса
   } else {
     ui->lineEdit->setText("Error");
   }
@@ -156,20 +155,14 @@ void Calculator::on_pushButton_graph_clicked() {
     int graph_counter = 0;
     int non_nun_count = 0;
     int non_nun = 0;
-    //     int good_to_go = SUCCSESS;
-    //     double res = 0;
-    //     for (X = xBegin; X <= xEnd && good_to_go; X += h) {
     for (X = xBegin; X <= xEnd; X += h) {
       x.push_back(X);
       y.push_back(controller_.Calculate(X));
-      //       good_to_go = calculate(polish, X, &res);
-      //       if (good_to_go) y.push_back(res);
     }
     ui->customPlot->addGraph();
     ui->customPlot->graph(0)->setPen(QPen(Qt::black));
     ui->customPlot->graph(0)->addData(x, y);
     ui->customPlot->replot();
-    //     if (!good_to_go) ui->lineEdit->setText("Error");
   } else {
     ui->lineEdit->setText("Error");
     ui->customPlot->clearGraphs();
