@@ -1,5 +1,6 @@
 // add headers
 #include <cmath>
+#pragma once
 #include <cstring>
 #include <iostream>
 #include <stack>

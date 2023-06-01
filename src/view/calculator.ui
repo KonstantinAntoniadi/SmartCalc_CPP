@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Calculator</class>
+ <widget class="QWidget" name="Calculator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1450</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Pet Me</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton:pressed{
+border:3px solid #FFF;
+background-image: none;
+background-color: #000; 
+font: 500 13pt &quot;Pet Me&quot;;
+color: #FFF;
+}
+
+QPushButton, QLineEdit{
+border:3px solid #000;
+background-color: #FFF;
+background-image: none;
+font: 500 13pt &quot;Pet Me&quot;;
+color: #000;
+}
+
+QDoubleSpinBox::up-button, QSpinBox::up-button{
+    min-width:30px;
+    min-height: 15px;
+}
+
+QDoubleSpinBox::down-button, QSpinBox::down-button{
+    min-width:30px;
+    min-height: 15px;
+}
+
+QDoubleSpinBox, QSpinBox{
+background-color: #FFF;
+border:3px solid #000;
+font: 500 13pt &quot;Pet Me&quot;;
+color: #000;
+}
+
+QFrame{
+border:3px solid #000;
+}
+
+
+</string>
+  </property>
+  <widget class="QSpinBox" name="spinBox_xMin">
+   <property name="geometry">
+    <rect>
+     <x>615</x>
+     <y>390</y>
+     <width>91</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-1000000</number>
+   </property>
+   <property name="maximum">
+    <number>1000000</number>
+   </property>
+   <property name="value">
+    <number>-5</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox_xMax">
+   <property name="geometry">
+    <rect>
+     <x>965</x>
+     <y>390</y>
+     <width>101</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-1000000</number>
+   </property>
+   <property name="maximum">
+    <number>1000000</number>
+   </property>
+   <property name="value">
+    <number>5</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox_yMax">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>90</y>
+     <width>91</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-1000000</number>
+   </property>
+   <property name="maximum">
+    <number>1000000</number>
+   </property>
+   <property name="value">
+    <number>5</number>
+   </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>160</y>
+     <width>242</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,0,0,0,0" columnstretch="0,0,0,0">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>10</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>5</number>
+    </property>
+    <item row="2" column="2">
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QPushButton" name="pushButton_dot">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>.</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="pushButton_pow">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>^</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>operand</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="pushButton_1">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="2">
+     <widget class="QPushButton" name="pushButton_0">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pushButton_openBracket">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>(</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>brasket</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pushButton_closedBracket">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>)</string>
+      </property>
+      <property name="button-style" stdset="0">
+       <string>ew</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>brasket</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QPushButton" name="pushButton_plus">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>+</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>operand</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QPushButton" name="pushButton_minus">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>operand</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="pushButton_div">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>/</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>operand</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QPushButton" name="pushButton_mul">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>*</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>operand</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>160</y>
+     <width>131</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,0,0,0,0" columnstretch="0,0">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>10</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>5</number>
+    </property>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushButton_acos">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>acos</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>func</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="pushButton_log">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Pet Me</family>
+        <pointsize>13</pointsize>
+        <weight>62</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>log</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>func</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton_cos">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>cos</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>func</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="pushButton_tan">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>tan</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>func</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="pushButton_sin">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>sin</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>func</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="pushButton_ln">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>ln</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>func</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="pushButton_atan">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>atan</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>func</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushButton_asin">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>asin</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>func</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pushButton_mod">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>mod</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>operand</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pushButton_sqrt">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>sqrt</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>func</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton_graph">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>20</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Graph</string>
+   </property>
+   <property name="class" stdset="0">
+    <string>control</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox_yMin">
+   <property name="geometry">
+    <rect>
+     <x>505</x>
+     <y>330</y>
+     <width>91</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>-1000000</number>
+   </property>
+   <property name="maximum">
+    <number>1000000</number>
+   </property>
+   <property name="value">
+    <number>-5</number>
+   </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>615</x>
+     <y>20</y>
+     <width>447</width>
+     <height>357</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QCustomPlot" name="customPlot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>3</x>
+      <y>3</y>
+      <width>441</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>411</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="rightMargin">
+     <number>11</number>
+    </property>
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <item row="0" column="4">
+     <widget class="QPushButton" name="pushButton_calc">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="toolTipDuration">
+       <number>0</number>
+      </property>
+      <property name="text">
+       <string>=</string>
+      </property>
+      <property name="shortcut">
+       <string>Return</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>control</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pushButton_x">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>x</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>digit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="pushButton_del">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>del</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>control</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QPushButton" name="pushButton_ac">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>ac</string>
+      </property>
+      <property name="class" stdset="0">
+       <string>control</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QDoubleSpinBox" name="doubleSpinBox">
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="minimum">
+       <double>-999999999.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>9999999999.000000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+      </property>
+      <property name="value">
+       <double>21.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>90</y>
+     <width>400</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="tabletTracking">
+    <bool>false</bool>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="maxLength">
+    <number>255</number>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+   <property name="cursorMoveStyle">
+    <enum>Qt::LogicalMoveStyle</enum>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
