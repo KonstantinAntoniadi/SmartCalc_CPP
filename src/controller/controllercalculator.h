@@ -7,6 +7,8 @@ class ControllerCalculator {
  public:
   ControllerCalculator() = default;
   ~ControllerCalculator() = default;
+
+  double Calculate(const std::string &infix, const double x);
  private:
   Expression expression_{};
 };

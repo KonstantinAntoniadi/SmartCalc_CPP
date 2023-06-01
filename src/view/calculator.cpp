@@ -121,20 +121,22 @@ void Calculator::buttonInput_clicked() {
 void Calculator::on_calcButtonClicked() {
   QString expressionLine = ui->lineEdit->text();
   QByteArray ba = expressionLine.toLocal8Bit();
-  char *expression = ba.data();
-  char polish[512] = {0};
-  int good = getPostfix(expression, polish);
-  if (good) {
-    double x = ui->doubleSpinBox->value();
-    double res = 0;
-    good = calculate(polish, x, &res);
-    if (good)
-      ui->lineEdit->setText(QString::number(res));
-    else
-      ui->lineEdit->setText("Error");
-  } else {
-    ui->lineEdit->setText("Error");
-  }
+  std::string expression = ba.data();
+  ui->lineEdit->setText(QString::number(controller_.Calculate(expression, 0)));
+//   char *expression = ba.data();
+//   char polish[512] = {0};
+//   int good = getPostfix(expression, polish);
+//   if (good) {
+//     double x = ui->doubleSpinBox->value();
+//     double res = 0;
+//     good = calculate(polish, x, &res);
+//     if (good)
+//       ui->lineEdit->setText(QString::number(res));
+//     else
+//       ui->lineEdit->setText("Error");
+//   } else {
+//     ui->lineEdit->setText("Error");
+//   }
 }
 
 void Calculator::on_lineEdit_textChanged(const QString &arg1) {
