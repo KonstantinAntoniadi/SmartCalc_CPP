@@ -86,7 +86,7 @@ double Expression::CalcOperand(Operation op) {
 }
 
 bool Expression::ValidateFunc() {
-  bool result = true;
+  bool res = true;
   if (!strncmp(&cur_it_[0], "cos", 3)) {
     lexemes_.emplace_back(COS);
     cur_it_ += 2;
@@ -115,10 +115,10 @@ bool Expression::ValidateFunc() {
     lexemes_.emplace_back(LOG);
     cur_it_ += 2;
   } else {
-    result = false;
+    res = false;
   }
 
-  return result;
+  return res;
 }
 
 bool Expression::IsOperator(const char check) {  // НЕ ООП
@@ -127,7 +127,7 @@ bool Expression::IsOperator(const char check) {  // НЕ ООП
 }
 
 bool Expression::ValidateOperator() {
-  bool result = true;
+  bool res = true;
 
   if (*cur_it_ == '+') {
     if (!lexemes_.empty() &&
@@ -152,10 +152,10 @@ bool Expression::ValidateOperator() {
     lexemes_.emplace_back(MOD);
     cur_it_ += 2;
   } else {
-    result = false;
+    res = false;
   }
 
-  return result;
+  return res;
 }
 
 void Expression::ConvertToLexemes() {
