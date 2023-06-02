@@ -6,9 +6,11 @@
 
 namespace s21 {
 constexpr int days_in_year = 365;  // нужно куда-то вынести
+// вынести 12 в константу
 class Credit {
  public:
   Credit() = default;
+  ~Credit() = default;
   void SetStartValues(const double loan, const int period, const double rate);
   void CalcAnnuity();
   void CalcDifferentiated();

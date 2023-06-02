@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/calc.dir/controller/controllercalculator.cc.o.d"
   "CMakeFiles/calc.dir/main.cpp.o"
   "CMakeFiles/calc.dir/main.cpp.o.d"
+  "CMakeFiles/calc.dir/model/credit.cc.o"
+  "CMakeFiles/calc.dir/model/credit.cc.o.d"
   "CMakeFiles/calc.dir/model/expression.cc.o"
   "CMakeFiles/calc.dir/model/expression.cc.o.d"
   "CMakeFiles/calc.dir/view/calculator.cpp.o"

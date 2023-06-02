@@ -56,6 +56,8 @@ set(PROJECT_SOURCES
         controller/controllercalculator.h
         model/expression.h
         model/expression.cc
+        model/credit.cc
+        model/credit.h
         ${TS_FILES}
 )
 

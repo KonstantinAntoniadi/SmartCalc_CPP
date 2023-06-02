@@ -238,6 +238,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/credit.o: model/credit.cc.o
+.PHONY : model/credit.o
+
+# target to build an object file
+model/credit.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/credit.cc.o
+.PHONY : model/credit.cc.o
+
+model/credit.i: model/credit.cc.i
+.PHONY : model/credit.i
+
+# target to preprocess a source file
+model/credit.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/credit.cc.i
+.PHONY : model/credit.cc.i
+
+model/credit.s: model/credit.cc.s
+.PHONY : model/credit.s
+
+# target to generate assembly for a file
+model/credit.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/credit.cc.s
+.PHONY : model/credit.cc.s
+
 model/expression.o: model/expression.cc.o
 .PHONY : model/expression.o
 
@@ -380,6 +404,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... model/credit.o"
+	@echo "... model/credit.i"
+	@echo "... model/credit.s"
 	@echo "... model/expression.o"
 	@echo "... model/expression.i"
 	@echo "... model/expression.s"

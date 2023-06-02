@@ -27,6 +27,7 @@ void Credit::CalcDifferentiated() {
   }
 
   last_payment_ = payment;
+  overpayment_ = total_payment_ - loan_;
 }
 
 double Credit::CalcMonthAnnuity() {
