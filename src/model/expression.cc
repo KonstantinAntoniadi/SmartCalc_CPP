@@ -16,7 +16,7 @@ double Expression::Calculate(const double x) {
         calculate_.top() *= -1;
       } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
                  cur_op == DIV || cur_op == EXP || cur_op == MOD) {
-        calculate_.push(alcOperand(cur_op));
+        calculate_.push(CalcOperand(cur_op));
       } else if (cur_op == COS || cur_op == SIN || cur_op == TAN ||
                  cur_op == ACOS || cur_op == ASIN || cur_op == ATAN ||
                  cur_op == SQRT || cur_op == LN || cur_op == LOG) {
