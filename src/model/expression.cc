@@ -179,7 +179,7 @@ void Expression::ConvertToLexemes() {
       sscanf(&cur_it_[0], "%le %n", &number, &count_symbols_read);
       lexemes_.emplace_back(NUMBER, number);
       cur_it_ += count_symbols_read - 1;
-    } else {
+    } else if (cur != ' ') {
       good_to_go_ = false;
     }
   }
