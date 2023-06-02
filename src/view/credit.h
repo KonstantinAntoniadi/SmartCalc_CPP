@@ -2,6 +2,7 @@
 #define CREDIT_H
 
 #include <QWidget>
+
 #include "../model/credit.h"
 namespace Ui {
 class Credit;
@@ -20,7 +21,6 @@ class Credit : public QWidget {
  private:
   Ui::Credit *ui;
   s21::Credit credit_;
-
 };
 
 #endif  // CREDIT_H

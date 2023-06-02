@@ -18,11 +18,13 @@ void Credit::CalcAnnuity() {
 
 void Credit::CalcDifferentiated() {
   double Sn = loan_ / period_;
-  double payment = Sn + loan_ * rate_ / 100 * (365 / 12.0) / 365;
+  double payment = Sn + loan_ * rate_ / 100 *
+                            (days_in_year_ / months_in_year_) / days_in_year_;
   first_payment_ = payment;
   total_payment_ = payment;
   for (int i = 1; i < period_; i++) {
-    payment = Sn + (loan_ - i * Sn) * rate_ / 100 * (365 / 12.0) / 365;
+    payment = Sn + (loan_ - i * Sn) * rate_ / 100 *
+                       (days_in_year_ / months_in_year_) / days_in_year_;
     total_payment_ += payment;
   }
 

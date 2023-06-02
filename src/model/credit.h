@@ -5,7 +5,7 @@
 #include <cmath>
 
 namespace s21 {
-constexpr int days_in_year = 365;  // нужно куда-то вынести
+
 // вынести 12 в константу
 class Credit {
  public:
@@ -27,6 +27,10 @@ class Credit {
   double rate_{};
   double month_payment_{}, total_payment_{}, overpayment_{};
   double first_payment_{}, last_payment_{};
+  int year_{};
+  int month_{};
+  int days_in_year_ = 365;
+  double months_in_year_ = 12.0;
 };
 
 };  // namespace s21

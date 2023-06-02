@@ -7,8 +7,6 @@ class ControllerCredit {
   ControllerCredit() = default;
   ~ControllerCredit() = default;
 
-  
-
  private:
   Credit credit_;
 };
