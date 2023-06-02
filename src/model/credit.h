@@ -12,6 +12,11 @@ class Credit {
   void SetStartValues(const double loan, const int period, const double rate);
   void CalcAnnuity();
   void CalcDifferentiated();
+  double GetMonthPayment() { return month_payment_; }
+  double GetTotalPayment() { return total_payment_; }
+  double GetOverpayment() { return overpayment_; }
+  double GetFirstPayment() { return first_payment_; }
+  double GetLastPayment() { return last_payment_; }
 
  private:
   double CalcMonthAnnuity();
