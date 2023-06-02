@@ -183,6 +183,12 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.h">
 			<Option target="calc"/>
 		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.cc">
+			<Option target="calc"/>
+		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.h">
+			<Option target="calc"/>
+		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/main.cpp">
 			<Option target="calc"/>
 		</Unit>

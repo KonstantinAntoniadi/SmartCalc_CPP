@@ -170,6 +170,7 @@ void Expression::ConvertToLexemes() {
   for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_;
        cur_it_++) {
     char cur = *cur_it_;
+
     if (cur == 'x') {
       lexemes_.emplace_back(X, x_);
     } else if (cur == '(') {

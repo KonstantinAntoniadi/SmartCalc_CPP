@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/calc.dir/calc_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/calc.dir/controller/controllercalculator.cc.o"
   "CMakeFiles/calc.dir/controller/controllercalculator.cc.o.d"
+  "CMakeFiles/calc.dir/controller/controllercredit.cc.o"
+  "CMakeFiles/calc.dir/controller/controllercredit.cc.o.d"
   "CMakeFiles/calc.dir/main.cpp.o"
   "CMakeFiles/calc.dir/main.cpp.o.d"
   "CMakeFiles/calc.dir/model/credit.cc.o"

@@ -214,6 +214,30 @@ controller/controllercalculator.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/controller/controllercalculator.cc.s
 .PHONY : controller/controllercalculator.cc.s
 
+controller/controllercredit.o: controller/controllercredit.cc.o
+.PHONY : controller/controllercredit.o
+
+# target to build an object file
+controller/controllercredit.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/controller/controllercredit.cc.o
+.PHONY : controller/controllercredit.cc.o
+
+controller/controllercredit.i: controller/controllercredit.cc.i
+.PHONY : controller/controllercredit.i
+
+# target to preprocess a source file
+controller/controllercredit.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/controller/controllercredit.cc.i
+.PHONY : controller/controllercredit.cc.i
+
+controller/controllercredit.s: controller/controllercredit.cc.s
+.PHONY : controller/controllercredit.s
+
+# target to generate assembly for a file
+controller/controllercredit.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/controller/controllercredit.cc.s
+.PHONY : controller/controllercredit.cc.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -401,6 +425,9 @@ help:
 	@echo "... controller/controllercalculator.o"
 	@echo "... controller/controllercalculator.i"
 	@echo "... controller/controllercalculator.s"
+	@echo "... controller/controllercredit.o"
+	@echo "... controller/controllercredit.i"
+	@echo "... controller/controllercredit.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

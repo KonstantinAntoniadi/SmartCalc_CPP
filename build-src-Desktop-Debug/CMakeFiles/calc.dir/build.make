@@ -181,10 +181,24 @@ CMakeFiles/calc.dir/controller/controllercalculator.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calc.dir/controller/controllercalculator.cc.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.cc -o CMakeFiles/calc.dir/controller/controllercalculator.cc.s
 
+CMakeFiles/calc.dir/controller/controllercredit.cc.o: CMakeFiles/calc.dir/flags.make
+CMakeFiles/calc.dir/controller/controllercredit.cc.o: /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.cc
+CMakeFiles/calc.dir/controller/controllercredit.cc.o: CMakeFiles/calc.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/calc.dir/controller/controllercredit.cc.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calc.dir/controller/controllercredit.cc.o -MF CMakeFiles/calc.dir/controller/controllercredit.cc.o.d -o CMakeFiles/calc.dir/controller/controllercredit.cc.o -c /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.cc
+
+CMakeFiles/calc.dir/controller/controllercredit.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/calc.dir/controller/controllercredit.cc.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.cc > CMakeFiles/calc.dir/controller/controllercredit.cc.i
+
+CMakeFiles/calc.dir/controller/controllercredit.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calc.dir/controller/controllercredit.cc.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.cc -o CMakeFiles/calc.dir/controller/controllercredit.cc.s
+
 CMakeFiles/calc.dir/model/expression.cc.o: CMakeFiles/calc.dir/flags.make
 CMakeFiles/calc.dir/model/expression.cc.o: /home/kosant/Desktop/Smartcalc_CPP/src/model/expression.cc
 CMakeFiles/calc.dir/model/expression.cc.o: CMakeFiles/calc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/calc.dir/model/expression.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/calc.dir/model/expression.cc.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calc.dir/model/expression.cc.o -MF CMakeFiles/calc.dir/model/expression.cc.o.d -o CMakeFiles/calc.dir/model/expression.cc.o -c /home/kosant/Desktop/Smartcalc_CPP/src/model/expression.cc
 
 CMakeFiles/calc.dir/model/expression.cc.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/calc.dir/model/expression.cc.s: cmake_force
 CMakeFiles/calc.dir/model/credit.cc.o: CMakeFiles/calc.dir/flags.make
 CMakeFiles/calc.dir/model/credit.cc.o: /home/kosant/Desktop/Smartcalc_CPP/src/model/credit.cc
 CMakeFiles/calc.dir/model/credit.cc.o: CMakeFiles/calc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/calc.dir/model/credit.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/calc.dir/model/credit.cc.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calc.dir/model/credit.cc.o -MF CMakeFiles/calc.dir/model/credit.cc.o.d -o CMakeFiles/calc.dir/model/credit.cc.o -c /home/kosant/Desktop/Smartcalc_CPP/src/model/credit.cc
 
 CMakeFiles/calc.dir/model/credit.cc.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/calc.dir/model/credit.cc.s: cmake_force
 CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o: CMakeFiles/calc.dir/flags.make
 CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o: calc_autogen/3YJK5W5UP7/qrc_resources.cpp
 CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o: CMakeFiles/calc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o -MF CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o.d -o CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o -c /home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/calc_autogen/3YJK5W5UP7/qrc_resources.cpp
 
 CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.i: cmake_force
@@ -232,6 +246,7 @@ calc_OBJECTS = \
 "CMakeFiles/calc.dir/view/calculator.cpp.o" \
 "CMakeFiles/calc.dir/view/mainwindow.cpp.o" \
 "CMakeFiles/calc.dir/controller/controllercalculator.cc.o" \
+"CMakeFiles/calc.dir/controller/controllercredit.cc.o" \
 "CMakeFiles/calc.dir/model/expression.cc.o" \
 "CMakeFiles/calc.dir/model/credit.cc.o" \
 "CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o"
@@ -246,6 +261,7 @@ calc: CMakeFiles/calc.dir/view/credit.cpp.o
 calc: CMakeFiles/calc.dir/view/calculator.cpp.o
 calc: CMakeFiles/calc.dir/view/mainwindow.cpp.o
 calc: CMakeFiles/calc.dir/controller/controllercalculator.cc.o
+calc: CMakeFiles/calc.dir/controller/controllercredit.cc.o
 calc: CMakeFiles/calc.dir/model/expression.cc.o
 calc: CMakeFiles/calc.dir/model/credit.cc.o
 calc: CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o
@@ -254,7 +270,7 @@ calc: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
 calc: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 calc: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 calc: CMakeFiles/calc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable calc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable calc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/calc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

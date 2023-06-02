@@ -363,6 +363,7 @@ CMakeFiles/calc.dir/calc_autogen/mocs_compilation.cpp.o: calc_autogen/mocs_compi
   /usr/include/c++/9/bits/stl_stack.h \
   calc_autogen/OTUN7GXZT4/moc_credit.cpp \
   /home/kosant/Desktop/Smartcalc_CPP/src/view/credit.h \
+  /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.h \
   /home/kosant/Desktop/Smartcalc_CPP/src/model/credit.h \
   calc_autogen/OTUN7GXZT4/moc_mainwindow.cpp \
   /home/kosant/Desktop/Smartcalc_CPP/src/view/mainwindow.h \
@@ -3206,6 +3207,7 @@ CMakeFiles/calc.dir/view/credit.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/src/vi
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
+  /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.h \
   /home/kosant/Desktop/Smartcalc_CPP/src/model/credit.h \
   /usr/include/c++/9/cmath \
   /usr/include/math.h \
@@ -3683,6 +3685,7 @@ CMakeFiles/calc.dir/view/mainwindow.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/sr
   /usr/include/c++/9/bits/deque.tcc \
   /usr/include/c++/9/bits/stl_stack.h \
   /home/kosant/Desktop/Smartcalc_CPP/src/view/credit.h \
+  /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.h \
   /home/kosant/Desktop/Smartcalc_CPP/src/model/credit.h
 
 CMakeFiles/calc.dir/view/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.cpp \
@@ -4817,8 +4820,6 @@ calc_autogen/include/ui_calculator.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcolumnview.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdrawutil.h:
@@ -4988,6 +4989,8 @@ calc_autogen/include/ui_calculator.h:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadstorage.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qthreadpool.h:
+
+/usr/include/c++/9/bits/atomic_futex.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h:
 
@@ -6037,6 +6040,10 @@ calc_autogen/OTUN7GXZT4/moc_credit.cpp:
 
 /home/kosant/Desktop/Smartcalc_CPP/src/view/credit.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h:
+
+/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.h:
+
 calc_autogen/OTUN7GXZT4/moc_mainwindow.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow:
@@ -6318,5 +6325,3 @@ calc_autogen/OTUN7GXZT4/moc_mainwindow.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h:
 
 /usr/include/c++/9/ext/concurrence.h:
-
-/usr/include/c++/9/bits/atomic_futex.h:

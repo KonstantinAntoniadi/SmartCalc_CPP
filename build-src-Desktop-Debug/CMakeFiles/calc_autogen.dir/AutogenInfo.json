@@ -105,6 +105,12 @@
 			null
 		],
 		[
+			"/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.h",
+			"MU",
+			"NPUKSKGWT2/moc_controllercredit.cpp",
+			null
+		],
+		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/model/credit.h",
 			"MU",
 			"NLOY5YBGEN/moc_credit.cpp",
@@ -237,6 +243,11 @@
 		],
 		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.cc",
+			"MU",
+			null
+		],
+		[
+			"/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.cc",
 			"MU",
 			null
 		],

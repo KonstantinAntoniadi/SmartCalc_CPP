@@ -54,6 +54,8 @@ set(PROJECT_SOURCES
         view/mainwindow.ui
         controller/controllercalculator.cc
         controller/controllercalculator.h
+        controller/controllercredit.cc
+        controller/controllercredit.h
         model/expression.h
         model/expression.cc
         model/credit.cc

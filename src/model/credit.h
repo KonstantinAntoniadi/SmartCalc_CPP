@@ -25,10 +25,8 @@ class Credit {
   double loan_{};
   int period_{};
   double rate_{};
-  double month_payment_{}, total_payment_{}, overpayment_{};
   double first_payment_{}, last_payment_{};
-  int year_{};
-  int month_{};
+  double month_payment_{}, total_payment_{}, overpayment_{};
   int days_in_year_ = 365;
   double months_in_year_ = 12.0;
 };

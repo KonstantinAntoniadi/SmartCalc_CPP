@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-#include "../model/credit.h"
+#include "../controller/controllercredit.h"
 namespace Ui {
 class Credit;
 }
@@ -20,7 +20,7 @@ class Credit : public QWidget {
 
  private:
   Ui::Credit *ui;
-  s21::Credit credit_;
+  s21::ControllerCredit controller_credit_{};
 };
 
 #endif  // CREDIT_H
