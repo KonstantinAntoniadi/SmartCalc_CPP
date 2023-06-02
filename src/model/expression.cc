@@ -60,25 +60,29 @@ double Expression::CalcFunc(Operation op) {
   return res;
 }
 
-void Expression::CalcOperand(Operation op) {
+double Expression::CalcOperand(Operation op) {
   double b = calculate_.top();
   calculate_.pop();
   double a = calculate_.top();
   calculate_.pop();
 
+  double res = 0;
+
   if (op == PLUS) {
-    calculate_.push(a + b);
+    res = a + b;
   } else if (op == MINUS) {
-    calculate_.push(a - b);
+    res = a - b;
   } else if (op == MUL) {
-    calculate_.push(a * b);
+    res = a * b;
   } else if (op == DIV) {
-    calculate_.push(a / b);
+    res = a / b;
   } else if (op == EXP) {
-    calculate_.push(std::pow(a, b));
+    res = std::pow(a, b);
   } else if (op == MOD) {
-    calculate_.push(std::fmod(a, b));
+    res = std::fmod(a, b);
   }
+
+  return res;
 }
 
 bool Expression::ValidateFunc() {

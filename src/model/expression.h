@@ -97,7 +97,7 @@ class Expression {
     postfix_.clear();
   }
   bool ValidateRPN();
-  void CalcOperand(Operation op);
+  double CalcOperand(Operation op);
   double CalcFunc(Operation op);
   void ProcessBracket();
   void ProcessRemains();
