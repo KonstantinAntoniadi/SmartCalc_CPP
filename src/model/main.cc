@@ -8,8 +8,15 @@ int v() {
 }
 
 int main() {
-  std::string str = "123456789";
+  std::string str = "d4";
   auto start = str.begin();
+  // std::string number;
+  double number = 0;
+  int count;
+  sscanf(&start[0], "%le%n", &number, &count);
 
-  start.
+  std::cout << number << std::endl;
+  std::cout << count << std::endl;
+
+  return 0;
 }

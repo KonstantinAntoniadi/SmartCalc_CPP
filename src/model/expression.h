@@ -111,7 +111,6 @@ class Expression {
   void ProcessRemains();
   void ProcessOperator(Lexeme &lexema);
   bool CheckAssociativity(Lexeme &lexeme);
-  std::string ReadNumber();
   bool IsOperator(const char check);
   bool ValidateOperator();
   bool IsFunc(const char check);

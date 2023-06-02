@@ -150,22 +150,6 @@ bool Expression::ValidateOperator() {
   return result;
 }
 
-std::string Expression::ReadNumber() {
-  unsigned int dot_count = 0;
-  std::string temp;
-  while (good_to_go_ && (isdigit(*cur_it_) || *cur_it_ == '.')) {
-    if (*cur_it_ == '.') dot_count++;
-    if (dot_count <= 1) {
-      temp += *cur_it_;
-      cur_it_ += 1;
-    } else {
-      good_to_go_ = 0;
-    }
-  }
-  cur_it_--;
-  return temp;
-}
-
 void Expression::ConvertToLexemes() {
   for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_;
        cur_it_++) {
@@ -182,8 +166,13 @@ void Expression::ConvertToLexemes() {
     } else if (IsOperator(cur)) {
       good_to_go_ = ValidateOperator();
     } else if (isdigit(cur)) {
-      std::string str_number = ReadNumber();
-      lexemes_.emplace_back(NUMBER, strtod(str_number.data(), 0));
+      double number = 0;
+      int count_symbols_read = 0;
+      sscanf(&cur_it_[0], "%le %n", &number, &count_symbols_read);
+      lexemes_.emplace_back(NUMBER, number);
+      cur_it_ += count_symbols_read - 1;
+    } else {
+      good_to_go_ = false;
     }
   }
 }
