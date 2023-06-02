@@ -30,15 +30,11 @@ void Credit::on_pushButton_calculate_clicked() {
     QDate date_finish = date_current.addMonths(period);
 
     double Sn = loan / period;
-    double payment = Sn + loan * rate / 100 *
-                              (date_current.daysInYear() / 12.0) /
-                              date_current.daysInYear();
+    double payment = Sn + loan * rate / 100 * (365 / 12.0) / 365;
     double first = payment;
     double total = payment;
     for (int i = 1; i < period; i++) {
-      payment = Sn + (loan - i * Sn) * rate / 100 *
-                         (date_current.daysInYear() / 12.0) /
-                         date_current.daysInYear();
+      payment = Sn + (loan - i * Sn) * rate / 100 * (365 / 12.0) / 365;
       total += payment;
       date_current = date_current.addMonths(1);
     }

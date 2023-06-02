@@ -3,23 +3,30 @@
 
 namespace s21 {
 
-void Credit::SetStartValues(const double loan, const int period, const double rate) {
-    loan_ = loan;
-    period_ = period;
-    rate_ = rate;
+void Credit::SetStartValues(const double loan, const int period,
+                            const double rate) {
+  loan_ = loan;
+  period_ = period;
+  rate_ = rate;
 }
 
 void Credit::CalcAnnuity() {
-    month_ = CalcMonthAnnuity();
-    total_ = month_ * period_;
-    overpayment_ = total_ - loan_;
+  month_payment_ = CalcMonthAnnuity();
+  total_payment_ = month_payment_ * period_;
+  overpayment_ = total_payment_ - loan_;
 }
 
 void Credit::CalcDifferentiated() {
-    time_t the_time = time(NULL);
-    struct tm *today = localtime(&the_time);
+  double Sn = loan_ / period_;
+  double payment = Sn + loan_ * rate_ / 100 * (365 / 12.0) / 365;
+  first_payment_ = payment;
+  total_payment_ = payment;
+  for (int i = 1; i < period_; i++) {
+    payment = Sn + (loan_ - i * Sn) * rate_ / 100 * (365 / 12.0) / 365;
+    total_payment_ += payment;
+  }
 
-    int day = today->tm_mday;
+  last_payment_ = payment;
 }
 
 double Credit::CalcMonthAnnuity() {
@@ -28,4 +35,5 @@ double Credit::CalcMonthAnnuity() {
 
   return loan_ * month_rate * temp / (temp - 1);
 }
+
 }  // namespace s21
