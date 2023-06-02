@@ -69,27 +69,19 @@ class Expression {
     unsigned int priority_{};
 
     void SetPrirority() {
-      // для дефолтных нужно сделать 0
-
       if (operation_ == PLUS || operation_ == MINUS || operation_ == MOD) {
         priority_ = 1;
-        // std::cout << "1" << std::endl;
       } else if (operation_ == MUL || operation_ == DIV) {
         priority_ = 2;
-        // std::cout << "2" << std::endl;
 
       } else if (operation_ == EXP || operation_ == UNARMINUS) {
         priority_ = 3;
-        // std::cout << "3" << std::endl;
 
       } else if (operation_ == COS || operation_ == SIN || operation_ == TAN ||
                  operation_ == ACOS || operation_ == ASIN ||
                  operation_ == ATAN || operation_ == SQRT || operation_ == LN ||
                  operation_ == LOG) {
         priority_ = 4;
-        // std::cout << "4" << std::endl;
-      } else {
-        // std::cout << "0" << std::endl;
       }
     }
   };
@@ -106,7 +98,7 @@ class Expression {
   }
   bool ValidateRPN();
   void CalcOperand(Operation op);
-  void CalcFunc(Operation op);
+  double CalcFunc(Operation op);
   void ProcessBracket();
   void ProcessRemains();
   void ProcessOperator(Lexeme &lexema);
@@ -119,13 +111,10 @@ class Expression {
   void ConvertToLexemes();
   // переделать на текущий итератор
   std::string::iterator cur_it_;
-  // std::string postfix_;
   std::string infix_;
   std::stack<Lexeme> operations_;
   std::stack<double> calculate_;
   bool good_to_go_ = false;
-  Operation op_;
-  size_t expresion_size_ = infix_.size();
   double x_{};
   std::vector<Lexeme> lexemes_{};
   std::vector<Lexeme> postfix_{};

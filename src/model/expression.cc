@@ -20,7 +20,7 @@ double Expression::Calculate(const double x) {
       } else if (cur_op == COS || cur_op == SIN || cur_op == TAN ||
                  cur_op == ACOS || cur_op == ASIN || cur_op == ATAN ||
                  cur_op == SQRT || cur_op == LN || cur_op == LOG) {
-        CalcFunc(cur_op);
+        calculate_.push(CalcFunc(cur_op));
       }
     }
     res = calculate_.top();
@@ -32,28 +32,32 @@ double Expression::Calculate(const double x) {
   return res;
 }
 
-void Expression::CalcFunc(Operation op) {  // переделай это на возврат значения
-  double a = calculate_.top();
+double Expression::CalcFunc(Operation op) {
+  double value = calculate_.top();
   calculate_.pop();
+
+  double res = 0;
   if (op == COS) {
-    calculate_.push(std::cos(a));
+    res = std::cos(value);
   } else if (op == SIN) {
-    calculate_.push(std::sin(a));
+    res = std::sin(value);
   } else if (op == TAN) {
-    calculate_.push(std::tan(a));
+    res = std::tan(value);
   } else if (op == ACOS) {
-    calculate_.push(std::acos(a));
+    res = std::acos(value);
   } else if (op == ASIN) {
-    calculate_.push(std::asin(a));
+    res = std::asin(value);
   } else if (op == ATAN) {
-    calculate_.push(std::atan(a));
+    res = std::atan(value);
   } else if (op == SQRT) {
-    calculate_.push(std::sqrt(a));
+    res = std::sqrt(value);
   } else if (op == LN) {
-    calculate_.push(std::log(a));
+    res = std::log(value);
   } else if (op == LOG) {
-    calculate_.push(std::log10(a));
+    res = std::log10(value);
   }
+
+  return res;
 }
 
 void Expression::CalcOperand(Operation op) {
