@@ -1,5 +1,5 @@
-#ifndef CREDIT_H
-#define CREDIT_H
+#ifndef CPP_SMART_CALC_V2_SRC_VIEW_CREDIT_H
+#define CPP_SMART_CALC_V2_SRC_VIEW_CREDIT_H
 
 #include <QWidget>
 
@@ -23,4 +23,4 @@ class Credit : public QWidget {
   s21::ControllerCredit controller_credit_{};
 };
 
-#endif  // CREDIT_H
+#endif  // CPP_SMART_CALC_V2_SRC_VIEW_CREDIT_H

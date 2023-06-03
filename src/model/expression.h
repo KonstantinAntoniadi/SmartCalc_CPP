@@ -1,7 +1,8 @@
-// add headers
-#include <cmath>
-#pragma once
+#ifndef CPP_SMART_CALC_V2_SRC_MODEL_EXPRESSION_H
+#define CPP_SMART_CALC_V2_SRC_MODEL_EXPRESSION_H
+
 #include <algorithm>
+#include <cmath>
 #include <cstring>
 #include <iostream>
 #include <stack>
@@ -127,3 +128,5 @@ class Expression {
 };
 
 };  // namespace s21
+
+#endif  // CPP_SMART_CALC_V2_SRC_MODEL_EXPRESSION_H

@@ -1,5 +1,5 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef CPP_SMART_CALC_V2_SRC_VIEW_MAINWINDOW_H
+#define CPP_SMART_CALC_V2_SRC_VIEW_MAINWINDOW_H
 
 #include <QMainWindow>
 #include <QVector>
@@ -28,4 +28,4 @@ class MainWindow : public QMainWindow {
  private:
   Ui::MainWindow *ui;
 };
-#endif  // MAINWINDOW_H
+#endif  // CPP_SMART_CALC_V2_SRC_VIEW_MAINWINDOW_H

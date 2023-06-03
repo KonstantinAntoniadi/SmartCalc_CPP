@@ -111,19 +111,19 @@ CMakeFiles/calc.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calc.dir/main.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kosant/Desktop/Smartcalc_CPP/src/main.cpp -o CMakeFiles/calc.dir/main.cpp.s
 
-CMakeFiles/calc.dir/view/qcustomplot.cpp.o: CMakeFiles/calc.dir/flags.make
-CMakeFiles/calc.dir/view/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.cpp
-CMakeFiles/calc.dir/view/qcustomplot.cpp.o: CMakeFiles/calc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/calc.dir/view/qcustomplot.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calc.dir/view/qcustomplot.cpp.o -MF CMakeFiles/calc.dir/view/qcustomplot.cpp.o.d -o CMakeFiles/calc.dir/view/qcustomplot.cpp.o -c /home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.cpp
+CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o: CMakeFiles/calc.dir/flags.make
+CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cpp
+CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o: CMakeFiles/calc.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o -MF CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o.d -o CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o -c /home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cpp
 
-CMakeFiles/calc.dir/view/qcustomplot.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/calc.dir/view/qcustomplot.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.cpp > CMakeFiles/calc.dir/view/qcustomplot.cpp.i
+CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cpp > CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.i
 
-CMakeFiles/calc.dir/view/qcustomplot.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calc.dir/view/qcustomplot.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.cpp -o CMakeFiles/calc.dir/view/qcustomplot.cpp.s
+CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cpp -o CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.s
 
 CMakeFiles/calc.dir/view/credit.cpp.o: CMakeFiles/calc.dir/flags.make
 CMakeFiles/calc.dir/view/credit.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/src/view/credit.cpp
@@ -241,7 +241,7 @@ CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.s: cmake_force
 calc_OBJECTS = \
 "CMakeFiles/calc.dir/calc_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/calc.dir/main.cpp.o" \
-"CMakeFiles/calc.dir/view/qcustomplot.cpp.o" \
+"CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o" \
 "CMakeFiles/calc.dir/view/credit.cpp.o" \
 "CMakeFiles/calc.dir/view/calculator.cpp.o" \
 "CMakeFiles/calc.dir/view/mainwindow.cpp.o" \
@@ -256,7 +256,7 @@ calc_EXTERNAL_OBJECTS =
 
 calc: CMakeFiles/calc.dir/calc_autogen/mocs_compilation.cpp.o
 calc: CMakeFiles/calc.dir/main.cpp.o
-calc: CMakeFiles/calc.dir/view/qcustomplot.cpp.o
+calc: CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o
 calc: CMakeFiles/calc.dir/view/credit.cpp.o
 calc: CMakeFiles/calc.dir/view/calculator.cpp.o
 calc: CMakeFiles/calc.dir/view/mainwindow.cpp.o

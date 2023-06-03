@@ -924,7 +924,7 @@ border:3px solid #000;
   <customwidget>
    <class>QCustomPlot</class>
    <extends>QWidget</extends>
-   <header>view/qcustomplot.h</header>
+   <header>view/QCustomPlot/qcustomplot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

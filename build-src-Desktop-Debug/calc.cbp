@@ -180,6 +180,12 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/resources/styles/background.png">
 			<Option target="calc"/>
 		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cpp">
+			<Option target="calc"/>
+		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.h">
+			<Option target="calc"/>
+		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.cpp">
 			<Option target="calc"/>
 		</Unit>
@@ -205,12 +211,6 @@
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/mainwindow.ui">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.cpp">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.h">
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/CMakeLists.txt">

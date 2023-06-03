@@ -28,8 +28,8 @@ set(PROJECT_SOURCES
         resources/icons/icon.icns
         resources/styles/background.png
         main.cpp
-        view/qcustomplot.cpp
-        view/qcustomplot.h
+        view/QCustomPlot/qcustomplot.cpp
+        view/QCustomPlot/qcustomplot.h
         view/credit.cpp
         view/credit.h
         view/credit.ui

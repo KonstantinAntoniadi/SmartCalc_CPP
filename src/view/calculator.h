@@ -1,5 +1,5 @@
-#ifndef CALCULATOR_H
-#define CALCULATOR_H
+#ifndef CPP_SMART_CALC_V2_SRC_VIEW_CALCULATOR_H
+#define CPP_SMART_CALC_V2_SRC_VIEW_CALCULATOR_H
 
 #include <QWidget>
 
@@ -38,4 +38,4 @@ class Calculator : public QWidget {
   QVector<double> x, y;
 };
 
-#endif  // CALCULATOR_H
+#endif  // CPP_SMART_CALC_V2_SRC_VIEW_CALCULATOR_H

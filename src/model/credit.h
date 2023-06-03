@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CPP_SMART_CALC_V2_SRC_MODEL_CREDIT_H
+#define CPP_SMART_CALC_V2_SRC_MODEL_CREDIT_H
 
 #include <time.h>
 
@@ -34,3 +35,5 @@ class Credit {
 };
 
 };  // namespace s21
+
+#endif  // CPP_SMART_CALC_V2_SRC_MODEL_CREDIT_H

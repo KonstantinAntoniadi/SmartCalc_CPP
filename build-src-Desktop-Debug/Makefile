@@ -310,6 +310,30 @@ model/expression.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/expression.cc.s
 .PHONY : model/expression.cc.s
 
+view/QCustomPlot/qcustomplot.o: view/QCustomPlot/qcustomplot.cpp.o
+.PHONY : view/QCustomPlot/qcustomplot.o
+
+# target to build an object file
+view/QCustomPlot/qcustomplot.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o
+.PHONY : view/QCustomPlot/qcustomplot.cpp.o
+
+view/QCustomPlot/qcustomplot.i: view/QCustomPlot/qcustomplot.cpp.i
+.PHONY : view/QCustomPlot/qcustomplot.i
+
+# target to preprocess a source file
+view/QCustomPlot/qcustomplot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.i
+.PHONY : view/QCustomPlot/qcustomplot.cpp.i
+
+view/QCustomPlot/qcustomplot.s: view/QCustomPlot/qcustomplot.cpp.s
+.PHONY : view/QCustomPlot/qcustomplot.s
+
+# target to generate assembly for a file
+view/QCustomPlot/qcustomplot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.s
+.PHONY : view/QCustomPlot/qcustomplot.cpp.s
+
 view/calculator.o: view/calculator.cpp.o
 .PHONY : view/calculator.o
 
@@ -382,30 +406,6 @@ view/mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/mainwindow.cpp.s
 .PHONY : view/mainwindow.cpp.s
 
-view/qcustomplot.o: view/qcustomplot.cpp.o
-.PHONY : view/qcustomplot.o
-
-# target to build an object file
-view/qcustomplot.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/qcustomplot.cpp.o
-.PHONY : view/qcustomplot.cpp.o
-
-view/qcustomplot.i: view/qcustomplot.cpp.i
-.PHONY : view/qcustomplot.i
-
-# target to preprocess a source file
-view/qcustomplot.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/qcustomplot.cpp.i
-.PHONY : view/qcustomplot.cpp.i
-
-view/qcustomplot.s: view/qcustomplot.cpp.s
-.PHONY : view/qcustomplot.s
-
-# target to generate assembly for a file
-view/qcustomplot.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/qcustomplot.cpp.s
-.PHONY : view/qcustomplot.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -437,6 +437,9 @@ help:
 	@echo "... model/expression.o"
 	@echo "... model/expression.i"
 	@echo "... model/expression.s"
+	@echo "... view/QCustomPlot/qcustomplot.o"
+	@echo "... view/QCustomPlot/qcustomplot.i"
+	@echo "... view/QCustomPlot/qcustomplot.s"
 	@echo "... view/calculator.o"
 	@echo "... view/calculator.i"
 	@echo "... view/calculator.s"
@@ -446,9 +449,6 @@ help:
 	@echo "... view/mainwindow.o"
 	@echo "... view/mainwindow.i"
 	@echo "... view/mainwindow.s"
-	@echo "... view/qcustomplot.o"
-	@echo "... view/qcustomplot.i"
-	@echo "... view/qcustomplot.s"
 .PHONY : help
 
 

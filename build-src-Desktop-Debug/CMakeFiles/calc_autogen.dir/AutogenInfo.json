@@ -105,6 +105,12 @@
 			null
 		],
 		[
+			"/home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.h",
+			"MU",
+			"EXROJM2MPK/moc_qcustomplot.cpp",
+			null
+		],
+		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.h",
 			"MU",
 			"OTUN7GXZT4/moc_calculator.cpp",
@@ -120,12 +126,6 @@
 			"/home/kosant/Desktop/Smartcalc_CPP/src/view/mainwindow.h",
 			"MU",
 			"OTUN7GXZT4/moc_mainwindow.cpp",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.h",
-			"MU",
-			"OTUN7GXZT4/moc_qcustomplot.cpp",
 			null
 		]
 	],
@@ -199,6 +199,11 @@
 			null
 		],
 		[
+			"/home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.cpp",
 			"MU",
 			null
@@ -206,11 +211,6 @@
 		[ "/home/kosant/Desktop/Smartcalc_CPP/src/view/credit.cpp", "MU", null ],
 		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/view/mainwindow.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.cpp",
 			"MU",
 			null
 		]

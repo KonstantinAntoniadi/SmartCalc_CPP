@@ -15,10 +15,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kosant/Desktop/Smartcalc_CPP/src/main.cpp" "CMakeFiles/calc.dir/main.cpp.o" "gcc" "CMakeFiles/calc.dir/main.cpp.o.d"
   "/home/kosant/Desktop/Smartcalc_CPP/src/model/credit.cc" "CMakeFiles/calc.dir/model/credit.cc.o" "gcc" "CMakeFiles/calc.dir/model/credit.cc.o.d"
   "/home/kosant/Desktop/Smartcalc_CPP/src/model/expression.cc" "CMakeFiles/calc.dir/model/expression.cc.o" "gcc" "CMakeFiles/calc.dir/model/expression.cc.o.d"
+  "/home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cpp" "CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o" "gcc" "CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o.d"
   "/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.cpp" "CMakeFiles/calc.dir/view/calculator.cpp.o" "gcc" "CMakeFiles/calc.dir/view/calculator.cpp.o.d"
   "/home/kosant/Desktop/Smartcalc_CPP/src/view/credit.cpp" "CMakeFiles/calc.dir/view/credit.cpp.o" "gcc" "CMakeFiles/calc.dir/view/credit.cpp.o.d"
   "/home/kosant/Desktop/Smartcalc_CPP/src/view/mainwindow.cpp" "CMakeFiles/calc.dir/view/mainwindow.cpp.o" "gcc" "CMakeFiles/calc.dir/view/mainwindow.cpp.o.d"
-  "/home/kosant/Desktop/Smartcalc_CPP/src/view/qcustomplot.cpp" "CMakeFiles/calc.dir/view/qcustomplot.cpp.o" "gcc" "CMakeFiles/calc.dir/view/qcustomplot.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

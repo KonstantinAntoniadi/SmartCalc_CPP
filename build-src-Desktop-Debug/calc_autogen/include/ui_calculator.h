@@ -18,7 +18,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QWidget>
-#include "view/qcustomplot.h"
+#include "view/QCustomPlot/qcustomplot.h"
 
 QT_BEGIN_NAMESPACE
 
