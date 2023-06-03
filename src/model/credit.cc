@@ -1,4 +1,3 @@
-// #pragma once
 #include "credit.h"
 
 namespace s21 {

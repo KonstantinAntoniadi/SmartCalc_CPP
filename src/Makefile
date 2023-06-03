@@ -1,6 +1,6 @@
 CC=g++
 CFLAG=-c 
-CFLAGS=-Wall -Werror -Wextra
+CFLAGS=-Wall -Werror -Wextra -std=c++17
 SRC_DIR=backend
 BACK_SRC=$(SRC_DIR)/*.c
 STACS_SRC=$(SRC_DIR)/stacks/*.c
@@ -28,21 +28,30 @@ open:
 dvi:
 	@open README.pdf
 
-test: clean
-	@$(CC) $(CFLAGS) model/creditcalculator.cc model/expression.cc -std=c++17 $(TEST)  -o unit_test  -lgtest -lrt -lpthread -lm
+expression.o: model/expression.cc
+	@$(CC) $(CFLAGS) -c model/expression.cc -o expression.o
+
+creditcalculator.o: model/creditcalculator.cc
+	@$(CC) $(CFLAGS) -c model/creditcalculator.cc -o creditcalculator.o
+
+expression.a: expression.o
+	@ar rcs expression.a expression.o
+
+creditcalculator.a: creditcalculator.o
+	@ar rcs creditcalculator.a creditcalculator.o
+
+test: expression.a creditcalculator.a clean
+	@$(CC) $(CFLAGS) $(TEST) creditcalculator.a expression.a -o unit_test  -lgtest -lpthread
 	@./unit_test
 
 
 gcov_report:
-	$(CC) $(CFLAGS) --coverage $(TEST) $(BACK_SRC)  $(NAME) $(TEST_LIBS) -o gcov_test
+	$(CC) $(CFLAGS) model/creditcalculator.cc model/expression.cc --coverage $(TEST) -o gcov_test  -lgtest -lpthread 
 	chmod +x *
 	./gcov_test
 	lcov -t "gcov_test" -o gcov_test.info --no-external -c -d .
 	genhtml -o report/ gcov_test.info
 	open ./report/index.html
-
-valgrind: test
-	valgrind --vgdb=no --leak-check=full --log-file="logs" --track-origins=yes --verbose ./unit_test
 
 dist:
 	rm -rf Archive_calc/
@@ -55,10 +64,10 @@ format:
 
 
 check: 
-	clang-format -n */*.c */*/*.c */*.h */*/*.h */*.cpp
+	clang-format -style=Google -n */*.cc  */*.h  */*.cpp --verbose
 
 clean:
-	@rm -rf *.o
+	@rm -rf *.o *.a
 	@rm -rf *.gcda *.gcno *.info
 	@rm -rf gcov_report
 	@rm -rf gcov_test

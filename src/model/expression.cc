@@ -294,8 +294,6 @@ bool Expression::IsFunc(const char check) {  // НЕ ООП
   return (funcs.find(check) != std::string::npos);
 }
 
-bool Expression::IsValidFunc() { return true; }
-
 bool Expression::OperationIsFunc(Operation op) {
   return std::count(funcs_.begin(), funcs_.end(), op);
 }

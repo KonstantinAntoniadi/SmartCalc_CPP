@@ -54,8 +54,6 @@ class Expression {
   double Calculate(const double x);
   // стоит объединить функции ниже
 
-  bool IsValidFunc();
-
  private:
   class Lexeme {
    public:
