@@ -1,7 +1,7 @@
-#include "expression.h"
+#include "expresultsion.h"
 
 namespace s21 {
-void Expression::ConvertToLexemes() {
+void Expresultsion::ConvertToLexemes() {
   for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_;
        cur_it_++) {
     char cur = *cur_it_;
@@ -30,10 +30,10 @@ void Expression::ConvertToLexemes() {
   // ValidateRPN();
 }
 
-double Expression::Calculate(const double x) {
+double Expresultsion::Calculate(const double x) {
   x_ = x;
   // std::cout <<
-  double res = 0;
+  double result = 0;
   if (good_to_go_) {
     for (auto it = postfix_.begin(); it != postfix_.end(); it++) {
       Operation cur_op = it->GetOperation();
@@ -50,70 +50,70 @@ double Expression::Calculate(const double x) {
         calculate_.push(CalcFunc(cur_op));
       }
     }
-    res = calculate_.top();
+    result = calculate_.top();
   }
 
   // while (!calculate_.empty()) {
   //   calculate_.pop();
   // }
-  return res;
+  return result;
 }
 
-double Expression::CalcFunc(Operation op) {
+double Expresultsion::CalcFunc(Operation op) {
   double value = calculate_.top();
   calculate_.pop();
 
-  double res = 0;
+  double result = 0;
   if (op == COS) {
-    res = std::cos(value);
+    result = std::cos(value);
   } else if (op == SIN) {
-    res = std::sin(value);
+    result = std::sin(value);
   } else if (op == TAN) {
-    res = std::tan(value);
+    result = std::tan(value);
   } else if (op == ACOS) {
-    res = std::acos(value);
+    result = std::acos(value);
   } else if (op == ASIN) {
-    res = std::asin(value);
+    result = std::asin(value);
   } else if (op == ATAN) {
-    res = std::atan(value);
+    result = std::atan(value);
   } else if (op == SQRT) {
-    res = std::sqrt(value);
+    result = std::sqrt(value);
   } else if (op == LN) {
-    res = std::log(value);
+    result = std::log(value);
   } else if (op == LOG) {
-    res = std::log10(value);
+    result = std::log10(value);
   }
 
-  return res;
+  return result;
 }
 
-double Expression::CalcOperand(Operation op) {
+double Expresultsion::CalcOperand(Operation op) {
   double b = calculate_.top();
   calculate_.pop();
   double a = calculate_.top();
   calculate_.pop();
 
-  double res = 0;
+  double result = 0;
 
   if (op == PLUS) {
-    res = a + b;
+    result = a + b;
   } else if (op == MINUS) {
-    res = a - b;
+    result = a - b;
   } else if (op == MUL) {
-    res = a * b;
+    result = a * b;
   } else if (op == DIV) {
-    res = a / b;
+    result = a / b;
   } else if (op == EXP) {
-    res = std::pow(a, b);
+    result = std::pow(a, b);
   } else if (op == MOD) {
-    res = std::fmod(a, b);
+    result = std::fmod(a, b);
   }
 
-  return res;
+  return result;
 }
 
-bool Expression::ValidateFunc() {
-  bool res = true;
+bool Expresultsion::ValidateFunc() {
+  bool result = true;
   if (!strncmp(&cur_it_[0], "cos", 3)) {
     lexemes_.emplace_back(COS);
     cur_it_ += 2;
@@ -142,19 +142,19 @@ bool Expression::ValidateFunc() {
     lexemes_.emplace_back(LOG);
     cur_it_ += 2;
   } else {
-    res = false;
+    result = false;
   }
 
-  return res;
+  return result;
 }
 
-bool Expression::IsOperator(const char check) {  // НЕ ООП
+bool Expresultsion::IsOperator(const char check) {  // НЕ ООП
   std::string operators = "+-*/^m";
   return (operators.find(check) != std::string::npos);
 }
 
-bool Expression::ValidateOperator() {
-  bool res = true;
+bool Expresultsion::ValidateOperator() {
+  bool result = true;
 
   if (*cur_it_ == '+') {
     if (!lexemes_.empty() &&
@@ -179,13 +179,13 @@ bool Expression::ValidateOperator() {
     lexemes_.emplace_back(MOD);
     cur_it_ += 2;
   } else {
-    res = false;
+    result = false;
   }
 
-  return res;
+  return result;
 }
 
-void Expression::GetPostfix() {
+void Expresultsion::GetPostfix() {
   for (auto it = lexemes_.begin(); it != lexemes_.end() && good_to_go_; it++) {
     Operation cur_op = it->GetOperation();
     if (cur_op == NUMBER || cur_op == X)
@@ -209,7 +209,7 @@ void Expression::GetPostfix() {
   //   записать
 }
 
-bool Expression::ValidateRPN() {
+bool Expresultsion::ValidateRPN() {
   bool good_rpn = true;
   int value = 0;
   int size = 0;
@@ -233,7 +233,7 @@ bool Expression::ValidateRPN() {
   return good_rpn;
 }
 
-void Expression::ProcessRemains() {
+void Expresultsion::ProcessRemains() {
   while (!operations_.empty() && good_to_go_) {
     if (operations_.top().GetOperation() == OPENBRACKET ||
         operations_.top().GetOperation() == CLOSEBRACKET) {
@@ -246,7 +246,7 @@ void Expression::ProcessRemains() {
   }
 }
 
-void Expression::ProcessBracket() {
+void Expresultsion::ProcessBracket() {
   if (!operations_.empty()) {
     while (!operations_.empty() &&
            operations_.top().GetOperation() != OPENBRACKET) {
@@ -266,7 +266,7 @@ void Expression::ProcessBracket() {
   // return good_to_go_;  // убрать это
 }
 
-void Expression::ProcessOperator(Lexeme &lexeme) {
+void Expresultsion::ProcessOperator(Lexeme &lexeme) {
   int pr_head = 0;
   if (!operations_.empty()) pr_head = operations_.top().GetPriority();
   int pr_c = lexeme.GetPriority();  // измени название
@@ -281,22 +281,22 @@ void Expression::ProcessOperator(Lexeme &lexeme) {
   // return true;  // избавься потом от возврата
 }
 
-bool Expression::CheckAssociativity(Lexeme &lexeme) {
+bool Expresultsion::CheckAssociativity(Lexeme &lexeme) {
   Operation add_operation = lexeme.GetOperation();
   Operation stack_operation = operations_.top().GetOperation();
   return (add_operation != EXP && add_operation != UNARMINUS) ||
          (stack_operation != EXP && stack_operation != UNARMINUS);
 }
 
-bool Expression::IsFunc(const char check) {  // НЕ ООП
+bool Expresultsion::IsFunc(const char check) {  // НЕ ООП
   // перепиши и используй итератор
   std::string funcs = "cstal";
   return (funcs.find(check) != std::string::npos);
 }
 
-bool Expression::IsValidFunc() { return true; }
+bool Expresultsion::IsValidFunc() { return true; }
 
-bool Expression::OperationIsFunc(Operation op) {
+bool Expresultsion::OperationIsFunc(Operation op) {
   return std::count(funcs_.begin(), funcs_.end(), op);
 }
 
