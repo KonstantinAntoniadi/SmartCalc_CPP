@@ -2,7 +2,6 @@
 
 #include <QDate>
 
-#include "../backend/credit.c"
 #include "ui_credit.h"
 
 Credit::Credit(QWidget *parent) : QWidget(parent), ui(new Ui::Credit) {

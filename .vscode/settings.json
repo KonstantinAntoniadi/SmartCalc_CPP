@@ -99,6 +99,7 @@
         "cinttypes": "cpp",
         "variant": "cpp",
         "set": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "credit.c": "cpp"
     }
 }

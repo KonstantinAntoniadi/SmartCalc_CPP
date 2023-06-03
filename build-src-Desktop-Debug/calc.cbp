@@ -132,45 +132,6 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/calc_autogen/mocs_compilation.cpp">
 			<Option target="calc"/>
 		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.c">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.h">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/checkFuncs.c">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/credit.c">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/getPostfix.c">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/processFuncs.c">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.c">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.c">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/validateFunc.c">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/validateOperator.c">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/backend/validateRPN.c">
-			<Option target="calc"/>
-		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/calc_en_US.ts">
 			<Option target="calc"/>
 		</Unit>

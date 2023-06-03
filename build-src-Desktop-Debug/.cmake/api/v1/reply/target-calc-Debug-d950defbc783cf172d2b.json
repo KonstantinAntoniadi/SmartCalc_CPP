@@ -30,13 +30,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 88,
+				"line" : 75,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 97,
+				"line" : 84,
 				"parent" : 0
 			},
 			{
@@ -151,16 +151,16 @@
 			"sourceIndexes" : 
 			[
 				0,
-				19,
+				6,
+				7,
+				9,
+				13,
+				15,
+				18,
 				20,
-				22,
-				26,
-				28,
-				31,
-				33,
-				36,
-				37,
-				43
+				23,
+				24,
+				30
 			]
 		}
 	],
@@ -217,25 +217,15 @@
 			[
 				0,
 				6,
-				8,
-				10,
-				12,
+				7,
+				9,
 				13,
-				14,
 				15,
-				16,
-				17,
 				18,
-				19,
 				20,
-				22,
-				26,
-				28,
-				31,
-				33,
-				36,
-				37,
-				43
+				23,
+				24,
+				30
 			]
 		},
 		{
@@ -245,10 +235,10 @@
 				1,
 				3,
 				4,
-				24,
-				27,
-				30,
-				39
+				11,
+				14,
+				17,
+				26
 			]
 		},
 		{
@@ -263,28 +253,25 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				7,
-				9,
-				11,
+				8,
+				10,
+				12,
+				16,
+				19,
 				21,
-				23,
+				22,
 				25,
-				29,
-				32,
-				34,
-				35,
-				38,
-				40,
-				41,
-				42
+				27,
+				28,
+				29
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				44,
-				45
+				31,
+				32
 			]
 		}
 	],
@@ -321,71 +308,6 @@
 			"backtrace" : 1,
 			"path" : "resources/styles/background.png",
 			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/stacks/operation.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/stacks/operation.h",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/stacks/number.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/stacks/number.h",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/calc.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/calc.h",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/getPostfix.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/validateFunc.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/validateOperator.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/validateRPN.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/checkFuncs.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/processFuncs.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "backend/credit.c",
-			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,

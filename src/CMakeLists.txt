@@ -27,19 +27,6 @@ set(PROJECT_SOURCES
         resources/icons/icon.ico
         resources/icons/icon.icns
         resources/styles/background.png
-        backend/stacks/operation.c
-        backend/stacks/operation.h
-        backend/stacks/number.c
-        backend/stacks/number.h
-        backend/calc.c
-        backend/calc.h
-        backend/getPostfix.c
-        backend/validateFunc.c
-        backend/validateOperator.c
-        backend/validateRPN.c
-        backend/checkFuncs.c
-        backend/processFuncs.c
-        backend/credit.c
         main.cpp
         view/qcustomplot.cpp
         view/qcustomplot.h

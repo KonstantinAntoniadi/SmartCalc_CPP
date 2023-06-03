@@ -114,9 +114,9 @@ void Calculator::on_calcButtonClicked() {
   QByteArray ba = expression_str.toLocal8Bit();
   std::string expression = ba.data();
   controller_.SetExpression(expression);
+  double x = ui->doubleSpinBox->value();
   if (controller_.IsValidExpression()) {
-    ui->lineEdit->setText(QString::number(controller_.Calculate(
-        ui->doubleSpinBox->value())));  // добавить сюда подстановку икса
+    ui->lineEdit->setText(QString::number(controller_.Calculate(x)));
   } else {
     ui->lineEdit->setText("Error");
   }

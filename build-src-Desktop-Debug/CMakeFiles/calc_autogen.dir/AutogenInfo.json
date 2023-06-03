@@ -81,24 +81,6 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.h",
-			"MU",
-			"FVSNT77ZGO/moc_calc.cpp",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h",
-			"MU",
-			"PSYKPQMXAY/moc_number.cpp",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h",
-			"MU",
-			"PSYKPQMXAY/moc_operation.cpp",
-			null
-		],
-		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.h",
 			"MU",
 			"NPUKSKGWT2/moc_controllercalculator.cpp",
@@ -199,48 +181,6 @@
 	"SETTINGS_FILE" : "/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles/calc_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.c", "MU", null ],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/checkFuncs.c",
-			"MU",
-			null
-		],
-		[ "/home/kosant/Desktop/Smartcalc_CPP/src/backend/credit.c", "MU", null ],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/getPostfix.c",
-			"MU",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/processFuncs.c",
-			"MU",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.c",
-			"MU",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.c",
-			"MU",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/validateFunc.c",
-			"MU",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/validateOperator.c",
-			"MU",
-			null
-		],
-		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/backend/validateRPN.c",
-			"MU",
-			null
-		],
 		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.cc",
 			"MU",

@@ -51,7 +51,7 @@ dist:
 	tar -cvzf Archive_calc.tar.gz Archive_calc
 
 format:
-	clang-format -style=Google -i */*.cc */*/*.cc */*.h */*/*.h */*.cpp
+	clang-format -style=Google -i */*.cc  */*.h  */*.cpp
 
 
 check: 
