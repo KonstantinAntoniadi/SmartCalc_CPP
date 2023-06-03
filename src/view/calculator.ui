@@ -74,8 +74,11 @@ border:3px solid #000;
    <property name="maximum">
     <number>1000000</number>
    </property>
+   <property name="singleStep">
+    <number>10</number>
+   </property>
    <property name="value">
-    <number>-5</number>
+    <number>-50</number>
    </property>
   </widget>
   <widget class="QSpinBox" name="spinBox_xMax">
@@ -93,8 +96,11 @@ border:3px solid #000;
    <property name="maximum">
     <number>1000000</number>
    </property>
+   <property name="singleStep">
+    <number>10</number>
+   </property>
    <property name="value">
-    <number>5</number>
+    <number>50</number>
    </property>
   </widget>
   <widget class="QSpinBox" name="spinBox_yMax">
@@ -112,8 +118,11 @@ border:3px solid #000;
    <property name="maximum">
     <number>1000000</number>
    </property>
+   <property name="singleStep">
+    <number>10</number>
+   </property>
    <property name="value">
-    <number>5</number>
+    <number>50</number>
    </property>
   </widget>
   <widget class="QWidget" name="gridLayoutWidget">
@@ -724,8 +733,11 @@ border:3px solid #000;
    <property name="maximum">
     <number>1000000</number>
    </property>
+   <property name="singleStep">
+    <number>10</number>
+   </property>
    <property name="value">
-    <number>-5</number>
+    <number>-50</number>
    </property>
   </widget>
   <widget class="QFrame" name="frame">
@@ -912,7 +924,7 @@ border:3px solid #000;
   <customwidget>
    <class>QCustomPlot</class>
    <extends>QWidget</extends>
-   <header>qcustomplot.h</header>
+   <header>view/qcustomplot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

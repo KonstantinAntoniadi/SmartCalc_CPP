@@ -3381,11 +3381,6 @@ CMakeFiles/calc.dir/view/credit.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/src/vi
   /usr/include/c++/9/tr1/riemann_zeta.tcc \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDate \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/credit.c \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.h \
-  /usr/include/c++/9/math.h \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h \
-  /home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h \
   calc_autogen/include/ui_credit.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -4824,10 +4819,6 @@ CMakeFiles/calc.dir/view/qcustomplot.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/s
 
 calc_autogen/include/ui_mainwindow.h:
 
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/operation.h:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/calc.h:
-
 /home/kosant/Desktop/Smartcalc_CPP/src/view/credit.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit:
@@ -5498,8 +5489,6 @@ calc_autogen/3YJK5W5UP7/qrc_resources.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmimedatabase.h:
 
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/credit.c:
-
 /usr/include/c++/9/bits/functional_hash.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h:
@@ -5647,8 +5636,6 @@ calc_autogen/OTUN7GXZT4/moc_qcustomplot.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpicture.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h:
-
-/usr/include/c++/9/math.h:
 
 /usr/include/linux/limits.h:
 
@@ -5947,8 +5934,6 @@ calc_autogen/mocs_compilation.cpp:
 /usr/include/c++/9/bits/allocated_ptr.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h:
-
-/home/kosant/Desktop/Smartcalc_CPP/src/backend/stacks/number.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h:
 
