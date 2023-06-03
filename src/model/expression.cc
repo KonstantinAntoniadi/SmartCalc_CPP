@@ -1,7 +1,7 @@
-#include "expresultsion.h"
+#include "expression.h"
 
 namespace s21 {
-void Expresultsion::ConvertToLexemes() {
+void Expression::ConvertToLexemes() {
   for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_;
        cur_it_++) {
     char cur = *cur_it_;
@@ -30,7 +30,7 @@ void Expresultsion::ConvertToLexemes() {
   // ValidateRPN();
 }
 
-double Expresultsion::Calculate(const double x) {
+double Expression::Calculate(const double x) {
   x_ = x;
   // std::cout <<
   double result = 0;
@@ -59,7 +59,7 @@ double Expresultsion::Calculate(const double x) {
   return result;
 }
 
-double Expresultsion::CalcFunc(Operation op) {
+double Expression::CalcFunc(Operation op) {
   double value = calculate_.top();
   calculate_.pop();
 
@@ -87,7 +87,7 @@ double Expresultsion::CalcFunc(Operation op) {
   return result;
 }
 
-double Expresultsion::CalcOperand(Operation op) {
+double Expression::CalcOperand(Operation op) {
   double b = calculate_.top();
   calculate_.pop();
   double a = calculate_.top();
@@ -112,7 +112,7 @@ double Expresultsion::CalcOperand(Operation op) {
   return result;
 }
 
-bool Expresultsion::ValidateFunc() {
+bool Expression::ValidateFunc() {
   bool result = true;
   if (!strncmp(&cur_it_[0], "cos", 3)) {
     lexemes_.emplace_back(COS);
@@ -148,12 +148,12 @@ bool Expresultsion::ValidateFunc() {
   return result;
 }
 
-bool Expresultsion::IsOperator(const char check) {  // НЕ ООП
+bool Expression::IsOperator(const char check) {  // НЕ ООП
   std::string operators = "+-*/^m";
   return (operators.find(check) != std::string::npos);
 }
 
-bool Expresultsion::ValidateOperator() {
+bool Expression::ValidateOperator() {
   bool result = true;
 
   if (*cur_it_ == '+') {
@@ -185,7 +185,7 @@ bool Expresultsion::ValidateOperator() {
   return result;
 }
 
-void Expresultsion::GetPostfix() {
+void Expression::GetPostfix() {
   for (auto it = lexemes_.begin(); it != lexemes_.end() && good_to_go_; it++) {
     Operation cur_op = it->GetOperation();
     if (cur_op == NUMBER || cur_op == X)
@@ -209,7 +209,7 @@ void Expresultsion::GetPostfix() {
   //   записать
 }
 
-bool Expresultsion::ValidateRPN() {
+bool Expression::ValidateRPN() {
   bool good_rpn = true;
   int value = 0;
   int size = 0;
@@ -233,7 +233,7 @@ bool Expresultsion::ValidateRPN() {
   return good_rpn;
 }
 
-void Expresultsion::ProcessRemains() {
+void Expression::ProcessRemains() {
   while (!operations_.empty() && good_to_go_) {
     if (operations_.top().GetOperation() == OPENBRACKET ||
         operations_.top().GetOperation() == CLOSEBRACKET) {
@@ -246,7 +246,7 @@ void Expresultsion::ProcessRemains() {
   }
 }
 
-void Expresultsion::ProcessBracket() {
+void Expression::ProcessBracket() {
   if (!operations_.empty()) {
     while (!operations_.empty() &&
            operations_.top().GetOperation() != OPENBRACKET) {
@@ -266,7 +266,7 @@ void Expresultsion::ProcessBracket() {
   // return good_to_go_;  // убрать это
 }
 
-void Expresultsion::ProcessOperator(Lexeme &lexeme) {
+void Expression::ProcessOperator(Lexeme &lexeme) {
   int pr_head = 0;
   if (!operations_.empty()) pr_head = operations_.top().GetPriority();
   int pr_c = lexeme.GetPriority();  // измени название
@@ -281,22 +281,22 @@ void Expresultsion::ProcessOperator(Lexeme &lexeme) {
   // return true;  // избавься потом от возврата
 }
 
-bool Expresultsion::CheckAssociativity(Lexeme &lexeme) {
+bool Expression::CheckAssociativity(Lexeme &lexeme) {
   Operation add_operation = lexeme.GetOperation();
   Operation stack_operation = operations_.top().GetOperation();
   return (add_operation != EXP && add_operation != UNARMINUS) ||
          (stack_operation != EXP && stack_operation != UNARMINUS);
 }
 
-bool Expresultsion::IsFunc(const char check) {  // НЕ ООП
+bool Expression::IsFunc(const char check) {  // НЕ ООП
   // перепиши и используй итератор
   std::string funcs = "cstal";
   return (funcs.find(check) != std::string::npos);
 }
 
-bool Expresultsion::IsValidFunc() { return true; }
+bool Expression::IsValidFunc() { return true; }
 
-bool Expresultsion::OperationIsFunc(Operation op) {
+bool Expression::OperationIsFunc(Operation op) {
   return std::count(funcs_.begin(), funcs_.end(), op);
 }
 
