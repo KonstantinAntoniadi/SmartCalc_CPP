@@ -150,7 +150,7 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.h">
 			<Option target="calc"/>
 		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/main.cpp">
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/main.cc">
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/model/creditcalculator.cc">
@@ -180,13 +180,13 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/resources/styles/background.png">
 			<Option target="calc"/>
 		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cpp">
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cc">
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.h">
 			<Option target="calc"/>
 		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.cpp">
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.cc">
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.h">
@@ -195,7 +195,7 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.ui">
 			<Option target="calc"/>
 		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/credit.cpp">
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/credit.cc">
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/credit.h">
@@ -204,7 +204,7 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/credit.ui">
 			<Option target="calc"/>
 		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/mainwindow.cpp">
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/mainwindow.cc">
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/mainwindow.h">

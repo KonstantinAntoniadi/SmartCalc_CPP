@@ -27,16 +27,16 @@ set(PROJECT_SOURCES
         resources/icons/icon.ico
         resources/icons/icon.icns
         resources/styles/background.png
-        main.cpp
-        view/QCustomPlot/qcustomplot.cpp
+        main.cc
+        view/QCustomPlot/qcustomplot.cc
         view/QCustomPlot/qcustomplot.h
-        view/credit.cpp
+        view/credit.cc
         view/credit.h
         view/credit.ui
         view/calculator.h
-        view/calculator.cpp
+        view/calculator.cc
         view/calculator.ui
-        view/mainwindow.cpp
+        view/mainwindow.cc
         view/mainwindow.h
         view/mainwindow.ui
         controller/controllercalculator.cc

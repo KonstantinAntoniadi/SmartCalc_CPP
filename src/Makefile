@@ -1,23 +1,25 @@
-CC=g++
-CFLAG=-c 
-CFLAGS=-Wall -Werror -Wextra -std=c++17
-SRC_DIR=backend
-BACK_SRC=$(SRC_DIR)/*.c
-STACS_SRC=$(SRC_DIR)/stacks/*.c
-TEST=test/*.cc
+CC = g++
+CFLAG = -c 
+CFLAGS = -Wall -Werror -Wextra -std=c++17
+TEST =t est/*.cc
+GTEST_DIR = test
+EXPRESSION = model/expression.cc
+CREDITCALCULATOR = model/creditcalculator.cc
 OS := $(shell uname)
 
 ifeq ($(OS),Linux)
-TEST_LIBS = -lcheck -lm -lpthread -lrt -lsubunit -fprofile-arcs -ftest-coverage
+TESTFLAGS = -lgtest -lpthread 
 else
-TEST_LIBS = -lcheck -lm -lpthread -fprofile-arcs -ftest-coverage
+TESTFLAGS = -lcheck -lm -lpthread -fprofile-arcs -ftest-coverage
 endif
 
 all: clean install open
 
+.PHONY: expression.a creditcalculator.a
+
 install: clean
-	@cp resources/fonts/PetMe.ttf ~/Library/Fonts
-	@cd front && cmake CMakeLists.txt && make && rm Makefile && mv calc.app ~/Desktop
+	@cp resources/fonts/PetMe.ttf ~/Library/Fonts 2>/dev/null
+	@ cmake CMakeLists.txt && make && rm Makefile && mv calc.app ~/Desktop
 
 uninstall:
 	rm -rf ~/Desktop/calc.app
@@ -28,11 +30,11 @@ open:
 dvi:
 	@open README.pdf
 
-expression.o: model/expression.cc
-	@$(CC) $(CFLAGS) -c model/expression.cc -o expression.o
+expression.o: $(EXPRESSION)
+	@$(CC) $(CFLAGS) -c $(EXPRESSION) -o expression.o
 
-creditcalculator.o: model/creditcalculator.cc
-	@$(CC) $(CFLAGS) -c model/creditcalculator.cc -o creditcalculator.o
+creditcalculator.o: $(CREDITCALCULATOR)
+	@$(CC) $(CFLAGS) -c $(CREDITCALCULATOR) -o creditcalculator.o
 
 expression.a: expression.o
 	@ar rcs expression.a expression.o
@@ -40,13 +42,13 @@ expression.a: expression.o
 creditcalculator.a: creditcalculator.o
 	@ar rcs creditcalculator.a creditcalculator.o
 
-test: expression.a creditcalculator.a clean
-	@$(CC) $(CFLAGS) $(TEST) creditcalculator.a expression.a -o unit_test  -lgtest -lpthread
+test: clean expression.a creditcalculator.a
+	@$(CC) $(CFLAGS) $(TEST) creditcalculator.a expression.a -o unit_test -lgtest -lpthread
 	@./unit_test
 
 
-gcov_report:
-	$(CC) $(CFLAGS) model/creditcalculator.cc model/expression.cc --coverage $(TEST) -o gcov_test  -lgtest -lpthread 
+gcov_report: clean expression.o creditcalculator.o
+	$(CC) $(CFLAGS) $(CREDITCALCULATOR) $(EXPRESSION) --coverage $(TEST) -o gcov_test $(TESTFLAGS)
 	chmod +x *
 	./gcov_test
 	lcov -t "gcov_test" -o gcov_test.info --no-external -c -d .
@@ -54,6 +56,10 @@ gcov_report:
 	open ./report/index.html
 
 dist:
+	mkdir SmartCalc_v2/
+	mkdir SmartCalc_v2/src
+	cp Makefile CMakeLists.txt calc_en_US.ts 
+
 	rm -rf Archive_calc/
 	mkdir Archive_calc/
 	mv calc.app Archive_calc
@@ -61,7 +67,6 @@ dist:
 
 format:
 	clang-format -style=Google -i */*.cc  */*.h  */*.cpp
-
 
 check: 
 	clang-format -style=Google -n */*.cc  */*.h  */*.cpp --verbose

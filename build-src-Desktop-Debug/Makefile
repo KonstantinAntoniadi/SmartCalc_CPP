@@ -238,29 +238,29 @@ controller/controllercredit.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/controller/controllercredit.cc.s
 .PHONY : controller/controllercredit.cc.s
 
-main.o: main.cpp.o
+main.o: main.cc.o
 .PHONY : main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/main.cc.o
+.PHONY : main.cc.o
 
-main.i: main.cpp.i
+main.i: main.cc.i
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/main.cpp.i
-.PHONY : main.cpp.i
+main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/main.cc.i
+.PHONY : main.cc.i
 
-main.s: main.cpp.s
+main.s: main.cc.s
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/main.cc.s
+.PHONY : main.cc.s
 
 model/creditcalculator.o: model/creditcalculator.cc.o
 .PHONY : model/creditcalculator.o
@@ -310,101 +310,101 @@ model/expression.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/expression.cc.s
 .PHONY : model/expression.cc.s
 
-view/QCustomPlot/qcustomplot.o: view/QCustomPlot/qcustomplot.cpp.o
+view/QCustomPlot/qcustomplot.o: view/QCustomPlot/qcustomplot.cc.o
 .PHONY : view/QCustomPlot/qcustomplot.o
 
 # target to build an object file
-view/QCustomPlot/qcustomplot.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.o
-.PHONY : view/QCustomPlot/qcustomplot.cpp.o
+view/QCustomPlot/qcustomplot.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cc.o
+.PHONY : view/QCustomPlot/qcustomplot.cc.o
 
-view/QCustomPlot/qcustomplot.i: view/QCustomPlot/qcustomplot.cpp.i
+view/QCustomPlot/qcustomplot.i: view/QCustomPlot/qcustomplot.cc.i
 .PHONY : view/QCustomPlot/qcustomplot.i
 
 # target to preprocess a source file
-view/QCustomPlot/qcustomplot.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.i
-.PHONY : view/QCustomPlot/qcustomplot.cpp.i
+view/QCustomPlot/qcustomplot.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cc.i
+.PHONY : view/QCustomPlot/qcustomplot.cc.i
 
-view/QCustomPlot/qcustomplot.s: view/QCustomPlot/qcustomplot.cpp.s
+view/QCustomPlot/qcustomplot.s: view/QCustomPlot/qcustomplot.cc.s
 .PHONY : view/QCustomPlot/qcustomplot.s
 
 # target to generate assembly for a file
-view/QCustomPlot/qcustomplot.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cpp.s
-.PHONY : view/QCustomPlot/qcustomplot.cpp.s
+view/QCustomPlot/qcustomplot.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/QCustomPlot/qcustomplot.cc.s
+.PHONY : view/QCustomPlot/qcustomplot.cc.s
 
-view/calculator.o: view/calculator.cpp.o
+view/calculator.o: view/calculator.cc.o
 .PHONY : view/calculator.o
 
 # target to build an object file
-view/calculator.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/calculator.cpp.o
-.PHONY : view/calculator.cpp.o
+view/calculator.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/calculator.cc.o
+.PHONY : view/calculator.cc.o
 
-view/calculator.i: view/calculator.cpp.i
+view/calculator.i: view/calculator.cc.i
 .PHONY : view/calculator.i
 
 # target to preprocess a source file
-view/calculator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/calculator.cpp.i
-.PHONY : view/calculator.cpp.i
+view/calculator.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/calculator.cc.i
+.PHONY : view/calculator.cc.i
 
-view/calculator.s: view/calculator.cpp.s
+view/calculator.s: view/calculator.cc.s
 .PHONY : view/calculator.s
 
 # target to generate assembly for a file
-view/calculator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/calculator.cpp.s
-.PHONY : view/calculator.cpp.s
+view/calculator.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/calculator.cc.s
+.PHONY : view/calculator.cc.s
 
-view/credit.o: view/credit.cpp.o
+view/credit.o: view/credit.cc.o
 .PHONY : view/credit.o
 
 # target to build an object file
-view/credit.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/credit.cpp.o
-.PHONY : view/credit.cpp.o
+view/credit.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/credit.cc.o
+.PHONY : view/credit.cc.o
 
-view/credit.i: view/credit.cpp.i
+view/credit.i: view/credit.cc.i
 .PHONY : view/credit.i
 
 # target to preprocess a source file
-view/credit.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/credit.cpp.i
-.PHONY : view/credit.cpp.i
+view/credit.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/credit.cc.i
+.PHONY : view/credit.cc.i
 
-view/credit.s: view/credit.cpp.s
+view/credit.s: view/credit.cc.s
 .PHONY : view/credit.s
 
 # target to generate assembly for a file
-view/credit.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/credit.cpp.s
-.PHONY : view/credit.cpp.s
+view/credit.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/credit.cc.s
+.PHONY : view/credit.cc.s
 
-view/mainwindow.o: view/mainwindow.cpp.o
+view/mainwindow.o: view/mainwindow.cc.o
 .PHONY : view/mainwindow.o
 
 # target to build an object file
-view/mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/mainwindow.cpp.o
-.PHONY : view/mainwindow.cpp.o
+view/mainwindow.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/mainwindow.cc.o
+.PHONY : view/mainwindow.cc.o
 
-view/mainwindow.i: view/mainwindow.cpp.i
+view/mainwindow.i: view/mainwindow.cc.i
 .PHONY : view/mainwindow.i
 
 # target to preprocess a source file
-view/mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/mainwindow.cpp.i
-.PHONY : view/mainwindow.cpp.i
+view/mainwindow.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/mainwindow.cc.i
+.PHONY : view/mainwindow.cc.i
 
-view/mainwindow.s: view/mainwindow.cpp.s
+view/mainwindow.s: view/mainwindow.cc.s
 .PHONY : view/mainwindow.s
 
 # target to generate assembly for a file
-view/mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/mainwindow.cpp.s
-.PHONY : view/mainwindow.cpp.s
+view/mainwindow.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/view/mainwindow.cc.s
+.PHONY : view/mainwindow.cc.s
 
 # Help Target
 help:
