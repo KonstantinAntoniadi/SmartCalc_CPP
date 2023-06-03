@@ -56,14 +56,11 @@ gcov_report: clean expression.o creditcalculator.o
 	open ./report/index.html
 
 dist:
-	mkdir SmartCalc_v2/
-	mkdir SmartCalc_v2/src
-	cp Makefile CMakeLists.txt calc_en_US.ts 
-
-	rm -rf Archive_calc/
-	mkdir Archive_calc/
-	mv calc.app Archive_calc
-	tar -cvzf Archive_calc.tar.gz Archive_calc
+	mkdir SmartCalc-2.0/
+	mkdir SmartCalc-2.0/src
+	cp -r controller model resources test view Makefile CMakeLists.txt calc_en_US.ts README.pdf SmartCalc-2.0/src
+	tar -cvzf SmartCalc-2.0.tar.gz SmartCalc-2.0
+	rm -rf SmartCalc-2.0
 
 format:
 	clang-format -style=Google -i */*.cc  */*.h  */*.cpp
