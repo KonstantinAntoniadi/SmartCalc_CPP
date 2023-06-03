@@ -93,9 +93,9 @@
 			null
 		],
 		[
-			"/home/kosant/Desktop/Smartcalc_CPP/src/model/credit.h",
+			"/home/kosant/Desktop/Smartcalc_CPP/src/model/creditcalculator.h",
 			"MU",
-			"NLOY5YBGEN/moc_credit.cpp",
+			"NLOY5YBGEN/moc_creditcalculator.cpp",
 			null
 		],
 		[
@@ -192,7 +192,11 @@
 			null
 		],
 		[ "/home/kosant/Desktop/Smartcalc_CPP/src/main.cpp", "MU", null ],
-		[ "/home/kosant/Desktop/Smartcalc_CPP/src/model/credit.cc", "MU", null ],
+		[
+			"/home/kosant/Desktop/Smartcalc_CPP/src/model/creditcalculator.cc",
+			"MU",
+			null
+		],
 		[
 			"/home/kosant/Desktop/Smartcalc_CPP/src/model/expression.cc",
 			"MU",

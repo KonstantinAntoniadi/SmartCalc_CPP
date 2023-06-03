@@ -29,7 +29,7 @@ dvi:
 	@open README.pdf
 
 test: clean
-	@$(CC) $(CFLAGS) model/credit.cc model/expression.cc -std=c++17 $(TEST)  -o unit_test  -lgtest -lrt -lpthread -lm
+	@$(CC) $(CFLAGS) model/creditcalculator.cc model/expression.cc -std=c++17 $(TEST)  -o unit_test  -lgtest -lrt -lpthread -lm
 	@./unit_test
 
 

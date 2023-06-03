@@ -209,19 +209,19 @@ CMakeFiles/calc.dir/model/expression.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calc.dir/model/expression.cc.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kosant/Desktop/Smartcalc_CPP/src/model/expression.cc -o CMakeFiles/calc.dir/model/expression.cc.s
 
-CMakeFiles/calc.dir/model/credit.cc.o: CMakeFiles/calc.dir/flags.make
-CMakeFiles/calc.dir/model/credit.cc.o: /home/kosant/Desktop/Smartcalc_CPP/src/model/credit.cc
-CMakeFiles/calc.dir/model/credit.cc.o: CMakeFiles/calc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/calc.dir/model/credit.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calc.dir/model/credit.cc.o -MF CMakeFiles/calc.dir/model/credit.cc.o.d -o CMakeFiles/calc.dir/model/credit.cc.o -c /home/kosant/Desktop/Smartcalc_CPP/src/model/credit.cc
+CMakeFiles/calc.dir/model/creditcalculator.cc.o: CMakeFiles/calc.dir/flags.make
+CMakeFiles/calc.dir/model/creditcalculator.cc.o: /home/kosant/Desktop/Smartcalc_CPP/src/model/creditcalculator.cc
+CMakeFiles/calc.dir/model/creditcalculator.cc.o: CMakeFiles/calc.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/calc.dir/model/creditcalculator.cc.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/calc.dir/model/creditcalculator.cc.o -MF CMakeFiles/calc.dir/model/creditcalculator.cc.o.d -o CMakeFiles/calc.dir/model/creditcalculator.cc.o -c /home/kosant/Desktop/Smartcalc_CPP/src/model/creditcalculator.cc
 
-CMakeFiles/calc.dir/model/credit.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/calc.dir/model/credit.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kosant/Desktop/Smartcalc_CPP/src/model/credit.cc > CMakeFiles/calc.dir/model/credit.cc.i
+CMakeFiles/calc.dir/model/creditcalculator.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/calc.dir/model/creditcalculator.cc.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kosant/Desktop/Smartcalc_CPP/src/model/creditcalculator.cc > CMakeFiles/calc.dir/model/creditcalculator.cc.i
 
-CMakeFiles/calc.dir/model/credit.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calc.dir/model/credit.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kosant/Desktop/Smartcalc_CPP/src/model/credit.cc -o CMakeFiles/calc.dir/model/credit.cc.s
+CMakeFiles/calc.dir/model/creditcalculator.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/calc.dir/model/creditcalculator.cc.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kosant/Desktop/Smartcalc_CPP/src/model/creditcalculator.cc -o CMakeFiles/calc.dir/model/creditcalculator.cc.s
 
 CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o: CMakeFiles/calc.dir/flags.make
 CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o: calc_autogen/3YJK5W5UP7/qrc_resources.cpp
@@ -248,7 +248,7 @@ calc_OBJECTS = \
 "CMakeFiles/calc.dir/controller/controllercalculator.cc.o" \
 "CMakeFiles/calc.dir/controller/controllercredit.cc.o" \
 "CMakeFiles/calc.dir/model/expression.cc.o" \
-"CMakeFiles/calc.dir/model/credit.cc.o" \
+"CMakeFiles/calc.dir/model/creditcalculator.cc.o" \
 "CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o"
 
 # External object files for target calc
@@ -263,7 +263,7 @@ calc: CMakeFiles/calc.dir/view/mainwindow.cpp.o
 calc: CMakeFiles/calc.dir/controller/controllercalculator.cc.o
 calc: CMakeFiles/calc.dir/controller/controllercredit.cc.o
 calc: CMakeFiles/calc.dir/model/expression.cc.o
-calc: CMakeFiles/calc.dir/model/credit.cc.o
+calc: CMakeFiles/calc.dir/model/creditcalculator.cc.o
 calc: CMakeFiles/calc.dir/calc_autogen/3YJK5W5UP7/qrc_resources.cpp.o
 calc: CMakeFiles/calc.dir/build.make
 calc: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8

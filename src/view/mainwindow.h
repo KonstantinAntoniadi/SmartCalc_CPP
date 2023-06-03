@@ -10,6 +10,7 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
+namespace s21 {
 class MainWindow : public QMainWindow {
   Q_OBJECT
 
@@ -28,4 +29,6 @@ class MainWindow : public QMainWindow {
  private:
   Ui::MainWindow *ui;
 };
+}  // namespace s21
+
 #endif  // CPP_SMART_CALC_V2_SRC_VIEW_MAINWINDOW_H

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "model/credit.h"
+#include "model/creditcalculator.h"
 namespace s21 {
 class ControllerCredit {
  public:
@@ -17,6 +17,6 @@ class ControllerCredit {
   double GetLastPayment();
 
  private:
-  Credit credit_;
+  CreditCalculator credit_;
 };
 };  // namespace s21

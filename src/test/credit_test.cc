@@ -7,8 +7,8 @@ class s21CreditTest : public testing::Test {
   double loan_ = 300000;
   int period_ = 18;
   double rate_ = 15;
-  Credit credit_{loan_, period_,
-                 rate_};  //  почему нельзя круглые скобки применить?
+  CreditCalculator credit_{loan_, period_,
+                           rate_};  //  почему нельзя круглые скобки применить?
 
   double MonthPaymenAnnuity_ = 18715.44;
   double OverpaymentAnnuity_ = 36877.85;

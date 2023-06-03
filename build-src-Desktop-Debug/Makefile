@@ -262,29 +262,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-model/credit.o: model/credit.cc.o
-.PHONY : model/credit.o
+model/creditcalculator.o: model/creditcalculator.cc.o
+.PHONY : model/creditcalculator.o
 
 # target to build an object file
-model/credit.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/credit.cc.o
-.PHONY : model/credit.cc.o
+model/creditcalculator.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/creditcalculator.cc.o
+.PHONY : model/creditcalculator.cc.o
 
-model/credit.i: model/credit.cc.i
-.PHONY : model/credit.i
+model/creditcalculator.i: model/creditcalculator.cc.i
+.PHONY : model/creditcalculator.i
 
 # target to preprocess a source file
-model/credit.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/credit.cc.i
-.PHONY : model/credit.cc.i
+model/creditcalculator.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/creditcalculator.cc.i
+.PHONY : model/creditcalculator.cc.i
 
-model/credit.s: model/credit.cc.s
-.PHONY : model/credit.s
+model/creditcalculator.s: model/creditcalculator.cc.s
+.PHONY : model/creditcalculator.s
 
 # target to generate assembly for a file
-model/credit.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/credit.cc.s
-.PHONY : model/credit.cc.s
+model/creditcalculator.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calc.dir/build.make CMakeFiles/calc.dir/model/creditcalculator.cc.s
+.PHONY : model/creditcalculator.cc.s
 
 model/expression.o: model/expression.cc.o
 .PHONY : model/expression.o
@@ -431,9 +431,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... model/credit.o"
-	@echo "... model/credit.i"
-	@echo "... model/credit.s"
+	@echo "... model/creditcalculator.o"
+	@echo "... model/creditcalculator.i"
+	@echo "... model/creditcalculator.s"
 	@echo "... model/expression.o"
 	@echo "... model/expression.i"
 	@echo "... model/expression.s"

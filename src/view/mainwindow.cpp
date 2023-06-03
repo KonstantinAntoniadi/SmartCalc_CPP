@@ -7,27 +7,25 @@
 #include "calculator.h"
 #include "credit.h"
 
+namespace s21 {
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
   ui->setupUi(this);
   Calculator* calculator = new Calculator();
   ui->stackedWidget->addWidget(calculator);
   ui->stackedWidget->addWidget(new Credit());
-  this->setFixedSize(1080, 500);
+  this->setFixedSize(1080, 510);
 }
 
-MainWindow::~MainWindow() {
-  setenv("LC_NUMERIC", "C", 1);
-
-  delete ui;
-}
+MainWindow::~MainWindow() { delete ui; }
 
 void MainWindow::on_actionCalculator_triggered() {
   ui->stackedWidget->setCurrentIndex(0);
-  this->setFixedSize(1080, 500);
+  this->setFixedSize(1080, 510);
 }
 
 void MainWindow::on_actionCredit_triggered() {
   ui->stackedWidget->setCurrentIndex(1);
-  this->setFixedSize(750, 280);
+  this->setFixedSize(750, 300);
 }
+}  // namespace s21

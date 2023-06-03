@@ -153,10 +153,10 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/main.cpp">
 			<Option target="calc"/>
 		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/model/credit.cc">
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/model/creditcalculator.cc">
 			<Option target="calc"/>
 		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/model/credit.h">
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/model/creditcalculator.h">
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/model/expression.cc">

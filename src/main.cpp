@@ -6,6 +6,7 @@
 
 int main(int argc, char *argv[]) {
   setenv("LC_NUMERIC", "C", 1);
+
   QApplication a(argc, argv);
   a.setWindowIcon(QIcon(":/icons/icon.png"));
   QTranslator translator;
@@ -17,7 +18,7 @@ int main(int argc, char *argv[]) {
       break;
     }
   }
-  MainWindow w;
+  s21::MainWindow w;
   w.show();
   return a.exec();
 }
