@@ -70,3 +70,6 @@ Thumbs.db
 *.dll
 *.exe
 
+# Vscode folders
+.vscode
+src/.vscode
