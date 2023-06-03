@@ -9,231 +9,231 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="159"/>
+        <location filename="view/calculator.ui" line="168"/>
         <source>6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="162"/>
-        <location filename="view/calculator.ui" line="178"/>
-        <location filename="view/calculator.ui" line="194"/>
-        <location filename="view/calculator.ui" line="210"/>
-        <location filename="view/calculator.ui" line="226"/>
-        <location filename="view/calculator.ui" line="242"/>
-        <location filename="view/calculator.ui" line="295"/>
-        <location filename="view/calculator.ui" line="311"/>
-        <location filename="view/calculator.ui" line="327"/>
-        <location filename="view/calculator.ui" line="343"/>
-        <location filename="view/calculator.ui" line="359"/>
-        <location filename="view/calculator.ui" line="810"/>
+        <location filename="view/calculator.ui" line="171"/>
+        <location filename="view/calculator.ui" line="187"/>
+        <location filename="view/calculator.ui" line="203"/>
+        <location filename="view/calculator.ui" line="219"/>
+        <location filename="view/calculator.ui" line="235"/>
+        <location filename="view/calculator.ui" line="251"/>
+        <location filename="view/calculator.ui" line="304"/>
+        <location filename="view/calculator.ui" line="320"/>
+        <location filename="view/calculator.ui" line="336"/>
+        <location filename="view/calculator.ui" line="352"/>
+        <location filename="view/calculator.ui" line="368"/>
+        <location filename="view/calculator.ui" line="822"/>
         <source>digit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="175"/>
+        <location filename="view/calculator.ui" line="184"/>
         <source>8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="191"/>
+        <location filename="view/calculator.ui" line="200"/>
         <source>.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="207"/>
+        <location filename="view/calculator.ui" line="216"/>
         <source>7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="223"/>
+        <location filename="view/calculator.ui" line="232"/>
         <source>4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="239"/>
+        <location filename="view/calculator.ui" line="248"/>
         <source>9</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="258"/>
+        <location filename="view/calculator.ui" line="267"/>
         <source>^</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="261"/>
-        <location filename="view/calculator.ui" line="413"/>
-        <location filename="view/calculator.ui" line="432"/>
-        <location filename="view/calculator.ui" line="451"/>
-        <location filename="view/calculator.ui" line="470"/>
-        <location filename="view/calculator.ui" line="668"/>
+        <location filename="view/calculator.ui" line="270"/>
+        <location filename="view/calculator.ui" line="422"/>
+        <location filename="view/calculator.ui" line="441"/>
+        <location filename="view/calculator.ui" line="460"/>
+        <location filename="view/calculator.ui" line="479"/>
+        <location filename="view/calculator.ui" line="677"/>
         <source>operand</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="283"/>
+        <location filename="view/calculator.ui" line="292"/>
         <source>1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="308"/>
+        <location filename="view/calculator.ui" line="317"/>
         <source>5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="324"/>
+        <location filename="view/calculator.ui" line="333"/>
         <source>2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="340"/>
-        <location filename="view/calculator.ui" line="889"/>
+        <location filename="view/calculator.ui" line="349"/>
+        <location filename="view/calculator.ui" line="901"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="356"/>
+        <location filename="view/calculator.ui" line="365"/>
         <source>3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="372"/>
+        <location filename="view/calculator.ui" line="381"/>
         <source>(</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="375"/>
-        <location filename="view/calculator.ui" line="394"/>
+        <location filename="view/calculator.ui" line="384"/>
+        <location filename="view/calculator.ui" line="403"/>
         <source>brasket</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="388"/>
+        <location filename="view/calculator.ui" line="397"/>
         <source>)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="391"/>
+        <location filename="view/calculator.ui" line="400"/>
         <source>ew</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="410"/>
+        <location filename="view/calculator.ui" line="419"/>
         <source>+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="429"/>
+        <location filename="view/calculator.ui" line="438"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="448"/>
+        <location filename="view/calculator.ui" line="457"/>
         <source>/</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="467"/>
+        <location filename="view/calculator.ui" line="476"/>
         <source>*</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="513"/>
+        <location filename="view/calculator.ui" line="522"/>
         <source>acos</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="516"/>
-        <location filename="view/calculator.ui" line="541"/>
-        <location filename="view/calculator.ui" line="563"/>
-        <location filename="view/calculator.ui" line="579"/>
-        <location filename="view/calculator.ui" line="595"/>
-        <location filename="view/calculator.ui" line="611"/>
-        <location filename="view/calculator.ui" line="627"/>
-        <location filename="view/calculator.ui" line="649"/>
-        <location filename="view/calculator.ui" line="690"/>
+        <location filename="view/calculator.ui" line="525"/>
+        <location filename="view/calculator.ui" line="550"/>
+        <location filename="view/calculator.ui" line="572"/>
+        <location filename="view/calculator.ui" line="588"/>
+        <location filename="view/calculator.ui" line="604"/>
+        <location filename="view/calculator.ui" line="620"/>
+        <location filename="view/calculator.ui" line="636"/>
+        <location filename="view/calculator.ui" line="658"/>
+        <location filename="view/calculator.ui" line="699"/>
         <source>func</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="538"/>
+        <location filename="view/calculator.ui" line="547"/>
         <source>log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="560"/>
+        <location filename="view/calculator.ui" line="569"/>
         <source>cos</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="576"/>
+        <location filename="view/calculator.ui" line="585"/>
         <source>tan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="592"/>
+        <location filename="view/calculator.ui" line="601"/>
         <source>sin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="608"/>
+        <location filename="view/calculator.ui" line="617"/>
         <source>ln</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="624"/>
+        <location filename="view/calculator.ui" line="633"/>
         <source>atan</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="646"/>
+        <location filename="view/calculator.ui" line="655"/>
         <source>asin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="665"/>
+        <location filename="view/calculator.ui" line="674"/>
         <source>mod</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="687"/>
+        <location filename="view/calculator.ui" line="696"/>
         <source>sqrt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="706"/>
+        <location filename="view/calculator.ui" line="715"/>
         <source>Graph</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="709"/>
-        <location filename="view/calculator.ui" line="794"/>
-        <location filename="view/calculator.ui" line="826"/>
-        <location filename="view/calculator.ui" line="842"/>
+        <location filename="view/calculator.ui" line="718"/>
+        <location filename="view/calculator.ui" line="806"/>
+        <location filename="view/calculator.ui" line="838"/>
+        <location filename="view/calculator.ui" line="854"/>
         <source>control</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="788"/>
+        <location filename="view/calculator.ui" line="800"/>
         <source>=</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="791"/>
+        <location filename="view/calculator.ui" line="803"/>
         <source>Return</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="807"/>
+        <location filename="view/calculator.ui" line="819"/>
         <source>x</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="823"/>
+        <location filename="view/calculator.ui" line="835"/>
         <source>del</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="view/calculator.ui" line="839"/>
+        <location filename="view/calculator.ui" line="851"/>
         <source>ac</source>
         <translation type="unfinished"></translation>
     </message>

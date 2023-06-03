@@ -282,15 +282,10 @@ void Expression::ProcessOperator(Lexeme &lexeme) {
 }
 
 bool Expression::CheckAssociativity(Lexeme &lexeme) {
-  // пожалуйста замени это на что-то нормальное
   Operation add_operation = lexeme.GetOperation();
   Operation stack_operation = operations_.top().GetOperation();
-  return (add_operation == PLUS || add_operation == MINUS ||
-          add_operation == MUL || add_operation == DIV ||
-          OperationIsFunc(add_operation)) &&
-         (stack_operation == PLUS || stack_operation == MINUS ||
-          stack_operation == MUL || stack_operation == DIV ||
-          OperationIsFunc(stack_operation));
+  return (add_operation != EXP && add_operation != UNARMINUS) ||
+         (stack_operation != EXP && stack_operation != UNARMINUS);
 }
 
 bool Expression::IsFunc(const char check) {  // НЕ ООП
