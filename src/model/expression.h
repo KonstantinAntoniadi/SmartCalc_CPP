@@ -1,10 +1,12 @@
 // add headers
 #include <cmath>
 #pragma once
+#include <algorithm>
 #include <cstring>
 #include <iostream>
 #include <stack>
 #include <vector>
+
 namespace s21 {
 
 // add enums
@@ -96,6 +98,8 @@ class Expression {
     lexemes_.clear();
     postfix_.clear();
   }
+
+  bool OperationIsFunc(Operation op);
   bool ValidateRPN();
   double CalcOperand(Operation op);
   double CalcFunc(Operation op);
@@ -114,6 +118,8 @@ class Expression {
   std::string infix_;
   std::stack<Lexeme> operations_;
   std::stack<double> calculate_;
+  std::vector<Operation> funcs_ = {COS,  SIN,  TAN, ACOS, ASIN,
+                                   ATAN, SQRT, LN,  LOG};
   bool good_to_go_ = false;
   double x_{};
   std::vector<Lexeme> lexemes_{};

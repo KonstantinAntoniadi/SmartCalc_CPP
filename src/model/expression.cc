@@ -17,9 +17,7 @@ double Expression::Calculate(const double x) {
       } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
                  cur_op == DIV || cur_op == EXP || cur_op == MOD) {
         calculate_.push(CalcOperand(cur_op));
-      } else if (cur_op == COS || cur_op == SIN || cur_op == TAN ||
-                 cur_op == ACOS || cur_op == ASIN || cur_op == ATAN ||
-                 cur_op == SQRT || cur_op == LN || cur_op == LOG) {
+      } else if (OperationIsFunc(cur_op)) {
         calculate_.push(CalcFunc(cur_op));
       }
     }
@@ -183,6 +181,8 @@ void Expression::ConvertToLexemes() {
       good_to_go_ = false;
     }
   }
+
+  ValidateRPN();
 }
 
 void Expression::GetPostfix() {
@@ -192,9 +192,7 @@ void Expression::GetPostfix() {
       postfix_.push_back(*it);
     else if (cur_op == OPENBRACKET)
       operations_.push(*it);
-    else if (cur_op == COS || cur_op == SIN || cur_op == TAN ||
-             cur_op == ACOS || cur_op == ASIN || cur_op == ATAN ||
-             cur_op == SQRT || cur_op == LN || cur_op == LOG) {
+    else if (OperationIsFunc(cur_op)) {
       operations_.push(*it);
     } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
                cur_op == DIV || cur_op == EXP || cur_op == MOD ||
@@ -206,21 +204,20 @@ void Expression::GetPostfix() {
   }
 
   if (good_to_go_) ProcessRemains();
-  if (good_to_go_)
-    good_to_go_ = ValidateRPN();  // возможно стоит флаг внутрь функции записать
+  // if (good_to_go_)
+  //   good_to_go_ = ValidateRPN();  // возможно стоит флаг внутрь функции
+  //   записать
 }
 
 bool Expression::ValidateRPN() {
   bool good_rpn = true;
   int value = 0;
   int size = 0;
-  for (auto it : postfix_) {
+  for (auto it : lexemes_) {
     Operation op = it.GetOperation();
     if (op == NUMBER || op == X) {
       value = 0;
-    } else if (op == COS || op == SIN || op == TAN || op == ACOS ||
-               op == ASIN || op == ATAN || op == SQRT || op == LN ||
-               op == LOG || op == UNARMINUS) {
+    } else if (OperationIsFunc(op) || op == UNARMINUS) {
       value = 1;
     } else if (op == PLUS || op == MINUS || op == MUL || op == DIV ||
                op == EXP || op == MOD) {
@@ -290,18 +287,10 @@ bool Expression::CheckAssociativity(Lexeme &lexeme) {
   Operation stack_operation = operations_.top().GetOperation();
   return (add_operation == PLUS || add_operation == MINUS ||
           add_operation == MUL || add_operation == DIV ||
-          add_operation == COS || add_operation == SIN ||
-          add_operation == TAN || add_operation == ACOS ||
-          add_operation == ASIN || add_operation == ATAN ||
-          add_operation == SQRT || add_operation == LN ||
-          add_operation == LOG) &&
+          OperationIsFunc(add_operation)) &&
          (stack_operation == PLUS || stack_operation == MINUS ||
           stack_operation == MUL || stack_operation == DIV ||
-          stack_operation == COS || stack_operation == SIN ||
-          stack_operation == TAN || stack_operation == ACOS ||
-          stack_operation == ASIN || stack_operation == ATAN ||
-          stack_operation == SQRT || stack_operation == LN ||
-          stack_operation == LOG);
+          OperationIsFunc(stack_operation));
 }
 
 bool Expression::IsFunc(const char check) {  // НЕ ООП
@@ -311,5 +300,9 @@ bool Expression::IsFunc(const char check) {  // НЕ ООП
 }
 
 bool Expression::IsValidFunc() { return true; }
+
+bool Expression::OperationIsFunc(Operation op) {
+  return std::count(funcs_.begin(), funcs_.end(), op);
+}
 
 };  // namespace s21
