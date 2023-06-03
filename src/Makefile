@@ -4,7 +4,7 @@ CFLAGS=-Wall -Werror -Wextra
 SRC_DIR=backend
 BACK_SRC=$(SRC_DIR)/*.c
 STACS_SRC=$(SRC_DIR)/stacks/*.c
-TEST=test/unit_test.cc
+TEST=test/*.cc
 OS := $(shell uname)
 
 ifeq ($(OS),Linux)
@@ -29,8 +29,7 @@ dvi:
 	@open README.pdf
 
 test: clean
-
-	@$(CC) $(CFLAGS) model/expression.cc -std=c++17 $(TEST)  -o unit_test  -lgtest -lrt -lpthread -lm
+	@$(CC) $(CFLAGS) model/credit.cc model/expression.cc -std=c++17 $(TEST)  -o unit_test  -lgtest -lrt -lpthread -lm
 	@./unit_test
 
 

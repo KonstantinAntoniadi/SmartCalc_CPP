@@ -10,6 +10,8 @@ namespace s21 {
 class Credit {
  public:
   Credit() = default;
+  Credit(const double loan, const int period, const double rate)
+      : loan_(loan), period_(period), rate_(rate){};
   ~Credit() = default;
   void SetStartValues(const double loan, const int period, const double rate);
   void CalcAnnuity();
