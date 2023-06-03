@@ -8,6 +8,7 @@ namespace Ui {
 class Credit;
 }
 
+namespace s21 {
 class Credit : public QWidget {
   Q_OBJECT
 
@@ -22,5 +23,6 @@ class Credit : public QWidget {
   Ui::Credit *ui;
   s21::ControllerCredit controller_credit_{};
 };
+}  // namespace s21
 
 #endif  // CPP_SMART_CALC_V2_SRC_VIEW_CREDIT_H

@@ -300,4 +300,4 @@ bool Expression::OperationIsFunc(Operation op) {
   return std::count(funcs_.begin(), funcs_.end(), op);
 }
 
-};  // namespace s21
+}  // namespace s21

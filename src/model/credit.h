@@ -34,6 +34,6 @@ class Credit {
   double months_in_year_ = 12.0;
 };
 
-};  // namespace s21
+}  // namespace s21
 
 #endif  // CPP_SMART_CALC_V2_SRC_MODEL_CREDIT_H

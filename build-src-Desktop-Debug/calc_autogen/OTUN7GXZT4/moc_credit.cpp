@@ -20,28 +20,28 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_Credit_t {
+struct qt_meta_stringdata_s21__Credit_t {
     QByteArrayData data[3];
-    char stringdata0[40];
+    char stringdata0[45];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Credit_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_s21__Credit_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_Credit_t qt_meta_stringdata_Credit = {
+static const qt_meta_stringdata_s21__Credit_t qt_meta_stringdata_s21__Credit = {
     {
-QT_MOC_LITERAL(0, 0, 6), // "Credit"
-QT_MOC_LITERAL(1, 7, 31), // "on_pushButton_calculate_clicked"
-QT_MOC_LITERAL(2, 39, 0) // ""
+QT_MOC_LITERAL(0, 0, 11), // "s21::Credit"
+QT_MOC_LITERAL(1, 12, 31), // "on_pushButton_calculate_clicked"
+QT_MOC_LITERAL(2, 44, 0) // ""
 
     },
-    "Credit\0on_pushButton_calculate_clicked\0"
+    "s21::Credit\0on_pushButton_calculate_clicked\0"
     ""
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_Credit[] = {
+static const uint qt_meta_data_s21__Credit[] = {
 
  // content:
        8,       // revision
@@ -63,7 +63,7 @@ static const uint qt_meta_data_Credit[] = {
        0        // eod
 };
 
-void Credit::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void s21::Credit::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<Credit *>(_o);
@@ -76,30 +76,30 @@ void Credit::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject Credit::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject s21::Credit::staticMetaObject = { {
     &QWidget::staticMetaObject,
-    qt_meta_stringdata_Credit.data,
-    qt_meta_data_Credit,
+    qt_meta_stringdata_s21__Credit.data,
+    qt_meta_data_s21__Credit,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *Credit::metaObject() const
+const QMetaObject *s21::Credit::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *Credit::qt_metacast(const char *_clname)
+void *s21::Credit::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_Credit.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_s21__Credit.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int Credit::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int s21::Credit::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)

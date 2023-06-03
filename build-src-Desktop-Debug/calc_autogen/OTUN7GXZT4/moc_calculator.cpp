@@ -20,37 +20,37 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_Calculator_t {
+struct qt_meta_stringdata_s21__Calculator_t {
     QByteArrayData data[10];
-    char stringdata0[158];
+    char stringdata0[163];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Calculator_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_s21__Calculator_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_Calculator_t qt_meta_stringdata_Calculator = {
+static const qt_meta_stringdata_s21__Calculator_t qt_meta_stringdata_s21__Calculator = {
     {
-QT_MOC_LITERAL(0, 0, 10), // "Calculator"
-QT_MOC_LITERAL(1, 11, 27), // "on_pushButton_graph_clicked"
-QT_MOC_LITERAL(2, 39, 0), // ""
-QT_MOC_LITERAL(3, 40, 20), // "on_calcButtonClicked"
-QT_MOC_LITERAL(4, 61, 23), // "on_lineEdit_textChanged"
-QT_MOC_LITERAL(5, 85, 4), // "arg1"
-QT_MOC_LITERAL(6, 90, 22), // "on_lineEdit_textEdited"
-QT_MOC_LITERAL(7, 113, 13), // "delLastSymbol"
-QT_MOC_LITERAL(8, 127, 19), // "buttonInput_clicked"
-QT_MOC_LITERAL(9, 147, 10) // "clearInput"
+QT_MOC_LITERAL(0, 0, 15), // "s21::Calculator"
+QT_MOC_LITERAL(1, 16, 27), // "on_pushButton_graph_clicked"
+QT_MOC_LITERAL(2, 44, 0), // ""
+QT_MOC_LITERAL(3, 45, 20), // "on_calcButtonClicked"
+QT_MOC_LITERAL(4, 66, 23), // "on_lineEdit_textChanged"
+QT_MOC_LITERAL(5, 90, 4), // "arg1"
+QT_MOC_LITERAL(6, 95, 22), // "on_lineEdit_textEdited"
+QT_MOC_LITERAL(7, 118, 13), // "delLastSymbol"
+QT_MOC_LITERAL(8, 132, 19), // "buttonInput_clicked"
+QT_MOC_LITERAL(9, 152, 10) // "clearInput"
 
     },
-    "Calculator\0on_pushButton_graph_clicked\0"
+    "s21::Calculator\0on_pushButton_graph_clicked\0"
     "\0on_calcButtonClicked\0on_lineEdit_textChanged\0"
     "arg1\0on_lineEdit_textEdited\0delLastSymbol\0"
     "buttonInput_clicked\0clearInput"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_Calculator[] = {
+static const uint qt_meta_data_s21__Calculator[] = {
 
  // content:
        8,       // revision
@@ -84,7 +84,7 @@ static const uint qt_meta_data_Calculator[] = {
        0        // eod
 };
 
-void Calculator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void s21::Calculator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<Calculator *>(_o);
@@ -102,30 +102,30 @@ void Calculator::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject Calculator::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject s21::Calculator::staticMetaObject = { {
     &QWidget::staticMetaObject,
-    qt_meta_stringdata_Calculator.data,
-    qt_meta_data_Calculator,
+    qt_meta_stringdata_s21__Calculator.data,
+    qt_meta_data_s21__Calculator,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *Calculator::metaObject() const
+const QMetaObject *s21::Calculator::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *Calculator::qt_metacast(const char *_clname)
+void *s21::Calculator::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_Calculator.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_s21__Calculator.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int Calculator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int s21::Calculator::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)

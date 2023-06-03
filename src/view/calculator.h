@@ -10,7 +10,7 @@
 namespace Ui {
 class Calculator;
 }
-
+namespace s21 {
 class Calculator : public QWidget {
   Q_OBJECT
 
@@ -37,5 +37,5 @@ class Calculator : public QWidget {
 
   QVector<double> x, y;
 };
-
+}  // namespace s21
 #endif  // CPP_SMART_CALC_V2_SRC_VIEW_CALCULATOR_H
