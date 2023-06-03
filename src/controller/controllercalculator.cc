@@ -1,5 +1,3 @@
-#pragma once
-
 #include "controllercalculator.h"
 
 namespace s21 {

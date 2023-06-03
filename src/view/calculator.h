@@ -4,8 +4,6 @@
 #include <QWidget>
 
 #include "../controller/controllercalculator.h"
-#define FAILTURE 0
-#define SUCCSESS 1
 
 namespace Ui {
 class Calculator;
