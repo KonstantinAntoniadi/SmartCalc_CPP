@@ -49,7 +49,7 @@ class Expression {
   }
 
   bool IsValid() { return good_to_go_; }
-
+  double Calculate() { return Calculate(0); }
   double Calculate(const double x);
   // стоит объединить функции ниже
 

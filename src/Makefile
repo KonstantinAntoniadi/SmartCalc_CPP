@@ -1,10 +1,10 @@
-CC=gcc
+CC=g++
 CFLAG=-c 
-CFLAGS=-Wall -Werror -Wextra -std=c11
+CFLAGS=-Wall -Werror -Wextra
 SRC_DIR=backend
 BACK_SRC=$(SRC_DIR)/*.c
 STACS_SRC=$(SRC_DIR)/stacks/*.c
-TEST=test/unit_test.c
+TEST=test/unit_test.cc
 OS := $(shell uname)
 
 ifeq ($(OS),Linux)
@@ -29,11 +29,13 @@ dvi:
 	@open README.pdf
 
 test: clean
-	$(CC) $(CFLAGS) $(TEST) $(BACK_SRC) $(STACS_SRC) $(TEST_LIBS) -o unit_test
-	./unit_test
+
+	@$(CC) $(CFLAGS) model/expression.cc -std=c++17 $(TEST)  -o unit_test  -lgtest -lrt -lpthread -lm
+	@./unit_test
+
 
 gcov_report:
-	$(CC) $(CFLAGS) --coverage $(TEST) $(BACK_SRC) $(STACS_SRC) $(NAME) $(TEST_LIBS) -o gcov_test
+	$(CC) $(CFLAGS) --coverage $(TEST) $(BACK_SRC)  $(NAME) $(TEST_LIBS) -o gcov_test
 	chmod +x *
 	./gcov_test
 	lcov -t "gcov_test" -o gcov_test.info --no-external -c -d .

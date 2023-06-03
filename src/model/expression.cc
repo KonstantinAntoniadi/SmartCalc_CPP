@@ -1,6 +1,35 @@
 #include "expression.h"
 
 namespace s21 {
+void Expression::ConvertToLexemes() {
+  for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_;
+       cur_it_++) {
+    char cur = *cur_it_;
+
+    if (cur == 'x') {
+      lexemes_.emplace_back(X, x_);
+    } else if (cur == '(') {
+      lexemes_.emplace_back(OPENBRACKET);
+    } else if (cur == ')') {
+      lexemes_.emplace_back(CLOSEBRACKET);
+    } else if (IsFunc(cur)) {  // можно попробовать объединить с функций ниже
+      good_to_go_ = ValidateFunc();
+    } else if (IsOperator(cur)) {
+      good_to_go_ = ValidateOperator();
+    } else if (isdigit(cur)) {
+      double number = 0;
+      int count_symbols_read = 0;
+      sscanf(&cur_it_[0], "%le %n", &number, &count_symbols_read);
+      lexemes_.emplace_back(NUMBER, number);
+      cur_it_ += count_symbols_read - 1;
+    } else if (cur != ' ') {
+      good_to_go_ = false;
+    }
+  }
+
+  // ValidateRPN();
+}
+
 double Expression::Calculate(const double x) {
   x_ = x;
   // std::cout <<
@@ -156,35 +185,6 @@ bool Expression::ValidateOperator() {
   return res;
 }
 
-void Expression::ConvertToLexemes() {
-  for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_;
-       cur_it_++) {
-    char cur = *cur_it_;
-
-    if (cur == 'x') {
-      lexemes_.emplace_back(X, x_);
-    } else if (cur == '(') {
-      lexemes_.emplace_back(OPENBRACKET);
-    } else if (cur == ')') {
-      lexemes_.emplace_back(CLOSEBRACKET);
-    } else if (IsFunc(cur)) {  // можно попробовать объединить с функций ниже
-      good_to_go_ = ValidateFunc();
-    } else if (IsOperator(cur)) {
-      good_to_go_ = ValidateOperator();
-    } else if (isdigit(cur)) {
-      double number = 0;
-      int count_symbols_read = 0;
-      sscanf(&cur_it_[0], "%le %n", &number, &count_symbols_read);
-      lexemes_.emplace_back(NUMBER, number);
-      cur_it_ += count_symbols_read - 1;
-    } else if (cur != ' ') {
-      good_to_go_ = false;
-    }
-  }
-
-  ValidateRPN();
-}
-
 void Expression::GetPostfix() {
   for (auto it = lexemes_.begin(); it != lexemes_.end() && good_to_go_; it++) {
     Operation cur_op = it->GetOperation();
@@ -204,8 +204,8 @@ void Expression::GetPostfix() {
   }
 
   if (good_to_go_) ProcessRemains();
-  // if (good_to_go_)
-  //   good_to_go_ = ValidateRPN();  // возможно стоит флаг внутрь функции
+  if (good_to_go_)
+    good_to_go_ = ValidateRPN();  // возможно стоит флаг внутрь функции
   //   записать
 }
 
@@ -213,7 +213,7 @@ bool Expression::ValidateRPN() {
   bool good_rpn = true;
   int value = 0;
   int size = 0;
-  for (auto it : lexemes_) {
+  for (auto it : postfix_) {
     Operation op = it.GetOperation();
     if (op == NUMBER || op == X) {
       value = 0;
@@ -237,7 +237,7 @@ void Expression::ProcessRemains() {
   while (!operations_.empty() && good_to_go_) {
     if (operations_.top().GetOperation() == OPENBRACKET ||
         operations_.top().GetOperation() == CLOSEBRACKET) {
-      good_to_go_ = 0;
+      good_to_go_ = false;
     }
     if (good_to_go_) {
       postfix_.push_back(operations_.top());

@@ -1098,15 +1098,38 @@ CMakeFiles/calc.dir/controller/controllercalculator.cc.o: /home/kosant/Desktop/S
   /usr/include/c++/9/tr1/poly_hermite.tcc \
   /usr/include/c++/9/tr1/poly_laguerre.tcc \
   /usr/include/c++/9/tr1/riemann_zeta.tcc \
-  /usr/include/c++/9/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/c++/9/iostream \
-  /usr/include/c++/9/ostream \
-  /usr/include/c++/9/ios \
-  /usr/include/c++/9/iosfwd \
-  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/algorithm \
+  /usr/include/c++/9/utility \
+  /usr/include/c++/9/bits/stl_relops.h \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/bits/stl_algo.h \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/c++/9/bits/algorithmfwd.h \
+  /usr/include/c++/9/bits/stl_heap.h \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
   /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/uniform_int_dist.h \
+  /usr/include/c++/9/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/9/functional \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/tuple \
+  /usr/include/c++/9/array \
+  /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/string \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/char_traits.h \
   /usr/include/c++/9/bits/postypes.h \
   /usr/include/c++/9/cwchar \
   /usr/include/wchar.h \
@@ -1117,27 +1140,25 @@ CMakeFiles/calc.dir/controller/controllercalculator.cc.o: /home/kosant/Desktop/S
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/c++/9/exception \
-  /usr/include/c++/9/bits/exception.h \
-  /usr/include/c++/9/bits/exception_ptr.h \
-  /usr/include/c++/9/bits/cxxabi_init_exception.h \
-  /usr/include/c++/9/typeinfo \
-  /usr/include/c++/9/bits/hash_bytes.h \
-  /usr/include/c++/9/new \
-  /usr/include/c++/9/bits/nested_exception.h \
-  /usr/include/c++/9/bits/char_traits.h \
   /usr/include/c++/9/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/c++/9/ext/new_allocator.h \
   /usr/include/c++/9/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
   /usr/include/c++/9/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/9/iosfwd \
   /usr/include/c++/9/cctype \
   /usr/include/ctype.h \
-  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/basic_string.h \
   /usr/include/c++/9/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
@@ -1153,25 +1174,10 @@ CMakeFiles/calc.dir/controller/controllercalculator.cc.o: /home/kosant/Desktop/S
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
-  /usr/include/c++/9/bits/locale_classes.h \
-  /usr/include/c++/9/string \
-  /usr/include/c++/9/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
-  /usr/include/c++/9/ext/new_allocator.h \
-  /usr/include/c++/9/bits/ostream_insert.h \
-  /usr/include/c++/9/bits/cxxabi_forced.h \
-  /usr/include/c++/9/bits/stl_function.h \
-  /usr/include/c++/9/backward/binders.h \
-  /usr/include/c++/9/bits/range_access.h \
-  /usr/include/c++/9/initializer_list \
-  /usr/include/c++/9/bits/basic_string.h \
-  /usr/include/c++/9/ext/alloc_traits.h \
-  /usr/include/c++/9/bits/alloc_traits.h \
   /usr/include/c++/9/string_view \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/string_view.tcc \
   /usr/include/c++/9/ext/string_conversions.h \
-  /usr/include/c++/9/cstdlib \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -1189,10 +1195,36 @@ CMakeFiles/calc.dir/controller/controllercalculator.cc.o: /home/kosant/Desktop/S
   /usr/include/asm-generic/errno-base.h \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/9/bits/basic_string.tcc \
+  /usr/include/c++/9/bits/uses_allocator.h \
+  /usr/include/c++/9/bits/invoke.h \
+  /usr/include/c++/9/bits/refwrap.h \
+  /usr/include/c++/9/bits/std_function.h \
+  /usr/include/c++/9/unordered_map \
+  /usr/include/c++/9/ext/aligned_buffer.h \
+  /usr/include/c++/9/bits/hashtable.h \
+  /usr/include/c++/9/bits/hashtable_policy.h \
+  /usr/include/c++/9/bits/node_handle.h \
+  /usr/include/c++/9/optional \
+  /usr/include/c++/9/bits/enable_special_members.h \
+  /usr/include/c++/9/bits/unordered_map.h \
+  /usr/include/c++/9/bits/erase_if.h \
+  /usr/include/c++/9/vector \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/vector.tcc \
+  /usr/include/c++/9/pstl/execution_defs.h \
+  /usr/include/c++/9/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/ostream \
+  /usr/include/c++/9/ios \
+  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/locale_classes.h \
   /usr/include/c++/9/bits/locale_classes.tcc \
   /usr/include/c++/9/system_error \
   /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
-  /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/streambuf \
   /usr/include/c++/9/bits/streambuf.tcc \
   /usr/include/c++/9/bits/basic_ios.h \
@@ -1210,41 +1242,9 @@ CMakeFiles/calc.dir/controller/controllercalculator.cc.o: /home/kosant/Desktop/S
   /usr/include/c++/9/bits/istream.tcc \
   /usr/include/c++/9/stack \
   /usr/include/c++/9/deque \
-  /usr/include/c++/9/bits/stl_construct.h \
-  /usr/include/c++/9/bits/stl_uninitialized.h \
-  /usr/include/c++/9/utility \
-  /usr/include/c++/9/bits/stl_relops.h \
   /usr/include/c++/9/bits/stl_deque.h \
   /usr/include/c++/9/bits/deque.tcc \
-  /usr/include/c++/9/bits/stl_stack.h \
-  /usr/include/c++/9/bits/uses_allocator.h \
-  /usr/include/c++/9/vector \
-  /usr/include/c++/9/bits/stl_vector.h \
-  /usr/include/c++/9/bits/stl_bvector.h \
-  /usr/include/c++/9/bits/vector.tcc \
-  /usr/include/c++/9/algorithm \
-  /usr/include/c++/9/bits/stl_algo.h \
-  /usr/include/c++/9/bits/algorithmfwd.h \
-  /usr/include/c++/9/bits/stl_heap.h \
-  /usr/include/c++/9/bits/stl_tempbuf.h \
-  /usr/include/c++/9/bits/uniform_int_dist.h \
-  /usr/include/c++/9/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/9/functional \
-  /usr/include/c++/9/tuple \
-  /usr/include/c++/9/array \
-  /usr/include/c++/9/bits/invoke.h \
-  /usr/include/c++/9/bits/refwrap.h \
-  /usr/include/c++/9/bits/std_function.h \
-  /usr/include/c++/9/unordered_map \
-  /usr/include/c++/9/ext/aligned_buffer.h \
-  /usr/include/c++/9/bits/hashtable.h \
-  /usr/include/c++/9/bits/hashtable_policy.h \
-  /usr/include/c++/9/bits/node_handle.h \
-  /usr/include/c++/9/optional \
-  /usr/include/c++/9/bits/enable_special_members.h \
-  /usr/include/c++/9/bits/unordered_map.h \
-  /usr/include/c++/9/bits/erase_if.h \
-  /usr/include/c++/9/pstl/execution_defs.h
+  /usr/include/c++/9/bits/stl_stack.h
 
 CMakeFiles/calc.dir/controller/controllercredit.cc.o: /home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercredit.cc \
   /usr/include/stdc-predef.h \
@@ -1882,15 +1882,38 @@ CMakeFiles/calc.dir/model/expression.cc.o: /home/kosant/Desktop/Smartcalc_CPP/sr
   /usr/include/c++/9/tr1/poly_hermite.tcc \
   /usr/include/c++/9/tr1/poly_laguerre.tcc \
   /usr/include/c++/9/tr1/riemann_zeta.tcc \
-  /usr/include/c++/9/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
-  /usr/include/c++/9/iostream \
-  /usr/include/c++/9/ostream \
-  /usr/include/c++/9/ios \
-  /usr/include/c++/9/iosfwd \
-  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/algorithm \
+  /usr/include/c++/9/utility \
+  /usr/include/c++/9/bits/stl_relops.h \
+  /usr/include/c++/9/initializer_list \
+  /usr/include/c++/9/bits/stl_algo.h \
+  /usr/include/c++/9/cstdlib \
+  /usr/include/c++/9/bits/algorithmfwd.h \
+  /usr/include/c++/9/bits/stl_heap.h \
+  /usr/include/c++/9/bits/stl_tempbuf.h \
+  /usr/include/c++/9/bits/stl_construct.h \
+  /usr/include/c++/9/new \
+  /usr/include/c++/9/exception \
+  /usr/include/c++/9/bits/exception.h \
+  /usr/include/c++/9/bits/exception_ptr.h \
+  /usr/include/c++/9/bits/cxxabi_init_exception.h \
+  /usr/include/c++/9/typeinfo \
+  /usr/include/c++/9/bits/hash_bytes.h \
+  /usr/include/c++/9/bits/nested_exception.h \
+  /usr/include/c++/9/ext/alloc_traits.h \
+  /usr/include/c++/9/bits/alloc_traits.h \
   /usr/include/c++/9/bits/memoryfwd.h \
+  /usr/include/c++/9/bits/uniform_int_dist.h \
+  /usr/include/c++/9/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/9/functional \
+  /usr/include/c++/9/bits/stl_function.h \
+  /usr/include/c++/9/backward/binders.h \
+  /usr/include/c++/9/tuple \
+  /usr/include/c++/9/array \
+  /usr/include/c++/9/stdexcept \
+  /usr/include/c++/9/string \
+  /usr/include/c++/9/bits/stringfwd.h \
+  /usr/include/c++/9/bits/char_traits.h \
   /usr/include/c++/9/bits/postypes.h \
   /usr/include/c++/9/cwchar \
   /usr/include/wchar.h \
@@ -1901,27 +1924,25 @@ CMakeFiles/calc.dir/model/expression.cc.o: /home/kosant/Desktop/Smartcalc_CPP/sr
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
-  /usr/include/c++/9/exception \
-  /usr/include/c++/9/bits/exception.h \
-  /usr/include/c++/9/bits/exception_ptr.h \
-  /usr/include/c++/9/bits/cxxabi_init_exception.h \
-  /usr/include/c++/9/typeinfo \
-  /usr/include/c++/9/bits/hash_bytes.h \
-  /usr/include/c++/9/new \
-  /usr/include/c++/9/bits/nested_exception.h \
-  /usr/include/c++/9/bits/char_traits.h \
   /usr/include/c++/9/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/c++/9/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
+  /usr/include/c++/9/ext/new_allocator.h \
   /usr/include/c++/9/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
   /usr/include/c++/9/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/9/iosfwd \
   /usr/include/c++/9/cctype \
   /usr/include/ctype.h \
-  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/ostream_insert.h \
+  /usr/include/c++/9/bits/cxxabi_forced.h \
+  /usr/include/c++/9/bits/range_access.h \
+  /usr/include/c++/9/bits/basic_string.h \
   /usr/include/c++/9/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h \
@@ -1937,25 +1958,10 @@ CMakeFiles/calc.dir/model/expression.cc.o: /home/kosant/Desktop/Smartcalc_CPP/sr
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
   /usr/include/x86_64-linux-gnu/bits/setjmp.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/atomic_word.h \
-  /usr/include/c++/9/bits/locale_classes.h \
-  /usr/include/c++/9/string \
-  /usr/include/c++/9/bits/allocator.h \
-  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
-  /usr/include/c++/9/ext/new_allocator.h \
-  /usr/include/c++/9/bits/ostream_insert.h \
-  /usr/include/c++/9/bits/cxxabi_forced.h \
-  /usr/include/c++/9/bits/stl_function.h \
-  /usr/include/c++/9/backward/binders.h \
-  /usr/include/c++/9/bits/range_access.h \
-  /usr/include/c++/9/initializer_list \
-  /usr/include/c++/9/bits/basic_string.h \
-  /usr/include/c++/9/ext/alloc_traits.h \
-  /usr/include/c++/9/bits/alloc_traits.h \
   /usr/include/c++/9/string_view \
   /usr/include/c++/9/bits/functional_hash.h \
   /usr/include/c++/9/bits/string_view.tcc \
   /usr/include/c++/9/ext/string_conversions.h \
-  /usr/include/c++/9/cstdlib \
   /usr/include/c++/9/cstdio \
   /usr/include/stdio.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
@@ -1973,10 +1979,36 @@ CMakeFiles/calc.dir/model/expression.cc.o: /home/kosant/Desktop/Smartcalc_CPP/sr
   /usr/include/asm-generic/errno-base.h \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/9/bits/basic_string.tcc \
+  /usr/include/c++/9/bits/uses_allocator.h \
+  /usr/include/c++/9/bits/invoke.h \
+  /usr/include/c++/9/bits/refwrap.h \
+  /usr/include/c++/9/bits/std_function.h \
+  /usr/include/c++/9/unordered_map \
+  /usr/include/c++/9/ext/aligned_buffer.h \
+  /usr/include/c++/9/bits/hashtable.h \
+  /usr/include/c++/9/bits/hashtable_policy.h \
+  /usr/include/c++/9/bits/node_handle.h \
+  /usr/include/c++/9/optional \
+  /usr/include/c++/9/bits/enable_special_members.h \
+  /usr/include/c++/9/bits/unordered_map.h \
+  /usr/include/c++/9/bits/erase_if.h \
+  /usr/include/c++/9/vector \
+  /usr/include/c++/9/bits/stl_uninitialized.h \
+  /usr/include/c++/9/bits/stl_vector.h \
+  /usr/include/c++/9/bits/stl_bvector.h \
+  /usr/include/c++/9/bits/vector.tcc \
+  /usr/include/c++/9/pstl/execution_defs.h \
+  /usr/include/c++/9/cstring \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/c++/9/iostream \
+  /usr/include/c++/9/ostream \
+  /usr/include/c++/9/ios \
+  /usr/include/c++/9/bits/ios_base.h \
+  /usr/include/c++/9/bits/locale_classes.h \
   /usr/include/c++/9/bits/locale_classes.tcc \
   /usr/include/c++/9/system_error \
   /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
-  /usr/include/c++/9/stdexcept \
   /usr/include/c++/9/streambuf \
   /usr/include/c++/9/bits/streambuf.tcc \
   /usr/include/c++/9/bits/basic_ios.h \
@@ -1994,41 +2026,9 @@ CMakeFiles/calc.dir/model/expression.cc.o: /home/kosant/Desktop/Smartcalc_CPP/sr
   /usr/include/c++/9/bits/istream.tcc \
   /usr/include/c++/9/stack \
   /usr/include/c++/9/deque \
-  /usr/include/c++/9/bits/stl_construct.h \
-  /usr/include/c++/9/bits/stl_uninitialized.h \
-  /usr/include/c++/9/utility \
-  /usr/include/c++/9/bits/stl_relops.h \
   /usr/include/c++/9/bits/stl_deque.h \
   /usr/include/c++/9/bits/deque.tcc \
-  /usr/include/c++/9/bits/stl_stack.h \
-  /usr/include/c++/9/bits/uses_allocator.h \
-  /usr/include/c++/9/vector \
-  /usr/include/c++/9/bits/stl_vector.h \
-  /usr/include/c++/9/bits/stl_bvector.h \
-  /usr/include/c++/9/bits/vector.tcc \
-  /usr/include/c++/9/algorithm \
-  /usr/include/c++/9/bits/stl_algo.h \
-  /usr/include/c++/9/bits/algorithmfwd.h \
-  /usr/include/c++/9/bits/stl_heap.h \
-  /usr/include/c++/9/bits/stl_tempbuf.h \
-  /usr/include/c++/9/bits/uniform_int_dist.h \
-  /usr/include/c++/9/pstl/glue_algorithm_defs.h \
-  /usr/include/c++/9/functional \
-  /usr/include/c++/9/tuple \
-  /usr/include/c++/9/array \
-  /usr/include/c++/9/bits/invoke.h \
-  /usr/include/c++/9/bits/refwrap.h \
-  /usr/include/c++/9/bits/std_function.h \
-  /usr/include/c++/9/unordered_map \
-  /usr/include/c++/9/ext/aligned_buffer.h \
-  /usr/include/c++/9/bits/hashtable.h \
-  /usr/include/c++/9/bits/hashtable_policy.h \
-  /usr/include/c++/9/bits/node_handle.h \
-  /usr/include/c++/9/optional \
-  /usr/include/c++/9/bits/enable_special_members.h \
-  /usr/include/c++/9/bits/unordered_map.h \
-  /usr/include/c++/9/bits/erase_if.h \
-  /usr/include/c++/9/pstl/execution_defs.h
+  /usr/include/c++/9/bits/stl_stack.h
 
 CMakeFiles/calc.dir/view/calculator.cpp.o: /home/kosant/Desktop/Smartcalc_CPP/src/view/calculator.cpp \
   /usr/include/stdc-predef.h \

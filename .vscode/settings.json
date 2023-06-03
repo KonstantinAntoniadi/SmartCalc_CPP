@@ -97,6 +97,8 @@
         "fstream": "cpp",
         "future": "cpp",
         "cinttypes": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "set": "cpp",
+        "iomanip": "cpp"
     }
 }
