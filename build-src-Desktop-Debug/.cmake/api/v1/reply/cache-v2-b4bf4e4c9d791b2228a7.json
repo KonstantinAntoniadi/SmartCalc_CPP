@@ -807,7 +807,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "calc"
+			"value" : "smartcalc_v2"
 		},
 		{
 			"name" : "CMAKE_PROJECT_VERSION",
@@ -1278,7 +1278,7 @@
 			"value" : "TRUE"
 		},
 		{
-			"name" : "calc_BINARY_DIR",
+			"name" : "smartcalc_v2_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1290,7 +1290,7 @@
 			"value" : "/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug"
 		},
 		{
-			"name" : "calc_IS_TOP_LEVEL",
+			"name" : "smartcalc_v2_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1302,7 +1302,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "calc_SOURCE_DIR",
+			"name" : "smartcalc_v2_SOURCE_DIR",
 			"properties" : 
 			[
 				{

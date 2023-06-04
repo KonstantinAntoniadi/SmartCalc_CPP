@@ -1,4 +1,4 @@
-# SmartCalc
+# SmartCalc v2.0 (C++)
 > Created by edwinevi  
 > School 21 (Kzn)
 
@@ -24,6 +24,8 @@ Functional:
 
 ## OS
 - MacOs
+- Ubuntu
+
 ## Dependencies
 - Qt5
 - Qt6

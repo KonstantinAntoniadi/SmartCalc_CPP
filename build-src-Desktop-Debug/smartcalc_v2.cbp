@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="calc"/>
+		<Option title="smartcalc_v2"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5LinguistTools\;CMake Files\resources\;"/>
@@ -132,12 +132,6 @@
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/calc_autogen/mocs_compilation.cpp">
 			<Option target="calc"/>
 		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/calc_en_US.ts">
-			<Option target="calc"/>
-		</Unit>
-		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/calc_en_US.ts.rule">
-			<Option target="calc"/>
-		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/controller/controllercalculator.cc">
 			<Option target="calc"/>
 		</Unit>
@@ -178,6 +172,12 @@
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/resources/styles/background.png">
+			<Option target="calc"/>
+		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts">
+			<Option target="calc"/>
+		</Unit>
+		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts.rule">
 			<Option target="calc"/>
 		</Unit>
 		<Unit filename="/home/kosant/Desktop/Smartcalc_CPP/src/view/QCustomPlot/qcustomplot.cc">

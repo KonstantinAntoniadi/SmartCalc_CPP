@@ -421,7 +421,7 @@
 		{
 			"backtrace" : 1,
 			"isGenerated" : true,
-			"path" : "calc_en_US.ts",
+			"path" : "smartcalc_v2_en_US.ts",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -452,7 +452,7 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "calc_en_US.ts.rule",
+			"path" : "smartcalc_v2_en_US.ts.rule",
 			"sourceGroupIndex" : 4
 		},
 		{

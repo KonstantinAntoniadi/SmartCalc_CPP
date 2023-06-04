@@ -69,9 +69,9 @@ include CMakeFiles/calc.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/calc.dir/flags.make
 
-/home/kosant/Desktop/Smartcalc_CPP/src/calc_en_US.ts: /home/kosant/Desktop/Smartcalc_CPP/src
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/kosant/Desktop/Smartcalc_CPP/src/calc_en_US.ts"
-	/usr/lib/qt5/bin/lupdate @/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles/calc_en_US.ts_lst_file -ts /home/kosant/Desktop/Smartcalc_CPP/src/calc_en_US.ts
+/home/kosant/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts: /home/kosant/Desktop/Smartcalc_CPP/src
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/kosant/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts"
+	/usr/lib/qt5/bin/lupdate @/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles/smartcalc_v2_en_US.ts_lst_file -ts /home/kosant/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts
 
 calc_autogen/3YJK5W5UP7/qrc_resources.cpp: /home/kosant/Desktop/Smartcalc_CPP/src/resources/resources.qrc
 calc_autogen/3YJK5W5UP7/qrc_resources.cpp: CMakeFiles/calc_autogen.dir/AutoRcc_resources_3YJK5W5UP7_Info.json
@@ -282,7 +282,7 @@ CMakeFiles/calc.dir/clean:
 .PHONY : CMakeFiles/calc.dir/clean
 
 CMakeFiles/calc.dir/depend: calc_autogen/3YJK5W5UP7/qrc_resources.cpp
-CMakeFiles/calc.dir/depend: /home/kosant/Desktop/Smartcalc_CPP/src/calc_en_US.ts
+CMakeFiles/calc.dir/depend: /home/kosant/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts
 	cd /home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kosant/Desktop/Smartcalc_CPP/src /home/kosant/Desktop/Smartcalc_CPP/src /home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug /home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug /home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles/calc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/calc.dir/depend
 

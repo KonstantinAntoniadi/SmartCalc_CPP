@@ -1,4 +1,4 @@
 # Hashes of file build rules.
-0c6141baa9001257c7c89296acaa9f60 /home/kosant/Desktop/Smartcalc_CPP/src/calc_en_US.ts
+b35e2708537e1df78248e3c54bfbf003 /home/kosant/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts
 0fad6346e2fd385a72e2a38b0add5bc1 CMakeFiles/calc_autogen
 39d0b9bbdaf193ef89b3b4fd98d298b8 calc_autogen/3YJK5W5UP7/qrc_resources.cpp

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(calc VERSION 0.1 LANGUAGES CXX)
+project(smartcalc_v2 VERSION 0.1 LANGUAGES CXX)
 find_package(QT NAMES Qt5 Qt6 REQUIRED COMPONENTS Widgets LinguistTools)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_C_STANDARD 11)
@@ -18,7 +18,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "$ENV{QT5_DIR}/lib/cmake")
 
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 
-set(TS_FILES calc_en_US.ts)
+set(TS_FILES smartcalc_v2_en_US.ts)
 
 set(PROJECT_SOURCES
         # icon.icns
