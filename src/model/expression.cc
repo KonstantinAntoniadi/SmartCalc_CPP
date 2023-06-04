@@ -34,18 +34,17 @@ double Expression::Calculate(const double x) {
   double result = 0;
   if (good_to_go_) {
     for (auto it = postfix_.begin(); it != postfix_.end(); it++) {
-      Operation cur_op = it->GetOperation();
-      if (cur_op == NUMBER) {
+      Operation op = it->GetOperation();
+      if (op == NUMBER) {
         calculate_.push(it->GetValue());
-      } else if (cur_op == X) {
+      } else if (op == X) {
         calculate_.push(x_);
-      } else if (cur_op == UNARMINUS) {
+      } else if (op == UNARMINUS) {
         calculate_.top() *= -1;
-      } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
-                 cur_op == DIV || cur_op == EXP || cur_op == MOD) {
-        calculate_.push(CalcOperand(cur_op));
-      } else if (OperationIsFunc(cur_op)) {
-        calculate_.push(CalcFunc(cur_op));
+      } else if (OperationIsBinaryOperation(op)) {
+        calculate_.push(CalcOperand(op));
+      } else if (OperationIsFunc(op)) {
+        calculate_.push(CalcFunc(op));
       }
     }
     result = calculate_.top();
@@ -174,20 +173,18 @@ bool Expression::ValidateOperator() {
   return result;
 }
 
-void Expression::GetPostfix() {
+void Expression::ConvertToPostfix() {
   for (auto it = lexemes_.begin(); it != lexemes_.end() && good_to_go_; it++) {
-    Operation cur_op = it->GetOperation();
-    if (cur_op == NUMBER || cur_op == X)
+    Operation op = it->GetOperation();
+    if (op == NUMBER || op == X)
       postfix_.push_back(*it);
-    else if (cur_op == OPENBRACKET)
+    else if (op == OPENBRACKET)
       operations_.push(*it);
-    else if (OperationIsFunc(cur_op)) {
+    else if (OperationIsFunc(op)) {
       operations_.push(*it);
-    } else if (cur_op == PLUS || cur_op == MINUS || cur_op == MUL ||
-               cur_op == DIV || cur_op == EXP || cur_op == MOD ||
-               cur_op == UNARMINUS) {
+    } else if (OperationIsBinaryOperation(op) || op == UNARMINUS) {
       ProcessOperator(*it);
-    } else if (cur_op == CLOSEBRACKET) {
+    } else if (op == CLOSEBRACKET) {
       ProcessBracket();
     }
   }
@@ -205,8 +202,7 @@ void Expression::ValidateRPN() {
       value = 0;
     } else if (OperationIsFunc(op) || op == UNARMINUS) {
       value = 1;
-    } else if (op == PLUS || op == MINUS || op == MUL || op == DIV ||
-               op == EXP || op == MOD) {
+    } else if (OperationIsBinaryOperation(op)) {
       value = 2;
     }
 
@@ -269,7 +265,38 @@ bool Expression::CheckAssociativity(Lexeme &lexeme) {
          (stack_operation != EXP && stack_operation != UNARMINUS);
 }
 
+void Expression::SetExpression(const std::string &infix) {
+  infix_ = infix;
+  Clear();
+  ConvertToLexemes();
+  ConvertToPostfix();
+}
+
+void Expression::Clear() {
+  good_to_go_ = true;
+  ClearCalculate();
+  ClearOperations();
+  lexemes_.clear();
+  postfix_.clear();
+}
+
+void Expression::ClearCalculate() {
+  while (!calculate_.empty()) {
+    calculate_.pop();
+  }
+}
+
+void Expression::ClearOperations() {
+  while (!operations_.empty()) {
+    operations_.pop();
+  }
+}
+
 bool Expression::OperationIsFunc(Operation op) { return funcs_.count(op); }
+
+bool Expression::OperationIsBinaryOperation(Operation op) {
+  return binary_operations_.count(op);
+}
 
 bool Expression::IsFunc(const char check) { return char_funcs_.count(check); }
 
@@ -279,6 +306,9 @@ bool Expression::IsOperator(const char check) {
 
 const std::unordered_set<Expression::Operation> Expression::funcs_ = {
     COS, SIN, TAN, ACOS, ASIN, ATAN, SQRT, LN, LOG};
+
+const std::unordered_set<Expression::Operation> Expression::binary_operations_ =
+    {PLUS, MINUS, MUL, DIV, EXP, MOD};
 
 const std::unordered_set<char> Expression::char_operators_ = {'+', '-', '*',
                                                               '/', '^', 'm'};

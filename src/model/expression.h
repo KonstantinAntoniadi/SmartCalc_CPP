@@ -11,7 +11,6 @@
 
 namespace s21 {
 
-// add enums
 class Expression {
   enum Operation {
     OPENBRACKET,
@@ -25,14 +24,12 @@ class Expression {
     SQRT,
     LN,
     LOG,
-    // between lexems
     PLUS,
     MINUS,
     MOD,
     MUL,
     DIV,
     EXP,
-    // unar
     UNARMINUS,
     NUMBER,
     X
@@ -42,17 +39,11 @@ class Expression {
  public:
   Expression() = default;
   ~Expression() = default;
-  void SetExpression(const std::string &infix) {
-    infix_ = infix;
-    Clear();
-    ConvertToLexemes();
-    GetPostfix();
-  }
+  void SetExpression(const std::string &infix);
 
-  bool IsValid() { return good_to_go_; }
-  double Calculate() { return Calculate(0); }
+  inline bool IsValidExpression() { return good_to_go_; }
   double Calculate(const double x);
-  // стоит объединить функции ниже
+  double Calculate() { return Calculate(0); }
 
  private:
   class Lexeme {
@@ -60,9 +51,9 @@ class Expression {
     Lexeme(Operation operation) : operation_(operation) { SetPrirority(); }
     Lexeme(Operation operation, double value)
         : operation_(operation), value_(value) {}
-    int GetPriority() { return priority_; }
-    Operation GetOperation() { return operation_; }
-    double GetValue() { return value_; }
+    inline int GetPriority() { return priority_; }
+    inline Operation GetOperation() { return operation_; }
+    inline double GetValue() { return value_; }
 
    private:
     Operation operation_{};
@@ -81,19 +72,11 @@ class Expression {
       }
     }
   };
-  void Clear() {
-    good_to_go_ = true;
-    while (!calculate_.empty()) {  // может стоит вынести отдельно
-      calculate_.pop();
-    }
-    while (!operations_.empty()) {
-      operations_.pop();
-    }
-    lexemes_.clear();
-    postfix_.clear();
-  }
 
-  static bool OperationIsFunc(Operation op);
+ private:
+  void Clear();
+  void ClearCalculate();
+  void ClearOperations();
   void ValidateRPN();
   double CalcOperand(Operation op);
   double CalcFunc(Operation op);
@@ -101,12 +84,15 @@ class Expression {
   void ProcessRemains();
   void ProcessOperator(Lexeme &lexema);
   bool CheckAssociativity(Lexeme &lexeme);
-  bool IsOperator(const char check);
+
   bool ValidateOperator();
-  bool IsFunc(const char check);
   bool ValidateFunc();
-  void GetPostfix();
+  void ConvertToPostfix();
   void ConvertToLexemes();
+  inline bool IsOperator(const char check);
+  inline bool IsFunc(const char check);
+  static bool OperationIsFunc(Operation op);
+  inline static bool OperationIsBinaryOperation(Operation op);
   std::string::iterator cur_iterator_;
   std::string infix_;
   std::stack<Lexeme> operations_;
@@ -116,6 +102,7 @@ class Expression {
   std::vector<Lexeme> lexemes_{};
   std::vector<Lexeme> postfix_{};
   static const std::unordered_set<Operation> funcs_;
+  static const std::unordered_set<Operation> binary_operations_;
   static const std::unordered_set<char> char_operators_;
   static const std::unordered_set<char> char_funcs_;
 };

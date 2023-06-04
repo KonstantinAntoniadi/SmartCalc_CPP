@@ -216,22 +216,22 @@ TEST_F(s21CalcTest, UnarPlusBeforeBracketTest) {
 
 TEST_F(s21CalcTest, BracketsInvalidTest) {
   expression_.SetExpression(brackets_invalid_);
-  EXPECT_FALSE(expression_.IsValid());
+  EXPECT_FALSE(expression_.IsValidExpression());
 }
 
 TEST_F(s21CalcTest, TrigonometryInvalidTest) {
   expression_.SetExpression(trigonometry_invalid_);
-  EXPECT_FALSE(expression_.IsValid());
+  EXPECT_FALSE(expression_.IsValidExpression());
 }
 
 TEST_F(s21CalcTest, MinusBracketInvalidTest) {
   expression_.SetExpression(minus_bracket_invalid_);
-  EXPECT_FALSE(expression_.IsValid());
+  EXPECT_FALSE(expression_.IsValidExpression());
 }
 
 TEST_F(s21CalcTest, ExpressionInvalidTest) {
   expression_.SetExpression(expression_invalid);
-  EXPECT_FALSE(expression_.IsValid());
+  EXPECT_FALSE(expression_.IsValidExpression());
 }
 
 }  // namespace s21
