@@ -2,9 +2,9 @@
 
 namespace s21 {
 void Expression::ConvertToLexemes() {
-  for (cur_it_ = infix_.begin(); cur_it_ != infix_.end() && good_to_go_;
-       cur_it_++) {
-    char cur = *cur_it_;
+  for (cur_iterator_ = infix_.begin();
+       cur_iterator_ != infix_.end() && good_to_go_; cur_iterator_++) {
+    char cur = *cur_iterator_;
 
     if (cur == 'x') {
       lexemes_.emplace_back(X, x_);
@@ -12,27 +12,25 @@ void Expression::ConvertToLexemes() {
       lexemes_.emplace_back(OPENBRACKET);
     } else if (cur == ')') {
       lexemes_.emplace_back(CLOSEBRACKET);
-    } else if (IsFunc(cur)) {  // можно попробовать объединить с функций ниже
+    } else if (IsFunc(cur)) {
       good_to_go_ = ValidateFunc();
     } else if (IsOperator(cur)) {
       good_to_go_ = ValidateOperator();
     } else if (isdigit(cur)) {
       double number = 0;
       int count_symbols_read = 0;
-      sscanf(&cur_it_[0], "%le %n", &number, &count_symbols_read);
+      sscanf(&cur_iterator_[0], "%le %n", &number, &count_symbols_read);
       lexemes_.emplace_back(NUMBER, number);
-      cur_it_ += count_symbols_read - 1;
+      cur_iterator_ += count_symbols_read - 1;
     } else if (cur != ' ') {
       good_to_go_ = false;
     }
   }
-
-  // ValidateRPN();
 }
 
 double Expression::Calculate(const double x) {
   x_ = x;
-  // std::cout <<
+
   double result = 0;
   if (good_to_go_) {
     for (auto it = postfix_.begin(); it != postfix_.end(); it++) {
@@ -53,9 +51,6 @@ double Expression::Calculate(const double x) {
     result = calculate_.top();
   }
 
-  // while (!calculate_.empty()) {
-  //   calculate_.pop();
-  // }
   return result;
 }
 
@@ -114,33 +109,33 @@ double Expression::CalcOperand(Operation op) {
 
 bool Expression::ValidateFunc() {
   bool result = true;
-  if (!strncmp(&cur_it_[0], "cos", 3)) {
+  if (!strncmp(&cur_iterator_[0], "cos", 3)) {
     lexemes_.emplace_back(COS);
-    cur_it_ += 2;
-  } else if (!strncmp(&cur_it_[0], "sin", 3)) {
+    cur_iterator_ += 2;
+  } else if (!strncmp(&cur_iterator_[0], "sin", 3)) {
     lexemes_.emplace_back(SIN);
-    cur_it_ += 2;
-  } else if (!strncmp(&cur_it_[0], "tan", 3)) {
+    cur_iterator_ += 2;
+  } else if (!strncmp(&cur_iterator_[0], "tan", 3)) {
     lexemes_.emplace_back(TAN);
-    cur_it_ += 2;
-  } else if (!strncmp(&cur_it_[0], "acos", 4)) {
+    cur_iterator_ += 2;
+  } else if (!strncmp(&cur_iterator_[0], "acos", 4)) {
     lexemes_.emplace_back(ACOS);
-    cur_it_ += 3;
-  } else if (!strncmp(&cur_it_[0], "asin", 4)) {
+    cur_iterator_ += 3;
+  } else if (!strncmp(&cur_iterator_[0], "asin", 4)) {
     lexemes_.emplace_back(ASIN);
-    cur_it_ += 3;
-  } else if (!strncmp(&cur_it_[0], "atan", 4)) {
+    cur_iterator_ += 3;
+  } else if (!strncmp(&cur_iterator_[0], "atan", 4)) {
     lexemes_.emplace_back(ATAN);
-    cur_it_ += 3;
-  } else if (!strncmp(&cur_it_[0], "sqrt", 4)) {
+    cur_iterator_ += 3;
+  } else if (!strncmp(&cur_iterator_[0], "sqrt", 4)) {
     lexemes_.emplace_back(SQRT);
-    cur_it_ += 3;
-  } else if (!strncmp(&cur_it_[0], "ln", 2)) {
+    cur_iterator_ += 3;
+  } else if (!strncmp(&cur_iterator_[0], "ln", 2)) {
     lexemes_.emplace_back(LN);
-    cur_it_ += 1;
-  } else if (!strncmp(&cur_it_[0], "log", 3)) {
+    cur_iterator_ += 1;
+  } else if (!strncmp(&cur_iterator_[0], "log", 3)) {
     lexemes_.emplace_back(LOG);
-    cur_it_ += 2;
+    cur_iterator_ += 2;
   } else {
     result = false;
   }
@@ -148,36 +143,30 @@ bool Expression::ValidateFunc() {
   return result;
 }
 
-bool Expression::IsOperator(const char check) {  // НЕ ООП
-  std::string operators = "+-*/^m";
-  return (operators.find(check) != std::string::npos);
-}
-
 bool Expression::ValidateOperator() {
   bool result = true;
 
-  if (*cur_it_ == '+') {
+  if (*cur_iterator_ == '+') {
     if (!lexemes_.empty() &&
         lexemes_.at(lexemes_.size() - 1).GetOperation() != OPENBRACKET) {
       lexemes_.emplace_back(PLUS);
     }
-  } else if (*cur_it_ == '-') {
+  } else if (*cur_iterator_ == '-') {
     if (lexemes_.empty() ||
         lexemes_.at(lexemes_.size() - 1).GetOperation() == OPENBRACKET) {
-      lexemes_.emplace_back(
-          UNARMINUS);  // может стоит вынести это в польскую нотацию
+      lexemes_.emplace_back(UNARMINUS);
     } else {
       lexemes_.emplace_back(MINUS);
     }
-  } else if (*cur_it_ == '*') {
+  } else if (*cur_iterator_ == '*') {
     lexemes_.emplace_back(MUL);
-  } else if (*cur_it_ == '/') {
+  } else if (*cur_iterator_ == '/') {
     lexemes_.emplace_back(DIV);
-  } else if (*cur_it_ == '^') {
+  } else if (*cur_iterator_ == '^') {
     lexemes_.emplace_back(EXP);
-  } else if (!strncmp(&cur_it_[0], "mod", 3)) {
+  } else if (!strncmp(&cur_iterator_[0], "mod", 3)) {
     lexemes_.emplace_back(MOD);
-    cur_it_ += 2;
+    cur_iterator_ += 2;
   } else {
     result = false;
   }
@@ -204,13 +193,10 @@ void Expression::GetPostfix() {
   }
 
   if (good_to_go_) ProcessRemains();
-  if (good_to_go_)
-    good_to_go_ = ValidateRPN();  // возможно стоит флаг внутрь функции
-  //   записать
+  ValidateRPN();
 }
 
-bool Expression::ValidateRPN() {
-  bool good_rpn = true;
+void Expression::ValidateRPN() {
   int value = 0;
   int size = 0;
   for (auto it : postfix_) {
@@ -225,12 +211,10 @@ bool Expression::ValidateRPN() {
     }
 
     size = size + 1 - value;
-    if (size <= 0) good_rpn = false;
+    if (size <= 0) good_to_go_ = false;
   }
 
-  good_rpn = size == 1;
-
-  return good_rpn;
+  good_to_go_ = size == 1;
 }
 
 void Expression::ProcessRemains() {
@@ -262,23 +246,20 @@ void Expression::ProcessBracket() {
   } else {
     good_to_go_ = false;
   }
-
-  // return good_to_go_;  // убрать это
 }
 
 void Expression::ProcessOperator(Lexeme &lexeme) {
-  int pr_head = 0;
-  if (!operations_.empty()) pr_head = operations_.top().GetPriority();
-  int pr_c = lexeme.GetPriority();  // измени название
-  while (!operations_.empty() &&
-         (pr_head > pr_c || (pr_head == pr_c && CheckAssociativity(lexeme)))) {
+  int pr_head_lexeme = 0;
+  if (!operations_.empty()) pr_head_lexeme = operations_.top().GetPriority();
+  int pr_lexeme_for_add = lexeme.GetPriority();
+  while (!operations_.empty() && (pr_head_lexeme > pr_lexeme_for_add ||
+                                  (pr_head_lexeme == pr_lexeme_for_add &&
+                                   CheckAssociativity(lexeme)))) {
     postfix_.push_back(operations_.top());
     operations_.pop();
-    if (!operations_.empty()) pr_head = operations_.top().GetPriority();
+    if (!operations_.empty()) pr_head_lexeme = operations_.top().GetPriority();
   }
   operations_.push(lexeme);
-
-  // return true;  // избавься потом от возврата
 }
 
 bool Expression::CheckAssociativity(Lexeme &lexeme) {
@@ -288,14 +269,21 @@ bool Expression::CheckAssociativity(Lexeme &lexeme) {
          (stack_operation != EXP && stack_operation != UNARMINUS);
 }
 
-bool Expression::IsFunc(const char check) {  // НЕ ООП
-  // перепиши и используй итератор
-  std::string funcs = "cstal";
-  return (funcs.find(check) != std::string::npos);
+bool Expression::OperationIsFunc(Operation op) { return funcs_.count(op); }
+
+bool Expression::IsFunc(const char check) { return char_funcs_.count(check); }
+
+bool Expression::IsOperator(const char check) {
+  return char_operators_.count(check);
 }
 
-bool Expression::OperationIsFunc(Operation op) {
-  return std::count(funcs_.begin(), funcs_.end(), op);
-}
+const std::unordered_set<Expression::Operation> Expression::funcs_ = {
+    COS, SIN, TAN, ACOS, ASIN, ATAN, SQRT, LN, LOG};
+
+const std::unordered_set<char> Expression::char_operators_ = {'+', '-', '*',
+                                                              '/', '^', 'm'};
+
+const std::unordered_set<char> Expression::char_funcs_ = {'c', 's', 't', 'a',
+                                                          'l'};
 
 }  // namespace s21

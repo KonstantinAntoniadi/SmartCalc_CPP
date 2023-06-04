@@ -6,6 +6,7 @@
 #include <cstring>
 #include <iostream>
 #include <stack>
+#include <unordered_set>
 #include <vector>
 
 namespace s21 {
@@ -40,8 +41,7 @@ class Expression {
 
  public:
   Expression() = default;
-  Expression(const Expression &other) = delete;
-  Expression(Expression &&other) = delete;
+  ~Expression() = default;
   void SetExpression(const std::string &infix) {
     infix_ = infix;
     Clear();
@@ -74,14 +74,9 @@ class Expression {
         priority_ = 1;
       } else if (operation_ == MUL || operation_ == DIV) {
         priority_ = 2;
-
       } else if (operation_ == EXP || operation_ == UNARMINUS) {
         priority_ = 3;
-
-      } else if (operation_ == COS || operation_ == SIN || operation_ == TAN ||
-                 operation_ == ACOS || operation_ == ASIN ||
-                 operation_ == ATAN || operation_ == SQRT || operation_ == LN ||
-                 operation_ == LOG) {
+      } else if (OperationIsFunc(operation_)) {
         priority_ = 4;
       }
     }
@@ -98,8 +93,8 @@ class Expression {
     postfix_.clear();
   }
 
-  bool OperationIsFunc(Operation op);
-  bool ValidateRPN();
+  static bool OperationIsFunc(Operation op);
+  void ValidateRPN();
   double CalcOperand(Operation op);
   double CalcFunc(Operation op);
   void ProcessBracket();
@@ -112,17 +107,17 @@ class Expression {
   bool ValidateFunc();
   void GetPostfix();
   void ConvertToLexemes();
-  // переделать на текущий итератор
-  std::string::iterator cur_it_;
+  std::string::iterator cur_iterator_;
   std::string infix_;
   std::stack<Lexeme> operations_;
   std::stack<double> calculate_;
-  std::vector<Operation> funcs_ = {COS,  SIN,  TAN, ACOS, ASIN,
-                                   ATAN, SQRT, LN,  LOG};
   bool good_to_go_ = false;
   double x_{};
   std::vector<Lexeme> lexemes_{};
   std::vector<Lexeme> postfix_{};
+  static const std::unordered_set<Operation> funcs_;
+  static const std::unordered_set<char> char_operators_;
+  static const std::unordered_set<char> char_funcs_;
 };
 
 }  // namespace s21

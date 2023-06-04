@@ -66,11 +66,11 @@ test: clean calculator.a
 
 gcov_report: clean calculator.o
 ifeq ($(OS),Darwin)
-	$(CC) $(CFLAGS) $(CREDITCALCULATOR) $(EXPRESSION) $(TEST) -lgtest -o $(TESTLIBS) gcov_test  
+	$(CC) $(CFLAGS) -lgtest $(CREDITCALCULATOR) $(EXPRESSION) $(TEST) $(TESTLIBS)  -o  gcov_test 
 else
 	$(CC) $(CFLAGS) $(CREDITCALCULATOR) $(EXPRESSION) $(TEST) -o gcov_test $(TESTLIBS)
 endif
-	@chmod +x *
+# @chmod +x * 
 	./gcov_test
 	lcov -t "gcov_test" -o gcov_test.info --no-external -c -d .
 	genhtml -o report/ gcov_test.info
