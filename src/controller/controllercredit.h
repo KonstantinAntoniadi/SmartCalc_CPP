@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CPP_SMART_CALC_V2_SRC_CONTROLLERCREDIT_H
+#define CPP_SMART_CALC_V2_SRC_CONTROLLERCREDIT_H
 
 #include "model/creditcalculator.h"
 namespace s21 {
@@ -20,3 +21,5 @@ class ControllerCredit {
   CreditCalculator credit_;
 };
 };  // namespace s21
+
+#endif  // CPP_SMART_CALC_V2_SRC_CONTROLLERCREDIT_H

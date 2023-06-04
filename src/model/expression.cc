@@ -158,7 +158,7 @@ bool Expression::ValidateOperator() {
 
   if (*cur_it_ == '+') {
     if (!lexemes_.empty() &&
-        !lexemes_.at(lexemes_.size() - 1).GetOperation() == OPENBRACKET) {
+        lexemes_.at(lexemes_.size() - 1).GetOperation() != OPENBRACKET) {
       lexemes_.emplace_back(PLUS);
     }
   } else if (*cur_it_ == '-') {

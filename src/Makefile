@@ -18,10 +18,10 @@ all: clean install open
 install: clean
 	mkdir build && cd build && cmake ../CMakeLists.txt && make && rm Makefile
 ifeq ($(OS),Darwin)
-    cp resources/fonts/PetMe.ttf ~/Library/Fonts
-	cp build/calc.app ~/Desktop
+	cp resources/fonts/PetMe.ttf ~/Library/Fonts
+	mv build/calc.app ~/Desktop
 else
-	cp build/calc ~/Desktop
+	mv build/calc ~/Desktop
 endif
 	rm -rf build/
 

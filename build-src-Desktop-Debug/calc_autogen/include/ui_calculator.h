@@ -514,7 +514,7 @@ public:
         pushButton_del->setProperty("class", QVariant(QApplication::translate("Calculator", "control", nullptr)));
         pushButton_ac->setText(QApplication::translate("Calculator", "ac", nullptr));
         pushButton_ac->setProperty("class", QVariant(QApplication::translate("Calculator", "control", nullptr)));
-        lineEdit->setText(QApplication::translate("Calculator", "0", nullptr));
+        lineEdit->setText(QString());
         lineEdit->setPlaceholderText(QString());
     } // retranslateUi
 

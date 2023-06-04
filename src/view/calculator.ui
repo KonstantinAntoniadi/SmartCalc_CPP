@@ -898,7 +898,7 @@ border:3px solid #000;
     <enum>Qt::StrongFocus</enum>
    </property>
    <property name="text">
-    <string>0</string>
+    <string/>
    </property>
    <property name="maxLength">
     <number>255</number>
