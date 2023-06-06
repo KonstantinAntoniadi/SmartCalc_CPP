@@ -6,24 +6,37 @@ void Expression::ConvertToLexemes() {
        cur_iterator_ != infix_.end() && good_to_go_; cur_iterator_++) {
     char cur = *cur_iterator_;
 
-    if (cur == 'x') {
-      lexemes_.emplace_back(X, x_);
-    } else if (cur == '(') {
-      lexemes_.emplace_back(OPENBRACKET);
-    } else if (cur == ')') {
-      lexemes_.emplace_back(CLOSEBRACKET);
-    } else if (IsFunc(cur)) {
-      good_to_go_ = ValidateFunc();
-    } else if (IsOperator(cur)) {
-      good_to_go_ = ValidateOperator();
-    } else if (isdigit(cur)) {
+    if (*cur_iterator_ == ' ') {
+      continue;
+    } else if (isdigit(cur)) {  // вынести в отдельную функцию
       double number = 0;
       int count_symbols_read = 0;
       sscanf(&cur_iterator_[0], "%le %n", &number, &count_symbols_read);
       lexemes_.emplace_back(NUMBER, number);
       cur_iterator_ += count_symbols_read - 1;
-    } else if (cur != ' ') {
-      good_to_go_ = false;
+    } else {
+      if (*cur_iterator_ == '+') {
+        if (!lexemes_.empty() &&
+            lexemes_.at(lexemes_.size() - 1).GetOperation() != OPENBRACKET) {
+          lexemes_.emplace_back(PLUS);
+        }
+      } else if (*cur_iterator_ == '-') {
+        if (lexemes_.empty() ||
+            lexemes_.at(lexemes_.size() - 1).GetOperation() == OPENBRACKET) {
+          lexemes_.emplace_back(UNARMINUS);
+        } else {
+          lexemes_.emplace_back(MINUS);
+        }
+      } else {
+        good_to_go_ = false;
+        for (const auto &[k, x] : map_operations_) {
+          if (!strncmp(&cur_iterator_[0], k.data(), k.size())) {
+            lexemes_.emplace_back(x);
+            cur_iterator_ += k.size() - 1;
+            good_to_go_ = true;
+          }
+        }
+      }
     }
   }
 }
@@ -101,73 +114,6 @@ double Expression::CalcOperand(Operation op) {
     result = std::pow(a, b);
   } else if (op == MOD) {
     result = std::fmod(a, b);
-  }
-
-  return result;
-}
-
-bool Expression::ValidateFunc() {
-  bool result = true;
-  if (!strncmp(&cur_iterator_[0], "cos", 3)) {
-    lexemes_.emplace_back(COS);
-    cur_iterator_ += 2;
-  } else if (!strncmp(&cur_iterator_[0], "sin", 3)) {
-    lexemes_.emplace_back(SIN);
-    cur_iterator_ += 2;
-  } else if (!strncmp(&cur_iterator_[0], "tan", 3)) {
-    lexemes_.emplace_back(TAN);
-    cur_iterator_ += 2;
-  } else if (!strncmp(&cur_iterator_[0], "acos", 4)) {
-    lexemes_.emplace_back(ACOS);
-    cur_iterator_ += 3;
-  } else if (!strncmp(&cur_iterator_[0], "asin", 4)) {
-    lexemes_.emplace_back(ASIN);
-    cur_iterator_ += 3;
-  } else if (!strncmp(&cur_iterator_[0], "atan", 4)) {
-    lexemes_.emplace_back(ATAN);
-    cur_iterator_ += 3;
-  } else if (!strncmp(&cur_iterator_[0], "sqrt", 4)) {
-    lexemes_.emplace_back(SQRT);
-    cur_iterator_ += 3;
-  } else if (!strncmp(&cur_iterator_[0], "ln", 2)) {
-    lexemes_.emplace_back(LN);
-    cur_iterator_ += 1;
-  } else if (!strncmp(&cur_iterator_[0], "log", 3)) {
-    lexemes_.emplace_back(LOG);
-    cur_iterator_ += 2;
-  } else {
-    result = false;
-  }
-
-  return result;
-}
-
-bool Expression::ValidateOperator() {
-  bool result = true;
-
-  if (*cur_iterator_ == '+') {
-    if (!lexemes_.empty() &&
-        lexemes_.at(lexemes_.size() - 1).GetOperation() != OPENBRACKET) {
-      lexemes_.emplace_back(PLUS);
-    }
-  } else if (*cur_iterator_ == '-') {
-    if (lexemes_.empty() ||
-        lexemes_.at(lexemes_.size() - 1).GetOperation() == OPENBRACKET) {
-      lexemes_.emplace_back(UNARMINUS);
-    } else {
-      lexemes_.emplace_back(MINUS);
-    }
-  } else if (*cur_iterator_ == '*') {
-    lexemes_.emplace_back(MUL);
-  } else if (*cur_iterator_ == '/') {
-    lexemes_.emplace_back(DIV);
-  } else if (*cur_iterator_ == '^') {
-    lexemes_.emplace_back(EXP);
-  } else if (!strncmp(&cur_iterator_[0], "mod", 3)) {
-    lexemes_.emplace_back(MOD);
-    cur_iterator_ += 2;
-  } else {
-    result = false;
   }
 
   return result;
@@ -298,22 +244,16 @@ bool Expression::OperationIsBinaryOperation(Operation op) {
   return binary_operations_.count(op);
 }
 
-bool Expression::IsFunc(const char check) { return char_funcs_.count(check); }
-
-bool Expression::IsOperator(const char check) {
-  return char_operators_.count(check);
-}
-
 const std::unordered_set<Expression::Operation> Expression::funcs_ = {
     COS, SIN, TAN, ACOS, ASIN, ATAN, SQRT, LN, LOG};
 
 const std::unordered_set<Expression::Operation> Expression::binary_operations_ =
     {PLUS, MINUS, MUL, DIV, EXP, MOD};
 
-const std::unordered_set<char> Expression::char_operators_ = {'+', '-', '*',
-                                                              '/', '^', 'm'};
-
-const std::unordered_set<char> Expression::char_funcs_ = {'c', 's', 't', 'a',
-                                                          'l'};
-
+const std::map<std::string, Expression::Operation> Expression::map_operations_ =
+    {{"(", OPENBRACKET}, {")", CLOSEBRACKET}, {"cos", COS},   {"sin", SIN},
+     {"tan", TAN},       {"acos", ACOS},      {"asin", ASIN}, {"atan", ATAN},
+     {"sqrt", SQRT},     {"ln", LN},          {"log", LOG},   {"+", PLUS},
+     {"-", MINUS},       {"mod", MOD},        {"*", MUL},     {"/", DIV},
+     {"^", EXP},         {"~", UNARMINUS},    {"x", X}};
 }  // namespace s21

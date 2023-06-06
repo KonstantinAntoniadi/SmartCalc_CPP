@@ -5,6 +5,7 @@
 #include <cmath>
 #include <cstring>
 #include <iostream>
+#include <map>
 #include <stack>
 #include <unordered_set>
 #include <vector>
@@ -102,8 +103,7 @@ class Expression {
   std::vector<Lexeme> postfix_{};
   static const std::unordered_set<Operation> funcs_;
   static const std::unordered_set<Operation> binary_operations_;
-  static const std::unordered_set<char> char_operators_;
-  static const std::unordered_set<char> char_funcs_;
+  static const std::map<std::string, Operation> map_operations_;
 };
 
 }  // namespace s21
