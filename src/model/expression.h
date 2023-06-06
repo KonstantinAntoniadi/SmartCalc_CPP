@@ -33,14 +33,13 @@ class Expression {
     UNARMINUS,
     NUMBER,
     X
-
   };
 
  public:
   Expression() = default;
   ~Expression() = default;
-  void SetExpression(const std::string &infix);
 
+  void SetExpression(const std::string &infix);
   inline bool IsValidExpression() { return good_to_go_; }
   double Calculate(const double x);
   double Calculate() { return Calculate(0); }
