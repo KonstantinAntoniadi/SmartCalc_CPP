@@ -74,6 +74,7 @@ class Expression {
   };
 
  private:
+  double ReadDouble();
   void Clear();
   void ClearCalculate();
   void ClearOperations();
@@ -99,6 +100,7 @@ class Expression {
   std::stack<double> calculate_;
   bool good_to_go_ = false;
   double x_{};
+
   std::vector<Lexeme> lexemes_{};
   std::vector<Lexeme> postfix_{};
   static const std::unordered_set<Operation> funcs_;

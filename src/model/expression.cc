@@ -1,6 +1,7 @@
 #include "expression.h"
 
 namespace s21 {
+
 void Expression::ConvertToLexemes() {
   for (cur_iterator_ = infix_.begin();
        cur_iterator_ != infix_.end() && good_to_go_; cur_iterator_++) {
@@ -8,12 +9,8 @@ void Expression::ConvertToLexemes() {
 
     if (*cur_iterator_ == ' ') {
       continue;
-    } else if (isdigit(cur)) {  // вынести в отдельную функцию
-      double number = 0;
-      int count_symbols_read = 0;
-      sscanf(&cur_iterator_[0], "%le %n", &number, &count_symbols_read);
-      lexemes_.emplace_back(NUMBER, number);
-      cur_iterator_ += count_symbols_read - 1;
+    } else if (isdigit(cur)) {
+      lexemes_.emplace_back(NUMBER, ReadDouble());
     } else {
       if (*cur_iterator_ == '+') {
         if (!lexemes_.empty() &&
@@ -39,6 +36,15 @@ void Expression::ConvertToLexemes() {
       }
     }
   }
+}
+
+double Expression::ReadDouble() {
+  double number = 0;
+  int count_symbols_read = 0;
+  sscanf(&cur_iterator_[0], "%le %n", &number, &count_symbols_read);
+  cur_iterator_ += count_symbols_read - 1;
+
+  return number;
 }
 
 double Expression::Calculate(const double x) {
