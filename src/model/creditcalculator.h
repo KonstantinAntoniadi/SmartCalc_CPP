@@ -7,7 +7,6 @@
 
 namespace s21 {
 
-// вынести 12 в константу
 class CreditCalculator {
  public:
   CreditCalculator() = default;
@@ -30,8 +29,8 @@ class CreditCalculator {
   double rate_{};
   double first_payment_{}, last_payment_{};
   double month_payment_{}, total_payment_{}, overpayment_{};
-  int days_in_year_ = 365;
-  double months_in_year_ = 12.0;
+  static constexpr int days_in_year_ = 365;
+  static constexpr double months_in_year_ = 12.0;
 };
 
 }  // namespace s21
