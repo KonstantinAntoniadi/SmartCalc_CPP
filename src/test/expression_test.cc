@@ -217,6 +217,10 @@ TEST_F(s21CalcTest, UnarPlusBeforeBracketTest) {
 TEST_F(s21CalcTest, BracketsInvalidTest) {
   expression_.SetExpression(brackets_invalid_);
   EXPECT_FALSE(expression_.IsValidExpression());
+  expression_.SetExpression("2 + 2");
+  expression_.Calculate();
+  expression_.SetExpression(")2 + 3");
+  expression_.Calculate();
 }
 
 TEST_F(s21CalcTest, TrigonometryInvalidTest) {

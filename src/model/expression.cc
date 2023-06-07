@@ -156,11 +156,12 @@ void Expression::ValidateExpression() {
   int size = 0;
   for (auto it : lexemes_) {
     Operation op = it.GetOperation();
-    if (op == NUMBER || op == X) {
+
+    if (op == NUMBER || op == X ) {
       value = 0;
     } else if (OperationIsFunc(op) || op == UNARMINUS || op == UNARPLUS) {
       value = 1;
-    } else if (OperationIsBinaryOperation(op)) {
+    } else if (OperationIsBinaryOperation(op) ) {
       value = 2;
     }
 
