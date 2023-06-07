@@ -36,6 +36,8 @@ void Expression::ConvertToLexemes() {
       }
     }
   }
+
+  ValidateExpression();
 }
 
 double Expression::ReadDouble() {
@@ -142,13 +144,12 @@ void Expression::ConvertToPostfix() {
   }
 
   if (good_to_go_) ProcessRemains();
-  ValidateRPN();
 }
 
-void Expression::ValidateRPN() {
+void Expression::ValidateExpression() {
   int value = 0;
   int size = 0;
-  for (auto it : postfix_) {
+  for (auto it : lexemes_) {
     Operation op = it.GetOperation();
     if (op == NUMBER || op == X) {
       value = 0;
@@ -158,8 +159,10 @@ void Expression::ValidateRPN() {
       value = 2;
     }
 
-    size = size + 1 - value;
-    if (size <= 0) good_to_go_ = false;
+    if (op != OPENBRACKET && op != CLOSEBRACKET) {
+      size = size + 1 - value;
+    }
+    if (size < 0) good_to_go_ = false;
   }
 
   good_to_go_ = size == 1;

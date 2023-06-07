@@ -78,7 +78,7 @@ class Expression {
   void Clear();
   void ClearCalculate();
   void ClearOperations();
-  void ValidateRPN();
+  void ValidateExpression();
   double CalcOperand(Operation op);
   double CalcFunc(Operation op);
   void ProcessBracket();
@@ -86,12 +86,8 @@ class Expression {
   void ProcessOperator(Lexeme &lexema);
   bool CheckAssociativity(Lexeme &lexeme);
 
-  bool ValidateOperator();
-  bool ValidateFunc();
   void ConvertToPostfix();
   void ConvertToLexemes();
-  inline bool IsOperator(const char check);
-  inline bool IsFunc(const char check);
   static bool OperationIsFunc(Operation op);
   inline static bool OperationIsBinaryOperation(Operation op);
   std::string::iterator cur_iterator_;
