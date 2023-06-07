@@ -21,8 +21,6 @@ void Expression::ConvertExpressionToLexemes() {
       }
     }
   }
-
-  ValidateExpression();
 }
 
 void Expression::ConvertUnarToLexeme(Operation op) {
@@ -230,6 +228,7 @@ void Expression::SetExpression(const std::string &infix) {
   infix_ = infix;
   Clear();
   ConvertExpressionToLexemes();
+  ValidateExpression();
   ConvertToPostfix();
 }
 
