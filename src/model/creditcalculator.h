@@ -13,6 +13,7 @@ class CreditCalculator {
   CreditCalculator(const double loan, const int period, const double rate)
       : loan_(loan), period_(period), rate_(rate){};
   ~CreditCalculator() = default;
+
   void SetStartValues(const double loan, const int period, const double rate);
   void CalcAnnuity();
   void CalcDifferentiated();

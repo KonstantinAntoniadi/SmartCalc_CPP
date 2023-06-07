@@ -983,7 +983,6 @@
  mdp:/usr/local/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
  mdp:/usr/local/lib/QtWidgets.framework/Versions/A/Headers/qwidgetaction.h
  mdp:/usr/local/lib/QtWidgets.framework/Versions/A/Headers/qwizard.h
-/Users/edwinevi/Desktop/Smartcalc_CPP/src/controller/controllercredit.h
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/view/calculator.h
  mmc:Q_OBJECT
  mdp:/Users/edwinevi/Desktop/Smartcalc_CPP/src/view/calculator.h
@@ -1268,10 +1267,11 @@
  mdp:/usr/local/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h
  mdp:/usr/local/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h
  mdp:/usr/local/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
+/Users/edwinevi/Desktop/Smartcalc_CPP/src/controller/controllercredit.h
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/controller/controllercalculator.h
+/Users/edwinevi/Desktop/Smartcalc_CPP/src/model/creditcalculator.h
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/view/credit.cc
  uic:ui_credit.h
-/Users/edwinevi/Desktop/Smartcalc_CPP/src/model/creditcalculator.h
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/view/mainwindow.h
  mmc:Q_OBJECT
  mdp:/Users/edwinevi/Desktop/Smartcalc_CPP/src/view/mainwindow.h

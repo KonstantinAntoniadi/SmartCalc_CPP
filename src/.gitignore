@@ -78,3 +78,6 @@ build-src-Desktop-Debug
 todo
 test.cc
 main
+
+# Cmake cache files
+CMakeLists.txt.*

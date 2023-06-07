@@ -7,6 +7,7 @@ class ControllerCredit {
  public:
   ControllerCredit() = default;
   ~ControllerCredit() = default;
+
   void SetStartValues(const double loan, const double period,
                       const double rate);
   void CalcAnnuity();

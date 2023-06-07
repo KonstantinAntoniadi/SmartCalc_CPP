@@ -28,6 +28,7 @@ set(OLD_GLOB
   "/Users/edwinevi/Desktop/Smartcalc_CPP/src/main.cc"
   "/Users/edwinevi/Desktop/Smartcalc_CPP/src/model/creditcalculator.cc"
   "/Users/edwinevi/Desktop/Smartcalc_CPP/src/model/expression.cc"
+  "/Users/edwinevi/Desktop/Smartcalc_CPP/src/test.cc"
   "/Users/edwinevi/Desktop/Smartcalc_CPP/src/test/credit_test.cc"
   "/Users/edwinevi/Desktop/Smartcalc_CPP/src/test/expression_test.cc"
   "/Users/edwinevi/Desktop/Smartcalc_CPP/src/test/main.cc"

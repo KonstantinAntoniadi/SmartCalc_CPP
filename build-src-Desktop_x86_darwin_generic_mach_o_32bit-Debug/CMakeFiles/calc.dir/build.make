@@ -79,6 +79,7 @@ include CMakeFiles/calc.dir/flags.make
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts: /Users/edwinevi/Desktop/Smartcalc_CPP/src/model/expression.cc
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts: /Users/edwinevi/Desktop/Smartcalc_CPP/src/model/expression.h
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts: /Users/edwinevi/Desktop/Smartcalc_CPP/src/resources/resources.qrc
+/Users/edwinevi/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts: /Users/edwinevi/Desktop/Smartcalc_CPP/src/test.cc
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts: /Users/edwinevi/Desktop/Smartcalc_CPP/src/test/credit_test.cc
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts: /Users/edwinevi/Desktop/Smartcalc_CPP/src/test/expression_test.cc
 /Users/edwinevi/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts: /Users/edwinevi/Desktop/Smartcalc_CPP/src/test/main.cc
