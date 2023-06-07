@@ -5,6 +5,7 @@
 #include <cmath>
 #include <cstring>
 #include <iostream>
+#include <map>
 #include <stack>
 #include <unordered_set>
 #include <vector>
@@ -30,6 +31,7 @@ class Expression {
     MUL,
     DIV,
     EXP,
+    UNARPLUS,
     UNARMINUS,
     NUMBER,
     X
@@ -73,10 +75,13 @@ class Expression {
   };
 
  private:
+  double ReadDouble();
+  void ConvertUnarToLexeme(Operation op);
+  void ConvertOperationToLexeme();
   void Clear();
   void ClearCalculate();
   void ClearOperations();
-  void ValidateRPN();
+  void ValidateExpression();
   double CalcOperand(Operation op);
   double CalcFunc(Operation op);
   void ProcessBracket();
@@ -84,12 +89,8 @@ class Expression {
   void ProcessOperator(Lexeme &lexema);
   bool CheckAssociativity(Lexeme &lexeme);
 
-  bool ValidateOperator();
-  bool ValidateFunc();
   void ConvertToPostfix();
-  void ConvertToLexemes();
-  inline bool IsOperator(const char check);
-  inline bool IsFunc(const char check);
+  void ConvertExpressionToLexemes();
   static bool OperationIsFunc(Operation op);
   inline static bool OperationIsBinaryOperation(Operation op);
   std::string::iterator cur_iterator_;
@@ -98,12 +99,13 @@ class Expression {
   std::stack<double> calculate_;
   bool good_to_go_ = false;
   double x_{};
+
   std::vector<Lexeme> lexemes_{};
   std::vector<Lexeme> postfix_{};
   static const std::unordered_set<Operation> funcs_;
   static const std::unordered_set<Operation> binary_operations_;
-  static const std::unordered_set<char> char_operators_;
-  static const std::unordered_set<char> char_funcs_;
+  static const std::map<Operation, Operation> map_unar_;
+  static const std::map<std::string, Operation> map_operations_;
 };
 
 }  // namespace s21
