@@ -25,19 +25,23 @@ void Expression::ConvertToLexemes() {
           lexemes_.emplace_back(MINUS);
         }
       } else {
-        good_to_go_ = false;
-        for (const auto &[k, x] : map_operations_) {
-          if (!strncmp(&cur_iterator_[0], k.data(), k.size())) {
-            lexemes_.emplace_back(x);
-            cur_iterator_ += k.size() - 1;
-            good_to_go_ = true;
-          }
-        }
+        ConvertOperationToLexeme();
       }
     }
   }
 
   ValidateExpression();
+}
+
+void Expression::ConvertOperationToLexeme() {
+  good_to_go_ = false;
+  for (const auto &[k, x] : map_operations_) {
+    if (!strncmp(&cur_iterator_[0], k.data(), k.size())) {
+      lexemes_.emplace_back(x);
+      cur_iterator_ += k.size() - 1;
+      good_to_go_ = true;
+    }
+  }
 }
 
 double Expression::ReadDouble() {

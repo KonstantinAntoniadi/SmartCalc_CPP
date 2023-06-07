@@ -75,6 +75,7 @@ class Expression {
 
  private:
   double ReadDouble();
+  void ConvertOperationToLexeme();
   void Clear();
   void ClearCalculate();
   void ClearOperations();
