@@ -14,11 +14,6 @@ double ControllerCalculator::Calculate(const double x) {
   return res;
 }
 
-double ControllerCalculator::Calculate(const std::string &infix,
-                                       const double x) {
-  expression_.SetExpression(infix);
 
-  return expression_.Calculate(x);
-}
 
 };  // namespace s21

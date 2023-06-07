@@ -21,8 +21,6 @@ class Calculator : public QWidget {
 
  private slots:
   void on_calcButtonClicked();
-  void on_lineEdit_textChanged(const QString &arg1);
-  void on_lineEdit_textEdited(const QString &arg1);
   void delLastSymbol();
   void buttonInput_clicked();
   void clearInput();

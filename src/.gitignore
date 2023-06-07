@@ -74,3 +74,5 @@ Thumbs.db
 .vscode
 src/.vscode
 build-src-Desktop-Debug
+../build*
+todo

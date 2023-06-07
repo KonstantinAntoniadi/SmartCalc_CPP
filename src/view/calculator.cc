@@ -123,20 +123,11 @@ void Calculator::on_calcButtonClicked() {
   }
 }
 
-void Calculator::on_lineEdit_textChanged(const QString &arg1) {
-  if (arg1 == ')') ui->lineEdit->setText("+");
-}
-
-void Calculator::on_lineEdit_textEdited(const QString &arg1) {
-  if (arg1 == '(') ui->lineEdit->setText("-");
-}
-
 void Calculator::on_pushButton_graph_clicked() {
   QString expressionLine = ui->lineEdit->text();
   QByteArray ba = expressionLine.toLocal8Bit();
 
   std::string expression = ba.data();
-  char polish[512] = {0};
   controller_.SetExpression(expression);
 
   if (controller_.IsValidExpression()) {
