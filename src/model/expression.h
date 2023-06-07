@@ -31,6 +31,7 @@ class Expression {
     MUL,
     DIV,
     EXP,
+    UNARPLUS,
     UNARMINUS,
     NUMBER,
     X
@@ -75,6 +76,7 @@ class Expression {
 
  private:
   double ReadDouble();
+  void ConvertUnarToLexeme(Operation op);
   void ConvertOperationToLexeme();
   void Clear();
   void ClearCalculate();
@@ -102,6 +104,7 @@ class Expression {
   std::vector<Lexeme> postfix_{};
   static const std::unordered_set<Operation> funcs_;
   static const std::unordered_set<Operation> binary_operations_;
+  static const std::map<Operation, Operation> map_unar_;
   static const std::map<std::string, Operation> map_operations_;
 };
 

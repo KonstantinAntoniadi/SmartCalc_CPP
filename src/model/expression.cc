@@ -13,17 +13,9 @@ void Expression::ConvertExpressionToLexemes() {
       lexemes_.emplace_back(NUMBER, ReadDouble());
     } else {
       if (*cur_iterator_ == '+') {
-        if (!lexemes_.empty() &&
-            lexemes_.at(lexemes_.size() - 1).GetOperation() != OPENBRACKET) {
-          lexemes_.emplace_back(PLUS);
-        }
+        ConvertUnarToLexeme(PLUS);
       } else if (*cur_iterator_ == '-') {
-        if (lexemes_.empty() ||
-            lexemes_.at(lexemes_.size() - 1).GetOperation() == OPENBRACKET) {
-          lexemes_.emplace_back(UNARMINUS);
-        } else {
-          lexemes_.emplace_back(MINUS);
-        }
+        ConvertUnarToLexeme(MINUS);
       } else {
         ConvertOperationToLexeme();
       }
@@ -31,6 +23,15 @@ void Expression::ConvertExpressionToLexemes() {
   }
 
   ValidateExpression();
+}
+
+void Expression::ConvertUnarToLexeme(Operation op) {
+  if (lexemes_.empty() ||
+      lexemes_.at(lexemes_.size() - 1).GetOperation() == OPENBRACKET) {
+    lexemes_.emplace_back(map_unar_.at(op));
+  } else {
+    lexemes_.emplace_back(op);
+  }
 }
 
 void Expression::ConvertOperationToLexeme() {
@@ -157,7 +158,7 @@ void Expression::ValidateExpression() {
     Operation op = it.GetOperation();
     if (op == NUMBER || op == X) {
       value = 0;
-    } else if (OperationIsFunc(op) || op == UNARMINUS) {
+    } else if (OperationIsFunc(op) || op == UNARMINUS || op == UNARPLUS) {
       value = 1;
     } else if (OperationIsBinaryOperation(op)) {
       value = 2;
@@ -262,6 +263,9 @@ const std::unordered_set<Expression::Operation> Expression::funcs_ = {
 
 const std::unordered_set<Expression::Operation> Expression::binary_operations_ =
     {PLUS, MINUS, MUL, DIV, EXP, MOD};
+
+const std::map<Expression::Operation, Expression::Operation>
+    Expression::map_unar_ = {{MINUS, UNARMINUS}, {PLUS, UNARPLUS}};
 
 const std::map<std::string, Expression::Operation> Expression::map_operations_ =
     {{"(", OPENBRACKET}, {")", CLOSEBRACKET}, {"cos", COS},   {"sin", SIN},
