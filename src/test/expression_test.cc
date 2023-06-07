@@ -80,7 +80,9 @@ class s21CalcTest : public testing::Test {
   std::string minus_bracket_invalid_ = "-)";
   std::string closebracket_in_start_invalid_ = "   )2+2";
   std::string closebracket_in_end_invalid_ = "2+2)";
-  std::string expression_invalid_ = "aezakmi";
+  std::string expression_invalid_1_ = "aezakmi";
+  std::string expression_invalid_2_ = "123aezakmi";
+  std::string expression_invalid_3_ = "123.12.123";
 };
 
 TEST_F(s21CalcTest, NumberTest) {
@@ -245,7 +247,17 @@ TEST_F(s21CalcTest, MinusBracketInvalidTest) {
 }
 
 TEST_F(s21CalcTest, ExpressionInvalidTest) {
-  expression_.SetExpression(expression_invalid_);
+  expression_.SetExpression(expression_invalid_1_);
+  EXPECT_FALSE(expression_.IsValidExpression());
+}
+
+TEST_F(s21CalcTest, ExpressionInvalidDoubleTest) {
+  expression_.SetExpression(expression_invalid_2_);
+  EXPECT_FALSE(expression_.IsValidExpression());
+}
+
+TEST_F(s21CalcTest, ExpressionInvalidDotsTest) {
+  expression_.SetExpression(expression_invalid_2_);
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 

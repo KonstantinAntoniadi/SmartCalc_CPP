@@ -70,7 +70,7 @@ ifeq ($(OS),Darwin)
 else
 	$(CC) $(CFLAGS) $(CREDITCALCULATOR) $(EXPRESSION) $(TEST) -o gcov_test $(TESTLIBS)
 endif
-# @chmod +x * 
+	@chmod +x * 
 	./gcov_test
 	lcov -t "gcov_test" -o gcov_test.info --no-external -c -d .
 	genhtml -o report/ gcov_test.info

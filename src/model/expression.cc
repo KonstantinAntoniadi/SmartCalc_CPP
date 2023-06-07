@@ -11,14 +11,12 @@ void Expression::ConvertExpressionToLexemes() {
       continue;
     } else if (isdigit(cur)) {
       lexemes_.emplace_back(NUMBER, ReadDouble());
+    } else if (*cur_iterator_ == '+') {
+      ConvertUnarToLexeme(PLUS);
+    } else if (*cur_iterator_ == '-') {
+      ConvertUnarToLexeme(MINUS);
     } else {
-      if (*cur_iterator_ == '+') {
-        ConvertUnarToLexeme(PLUS);
-      } else if (*cur_iterator_ == '-') {
-        ConvertUnarToLexeme(MINUS);
-      } else {
-        ConvertOperationToLexeme();
-      }
+      ConvertOperationToLexeme();
     }
   }
 }
@@ -228,7 +226,7 @@ void Expression::SetExpression(const std::string &infix) {
   infix_ = infix;
   Clear();
   ConvertExpressionToLexemes();
-  ValidateExpression();
+  if (good_to_go_) ValidateExpression();
   ConvertToPostfix();
 }
 

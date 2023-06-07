@@ -90,10 +90,7 @@ Calculator::Calculator(QWidget *parent)
   connect(ui_->pushButton_del, SIGNAL(clicked()), this, SLOT(delLastSymbol()));
 }
 
-Calculator::~Calculator() {
-  setenv("LC_NUMERIC", "C", 1);
-  delete ui_;
-}
+Calculator::~Calculator() { delete ui_; }
 
 void Calculator::clearInput() { ui_->lineEdit->clear(); }
 

@@ -76,3 +76,5 @@ src/.vscode
 build-src-Desktop-Debug
 ../build*
 todo
+test.cc
+main
