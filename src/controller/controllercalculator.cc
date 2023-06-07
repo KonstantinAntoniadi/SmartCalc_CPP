@@ -14,6 +14,4 @@ double ControllerCalculator::Calculate(const double x) {
   return res;
 }
 
-
-
 };  // namespace s21

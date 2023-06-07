@@ -9,23 +9,23 @@
 
 namespace s21 {
 MainWindow::MainWindow(QWidget* parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow) {
-  ui->setupUi(this);
+    : QMainWindow(parent), ui_(new Ui::MainWindow) {
+  ui_->setupUi(this);
   Calculator* calculator = new Calculator();
-  ui->stackedWidget->addWidget(calculator);
-  ui->stackedWidget->addWidget(new Credit());
+  ui_->stackedWidget->addWidget(calculator);
+  ui_->stackedWidget->addWidget(new Credit());
   this->setFixedSize(1080, 510);
 }
 
-MainWindow::~MainWindow() { delete ui; }
+MainWindow::~MainWindow() { delete ui_; }
 
 void MainWindow::on_actionCalculator_triggered() {
-  ui->stackedWidget->setCurrentIndex(0);
+  ui_->stackedWidget->setCurrentIndex(0);
   this->setFixedSize(1080, 510);
 }
 
 void MainWindow::on_actionCredit_triggered() {
-  ui->stackedWidget->setCurrentIndex(1);
+  ui_->stackedWidget->setCurrentIndex(1);
   this->setFixedSize(750, 300);
 }
 }  // namespace s21

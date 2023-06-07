@@ -27,7 +27,7 @@ class MainWindow : public QMainWindow {
  private slots:
 
  private:
-  Ui::MainWindow *ui;
+  Ui::MainWindow *ui_;
 };
 }  // namespace s21
 

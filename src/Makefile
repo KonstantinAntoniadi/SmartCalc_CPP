@@ -90,7 +90,7 @@ dist:
 .PHONY : dist
 
 format:
-	clang-format -style=Google -i */*.cc  */*.h  */*.cpp
+	clang-format -style=Google -i */*.cc  */*.h
 .PHONY : format
 
 check: 

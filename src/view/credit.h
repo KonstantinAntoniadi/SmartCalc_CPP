@@ -20,7 +20,7 @@ class Credit : public QWidget {
   void on_pushButton_calculate_clicked();
 
  private:
-  Ui::Credit *ui;
+  Ui::Credit *ui_;
   s21::ControllerCredit controller_credit_{};
 };
 }  // namespace s21

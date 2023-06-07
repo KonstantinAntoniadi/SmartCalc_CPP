@@ -26,12 +26,12 @@ class Calculator : public QWidget {
   void clearInput();
 
  private:
-  Ui::Calculator *ui;
-  double xBegin, xEnd, h, X;
-  int N;
-  s21::ControllerCalculator controller_;
+  Ui::Calculator *ui_;
+  double xBegin_, xEnd_, h_, X_;
+  int N_;
+  s21::ControllerCalculator controller_{};
 
-  QVector<double> x, y;
+  QVector<double> x_, y_;
 };
 }  // namespace s21
 #endif  // CPP_SMART_CALC_V2_SRC_VIEW_CALCULATOR_H
