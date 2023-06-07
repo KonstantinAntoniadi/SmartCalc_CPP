@@ -135,11 +135,11 @@ double Expression::CalcOperand(Operation op) {
 void Expression::ConvertToPostfix() {
   for (auto it = lexemes_.begin(); it != lexemes_.end() && good_to_go_; it++) {
     Operation op = it->GetOperation();
-    if (op == NUMBER || op == X)
+    if (op == NUMBER || op == X) {
       postfix_.push_back(*it);
-    else if (op == OPENBRACKET)
+    } else if (op == OPENBRACKET) {
       operations_.push(*it);
-    else if (OperationIsFunc(op)) {
+    } else if (OperationIsFunc(op)) {
       operations_.push(*it);
     } else if (OperationIsBinaryOperation(op) || op == UNARMINUS) {
       ProcessOperator(*it);
@@ -157,11 +157,11 @@ void Expression::ValidateExpression() {
   for (auto it : lexemes_) {
     Operation op = it.GetOperation();
 
-    if (op == NUMBER || op == X ) {
+    if (op == NUMBER || op == X) {
       value = 0;
     } else if (OperationIsFunc(op) || op == UNARMINUS || op == UNARPLUS) {
       value = 1;
-    } else if (OperationIsBinaryOperation(op) ) {
+    } else if (OperationIsBinaryOperation(op)) {
       value = 2;
     }
 
