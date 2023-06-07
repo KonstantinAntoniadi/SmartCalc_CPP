@@ -78,7 +78,9 @@ class s21CalcTest : public testing::Test {
   std::string brackets_invalid_ = "()";
   std::string trigonometry_invalid_ = "cos(sin(tan(";
   std::string minus_bracket_invalid_ = "-)";
-  std::string expression_invalid = "aezakmi";
+  std::string closebracket_in_start_invalid_ = ")2+2";
+  std::string closebracket_in_end_invalid_ = "2+2)";
+  std::string expression_invalid_ = "aezakmi";
 };
 
 TEST_F(s21CalcTest, NumberTest) {
@@ -216,11 +218,21 @@ TEST_F(s21CalcTest, UnarPlusBeforeBracketTest) {
 
 TEST_F(s21CalcTest, BracketsInvalidTest) {
   expression_.SetExpression(brackets_invalid_);
+  expression_.Calculate();
   EXPECT_FALSE(expression_.IsValidExpression());
-  expression_.SetExpression("2 + 2");
+
+  expression_.SetExpression(plus_);
   expression_.Calculate();
-  expression_.SetExpression(")2 + 3");
+
+  expression_.SetExpression(closebracket_in_start_invalid_);
   expression_.Calculate();
+  EXPECT_FALSE(expression_.IsValidExpression());
+}
+
+TEST_F(s21CalcTest, CloseBracketInvalidTest) {
+  expression_.SetExpression(closebracket_in_end_invalid_ = "2+2)");
+  expression_.Calculate();
+  EXPECT_FALSE(expression_.IsValidExpression());
 }
 
 TEST_F(s21CalcTest, TrigonometryInvalidTest) {
@@ -234,7 +246,7 @@ TEST_F(s21CalcTest, MinusBracketInvalidTest) {
 }
 
 TEST_F(s21CalcTest, ExpressionInvalidTest) {
-  expression_.SetExpression(expression_invalid);
+  expression_.SetExpression(expression_invalid_);
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 
