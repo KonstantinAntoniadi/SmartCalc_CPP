@@ -2,7 +2,7 @@
 
 namespace s21 {
 
-void Expression::ConvertToLexemes() {
+void Expression::ConvertExpressionToLexemes() {
   for (cur_iterator_ = infix_.begin();
        cur_iterator_ != infix_.end() && good_to_go_; cur_iterator_++) {
     char cur = *cur_iterator_;
@@ -227,7 +227,7 @@ bool Expression::CheckAssociativity(Lexeme &lexeme) {
 void Expression::SetExpression(const std::string &infix) {
   infix_ = infix;
   Clear();
-  ConvertToLexemes();
+  ConvertExpressionToLexemes();
   ConvertToPostfix();
 }
 

@@ -88,7 +88,7 @@ class Expression {
   bool CheckAssociativity(Lexeme &lexeme);
 
   void ConvertToPostfix();
-  void ConvertToLexemes();
+  void ConvertExpressionToLexemes();
   static bool OperationIsFunc(Operation op);
   inline static bool OperationIsBinaryOperation(Operation op);
   std::string::iterator cur_iterator_;
