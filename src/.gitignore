@@ -73,3 +73,4 @@ Thumbs.db
 # Vscode folders
 .vscode
 src/.vscode
+build-src-Desktop-Debug
