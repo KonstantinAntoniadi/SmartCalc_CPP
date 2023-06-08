@@ -11,8 +11,7 @@ namespace s21 {
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), ui_(new Ui::MainWindow) {
   ui_->setupUi(this);
-  Calculator* calculator = new Calculator();
-  ui_->stackedWidget->addWidget(calculator);
+  ui_->stackedWidget->addWidget(new Calculator());
   ui_->stackedWidget->addWidget(new Credit());
   this->setFixedSize(1080, 510);
 }
