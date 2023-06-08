@@ -2,9 +2,9 @@
 > Created by edwinevi  
 > School 21 (Kzn)
 
-## _Overview_
-### Calc mode
-![calc mode](img/calc_mode.png)
+
+## Calc mode
+![calc mode](misc/gif/calc_mode.gif)
 
 Functional:
 - arithmetic operations
@@ -12,8 +12,8 @@ Functional:
 - insert x
 - drawing a graph
 
-### Credit mode
-![credit mode](/img/credit_mode.png)
+## Credit mode
+![credit mode](misc/img/credit_mode.png)
 
 Functional:
 - annuity payment mode
@@ -22,8 +22,12 @@ Functional:
 - calculate overpayment
 - calculate total payout
 
+## MVC
+The calculator is implemented using the mvc pattern
+![mvc](misc/img/mvc.png)
+
 ## OS
-- MacOs
+- MacOS
 - Ubuntu
 
 ## Dependencies
@@ -33,7 +37,13 @@ Functional:
 - make
 
 ## install
-```make install```
+
+```bash
+cd src
+make install
+```
 
 ## open
-```make open```
+```bash
+make open
+```
