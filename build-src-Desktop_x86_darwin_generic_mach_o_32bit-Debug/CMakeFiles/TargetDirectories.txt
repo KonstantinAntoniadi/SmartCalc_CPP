@@ -1,4 +1,0 @@
-/Users/edwinevi/Desktop/Smartcalc_CPP/build-src-Desktop_x86_darwin_generic_mach_o_32bit-Debug/CMakeFiles/calc.dir
-/Users/edwinevi/Desktop/Smartcalc_CPP/build-src-Desktop_x86_darwin_generic_mach_o_32bit-Debug/CMakeFiles/edit_cache.dir
-/Users/edwinevi/Desktop/Smartcalc_CPP/build-src-Desktop_x86_darwin_generic_mach_o_32bit-Debug/CMakeFiles/rebuild_cache.dir
-/Users/edwinevi/Desktop/Smartcalc_CPP/build-src-Desktop_x86_darwin_generic_mach_o_32bit-Debug/CMakeFiles/calc_autogen.dir

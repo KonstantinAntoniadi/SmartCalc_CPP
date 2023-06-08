@@ -1,4 +1,0 @@
-# Hashes of file build rules.
-5829d256a4a323aaa225e6035345296c /Users/edwinevi/Desktop/Smartcalc_CPP/src/smartcalc_v2_en_US.ts
-7b629bf2dcca39db905524c1af86d82b CMakeFiles/calc_autogen
-b9464287627c15818ddd4a821dd8213e calc_autogen/3YJK5W5UP7/qrc_resources.cpp

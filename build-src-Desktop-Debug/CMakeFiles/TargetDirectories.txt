@@ -1,4 +1,0 @@
-/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles/calc.dir
-/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles/edit_cache.dir
-/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles/rebuild_cache.dir
-/home/kosant/Desktop/Smartcalc_CPP/build-src-Desktop-Debug/CMakeFiles/calc_autogen.dir
