@@ -2,7 +2,6 @@
 > Created by edwinevi  
 > School 21 (Kzn)
 
-
 ## Calc mode
 ![calc mode](misc/gif/calc_mode.gif)
 
@@ -39,6 +38,7 @@ The calculator is implemented using the mvc pattern
 ## install
 ```bash
 git clone git@github.com:KonstantinAntoniadi/s21_SmartCalc_v2.0.git
+cd s21_SmartCalc_v2.0
 make install
 ```
 
