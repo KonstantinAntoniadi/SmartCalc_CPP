@@ -12,7 +12,7 @@ Functional:
 - drawing a graph
 
 ## Credit mode
-![credit mode](misc/img/credit_mode.png)
+![credit mode](misc/gif/credit_mode.gif)
 
 Functional:
 - annuity payment mode
