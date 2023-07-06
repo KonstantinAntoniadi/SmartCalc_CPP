@@ -43,14 +43,6 @@ else
 endif
 .PHONY : open	
 
-dvi:
-ifeq ($(OS),Darwin)
-	@open README.pdf
-else
-	@xdg-open README.pdf
-endif
-.PHONY : dvi
-
 calculator.o: $(EXPRESSION) $(CREDITCALCULATOR)
 	@$(CC) $(CFLAGS) -c $(EXPRESSION) $(CREDITCALCULATOR)
 .PHONY : calculator.o
