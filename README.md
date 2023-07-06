@@ -1,6 +1,4 @@
-# SmartCalc v2.0 (C++)
-> Created by edwinevi  
-> School 21 (Kzn)
+# SmartCalc C++
 
 ## Calc mode
 ![calc mode](misc/gif/calc_mode.gif)
