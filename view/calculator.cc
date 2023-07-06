@@ -6,7 +6,6 @@
 #include "model/expression.h"
 #include "ui_calculator.h"
 
-namespace s21 {
 Calculator::Calculator(QWidget *parent)
     : QWidget(parent), ui_(new Ui::Calculator) {
   ui_->setupUi(this);
@@ -158,5 +157,3 @@ void Calculator::on_pushButton_graph_clicked() {
     ui_->customPlot->replot();
   }
 }
-
-}  // namespace s21

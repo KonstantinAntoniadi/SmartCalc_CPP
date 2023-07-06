@@ -1,7 +1,5 @@
 #include "expression.h"
 
-namespace s21 {
-
 void Expression::ConvertExpressionToLexemes() {
   for (cur_iterator_ = infix_.begin();
        cur_iterator_ != infix_.end() && good_to_go_; cur_iterator_++) {
@@ -271,4 +269,3 @@ const std::map<std::string, Expression::Operation> Expression::map_operations_ =
      {"sqrt", SQRT},     {"ln", LN},          {"log", LOG},   {"+", PLUS},
      {"-", MINUS},       {"mod", MOD},        {"*", MUL},     {"/", DIV},
      {"^", EXP},         {"~", UNARMINUS},    {"x", X}};
-}  // namespace s21

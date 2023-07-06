@@ -7,7 +7,6 @@
 #include "calculator.h"
 #include "credit.h"
 
-namespace s21 {
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), ui_(new Ui::MainWindow) {
   ui_->setupUi(this);
@@ -27,4 +26,3 @@ void MainWindow::on_actionCredit_triggered() {
   ui_->stackedWidget->setCurrentIndex(1);
   this->setFixedSize(750, 300);
 }
-}  // namespace s21

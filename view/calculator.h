@@ -1,5 +1,5 @@
-#ifndef CPP_SMART_CALC_V2_SRC_VIEW_CALCULATOR_H
-#define CPP_SMART_CALC_V2_SRC_VIEW_CALCULATOR_H
+#ifndef SMARTCALC_CPP_SRC_VIEW_CALCULATOR_H
+#define SMARTCALC_CPP_SRC_VIEW_CALCULATOR_H
 
 #include <QWidget>
 
@@ -8,7 +8,6 @@
 namespace Ui {
 class Calculator;
 }
-namespace s21 {
 class Calculator : public QWidget {
   Q_OBJECT
 
@@ -29,9 +28,8 @@ class Calculator : public QWidget {
   Ui::Calculator *ui_;
   double xBegin_, xEnd_, h_, X_;
   int N_;
-  s21::ControllerCalculator controller_{};
+  ControllerCalculator controller_{};
 
   QVector<double> x_, y_;
 };
-}  // namespace s21
-#endif  // CPP_SMART_CALC_V2_SRC_VIEW_CALCULATOR_H
+#endif  // SMARTCALC_CPP_SRC_VIEW_CALCULATOR_H

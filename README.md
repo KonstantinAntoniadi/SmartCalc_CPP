@@ -35,8 +35,8 @@ The calculator is implemented using the mvc pattern
 
 ## install
 ```bash
-git clone git@github.com:KonstantinAntoniadi/s21_SmartCalc_v2.0.git
-cd s21_SmartCalc_v2.0
+git clone git@github.com:KonstantinAntoniadi/SmartCalc_CPP.git
+cd SmartCalc_CPP
 make install
 ```
 

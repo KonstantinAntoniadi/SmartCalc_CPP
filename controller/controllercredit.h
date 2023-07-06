@@ -1,8 +1,8 @@
-#ifndef CPP_SMART_CALC_V2_SRC_CONTROLLERCREDIT_H
-#define CPP_SMART_CALC_V2_SRC_CONTROLLERCREDIT_H
+#ifndef SMARTCALC_CPP_SRC_CONTROLLERCREDIT_H
+#define SMARTCALC_CPP_SRC_CONTROLLERCREDIT_H
 
 #include "model/creditcalculator.h"
-namespace s21 {
+
 class ControllerCredit {
  public:
   ControllerCredit() = default;
@@ -21,6 +21,5 @@ class ControllerCredit {
  private:
   CreditCalculator credit_;
 };
-};  // namespace s21
 
-#endif  // CPP_SMART_CALC_V2_SRC_CONTROLLERCREDIT_H
+#endif  // SMARTCALC_CPP_SRC_CONTROLLERCREDIT_H

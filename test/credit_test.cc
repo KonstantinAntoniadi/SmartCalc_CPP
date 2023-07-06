@@ -1,8 +1,7 @@
 #include "test.h"
 
-namespace s21 {
 constexpr double eps = 1e-02;
-class s21CreditTest : public testing::Test {
+class CreditTest : public testing::Test {
  protected:
   double loan_ = 300000;
   int period_ = 18;
@@ -20,14 +19,14 @@ class s21CreditTest : public testing::Test {
   double TotalPayoutDifferentiated_ = 335625.00;
 };
 
-TEST_F(s21CreditTest, AnnuityTest) {
+TEST_F(CreditTest, AnnuityTest) {
   credit_.CalcAnnuity();
   EXPECT_LT(std::abs(credit_.GetMonthPayment() - MonthPaymenAnnuity_), eps);
   EXPECT_LT(std::abs(credit_.GetOverpayment() - OverpaymentAnnuity_), eps);
   EXPECT_LT(std::abs(credit_.GetTotalPayment() - TotalPayoutAnnuity_), eps);
 }
 
-TEST_F(s21CreditTest, DifferentiatedTest) {
+TEST_F(CreditTest, DifferentiatedTest) {
   credit_.CalcDifferentiated();
   EXPECT_LT(std::abs(credit_.GetFirstPayment() - FirstPaymentDifferentiated_),
             eps);
@@ -38,4 +37,3 @@ TEST_F(s21CreditTest, DifferentiatedTest) {
   EXPECT_LT(std::abs(credit_.GetTotalPayment() - TotalPayoutDifferentiated_),
             eps);
 }
-}  // namespace s21

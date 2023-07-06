@@ -1,7 +1,5 @@
 #include "creditcalculator.h"
 
-namespace s21 {
-
 void CreditCalculator::SetStartValues(const double loan, const int period,
                                       const double rate) {
   loan_ = loan;
@@ -40,5 +38,3 @@ double CreditCalculator::CalcMonthAnnuity() {
 
   return loan_ * month_rate * temp / (temp - 1);
 }
-
-}  // namespace s21

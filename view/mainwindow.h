@@ -1,5 +1,5 @@
-#ifndef CPP_SMART_CALC_V2_SRC_VIEW_MAINWINDOW_H
-#define CPP_SMART_CALC_V2_SRC_VIEW_MAINWINDOW_H
+#ifndef SMARTCALC_CPP_SRC_VIEW_MAINWINDOW_H
+#define SMARTCALC_CPP_SRC_VIEW_MAINWINDOW_H
 
 #include <QMainWindow>
 #include <QVector>
@@ -10,7 +10,6 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
-namespace s21 {
 class MainWindow : public QMainWindow {
   Q_OBJECT
 
@@ -29,6 +28,5 @@ class MainWindow : public QMainWindow {
  private:
   Ui::MainWindow *ui_;
 };
-}  // namespace s21
 
-#endif  // CPP_SMART_CALC_V2_SRC_VIEW_MAINWINDOW_H
+#endif  // SMARTCALC_CPP_SRC_VIEW_MAINWINDOW_H

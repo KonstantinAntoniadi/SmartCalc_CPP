@@ -1,7 +1,6 @@
 #include "test.h"
 
-namespace s21 {
-class s21CalcTest : public testing::Test {
+class CalcTest : public testing::Test {
  protected:
   Expression expression_;
 
@@ -85,186 +84,184 @@ class s21CalcTest : public testing::Test {
   std::string expression_invalid_3_ = "123.12.123";
 };
 
-TEST_F(s21CalcTest, NumberTest) {
+TEST_F(CalcTest, NumberTest) {
   expression_.SetExpression(number_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), number_result_);
 }
 
-TEST_F(s21CalcTest, PlusTest) {
+TEST_F(CalcTest, PlusTest) {
   expression_.SetExpression(plus_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), plus_result_);
 }
 
-TEST_F(s21CalcTest, MinusTest) {
+TEST_F(CalcTest, MinusTest) {
   expression_.SetExpression(minus_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), minus_result_);
 }
 
-TEST_F(s21CalcTest, MulTest) {
+TEST_F(CalcTest, MulTest) {
   expression_.SetExpression(mul_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), mul_result_);
 }
 
-TEST_F(s21CalcTest, DivTest) {
+TEST_F(CalcTest, DivTest) {
   expression_.SetExpression(div_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), div_result_);
 }
 
-TEST_F(s21CalcTest, PowTest) {
+TEST_F(CalcTest, PowTest) {
   expression_.SetExpression(pow_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), pow_result_);
 }
 
-TEST_F(s21CalcTest, ModTest) {
+TEST_F(CalcTest, ModTest) {
   expression_.SetExpression(mod_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), mod_result_);
 }
 
-TEST_F(s21CalcTest, AllOperandsTest) {
+TEST_F(CalcTest, AllOperandsTest) {
   expression_.SetExpression(all_binary_operatrions_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), all_binary_operatrions_result_);
 }
 
-TEST_F(s21CalcTest, BracketsTest) {
+TEST_F(CalcTest, BracketsTest) {
   expression_.SetExpression(brackets_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), brackets_result_);
 }
 
-TEST_F(s21CalcTest, CosTest) {
+TEST_F(CalcTest, CosTest) {
   expression_.SetExpression(cos_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), cos_result_);
 }
 
-TEST_F(s21CalcTest, SinTest) {
+TEST_F(CalcTest, SinTest) {
   expression_.SetExpression(sin_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), sin_result_);
 }
 
-TEST_F(s21CalcTest, TanTest) {
+TEST_F(CalcTest, TanTest) {
   expression_.SetExpression(tan_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), tan_result_);
 }
 
-TEST_F(s21CalcTest, AcosTest) {
+TEST_F(CalcTest, AcosTest) {
   expression_.SetExpression(acos_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), acos_result_);
 }
 
-TEST_F(s21CalcTest, AsinTest) {
+TEST_F(CalcTest, AsinTest) {
   expression_.SetExpression(asin_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), asin_result_);
 }
 
-TEST_F(s21CalcTest, AtanTest) {
+TEST_F(CalcTest, AtanTest) {
   expression_.SetExpression(atan_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), atan_result_);
 }
 
-TEST_F(s21CalcTest, SqrtTest) {
+TEST_F(CalcTest, SqrtTest) {
   expression_.SetExpression(sqrt_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), sqrt_result_);
 }
 
-TEST_F(s21CalcTest, LnTest) {
+TEST_F(CalcTest, LnTest) {
   expression_.SetExpression(ln_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), ln_result_);
 }
 
-TEST_F(s21CalcTest, LogTest) {
+TEST_F(CalcTest, LogTest) {
   expression_.SetExpression(log_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), log_result_);
 }
 
-TEST_F(s21CalcTest, ManyTrigonometryTest) {
+TEST_F(CalcTest, ManyTrigonometryTest) {
   expression_.SetExpression(many_trigonometry_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(x_for_many_trigonometry_),
                    many_trigonometry_result_);
 }
 
-TEST_F(s21CalcTest, XMulTest) {
+TEST_F(CalcTest, XMulTest) {
   expression_.SetExpression(x_mul_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(x_for_mul_), x_mul_result_);
 }
 
-TEST_F(s21CalcTest, UnarMinusStartTest) {
+TEST_F(CalcTest, UnarMinusStartTest) {
   expression_.SetExpression(unar_minus_start_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), unar_minus_start_result_);
 }
 
-TEST_F(s21CalcTest, UnarMinusAfterBracketTest) {
+TEST_F(CalcTest, UnarMinusAfterBracketTest) {
   expression_.SetExpression(unar_minus_after_bracket_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), unar_minus_after_bracket_result_);
 }
 
-TEST_F(s21CalcTest, UnarMinusBeforeBracketTest) {
+TEST_F(CalcTest, UnarMinusBeforeBracketTest) {
   expression_.SetExpression(unar_minus_before_bracket_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(x_for_unar_minus_before_bracket_),
                    unar_minus_before_bracket_result);
 }
 
-TEST_F(s21CalcTest, UnarPlusStartTest) {
+TEST_F(CalcTest, UnarPlusStartTest) {
   expression_.SetExpression(unar_plus_start_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), unar_plus_start_result_);
 }
 
-TEST_F(s21CalcTest, UnarPlusAfterBracketTest) {
+TEST_F(CalcTest, UnarPlusAfterBracketTest) {
   expression_.SetExpression(unar_plus_after_bracket_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(), unar_plus_after_bracket_result_);
 }
 
-TEST_F(s21CalcTest, UnarPlusBeforeBracketTest) {
+TEST_F(CalcTest, UnarPlusBeforeBracketTest) {
   expression_.SetExpression(unar_plus_before_bracket_);
   EXPECT_DOUBLE_EQ(expression_.Calculate(x_for_unar_plus_before_bracket_),
                    unar_plus_before_bracket_result);
 }
 
-TEST_F(s21CalcTest, BracketsInvalidTest) {
+TEST_F(CalcTest, BracketsInvalidTest) {
   expression_.SetExpression(brackets_invalid_);
   expression_.Calculate();
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 
-TEST_F(s21CalcTest, CloseBracketStartInvalidTest) {
+TEST_F(CalcTest, CloseBracketStartInvalidTest) {
   expression_.SetExpression(closebracket_in_start_invalid_);
   expression_.Calculate();
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 
-TEST_F(s21CalcTest, CloseBracketEndInvalidTest) {
+TEST_F(CalcTest, CloseBracketEndInvalidTest) {
   expression_.SetExpression(closebracket_in_end_invalid_);
   expression_.Calculate();
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 
-TEST_F(s21CalcTest, TrigonometryInvalidTest) {
+TEST_F(CalcTest, TrigonometryInvalidTest) {
   expression_.SetExpression(trigonometry_invalid_);
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 
-TEST_F(s21CalcTest, MinusBracketInvalidTest) {
+TEST_F(CalcTest, MinusBracketInvalidTest) {
   expression_.SetExpression(minus_bracket_invalid_);
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 
-TEST_F(s21CalcTest, ExpressionInvalidTest) {
+TEST_F(CalcTest, ExpressionInvalidTest) {
   expression_.SetExpression(expression_invalid_1_);
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 
-TEST_F(s21CalcTest, ExpressionInvalidDoubleTest) {
+TEST_F(CalcTest, ExpressionInvalidDoubleTest) {
   expression_.SetExpression(expression_invalid_2_);
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 
-TEST_F(s21CalcTest, ExpressionInvalidDotsTest) {
+TEST_F(CalcTest, ExpressionInvalidDotsTest) {
   expression_.SetExpression(expression_invalid_2_);
   EXPECT_FALSE(expression_.IsValidExpression());
 }
 
-TEST_F(s21CalcTest, ClearTest) {
+TEST_F(CalcTest, ClearTest) {
   expression_.SetExpression(plus_);
   expression_.Calculate();
   expression_.SetExpression(minus_);
 }
-
-}  // namespace s21

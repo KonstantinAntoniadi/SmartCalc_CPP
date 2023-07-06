@@ -1,9 +1,8 @@
-#ifndef CPP_SMART_CALC_V2_SRC_CONTROLLERCALCULATOR_H
-#define CPP_SMART_CALC_V2_SRC_CONTROLLERCALCULATOR_H
+#ifndef SMARTCALC_CPP_SRC_CONTROLLERCALCULATOR_H
+#define SMARTCALC_CPP_SRC_CONTROLLERCALCULATOR_H
 
 #include "model/expression.h"
 
-namespace s21 {
 class ControllerCalculator {
  public:
   ControllerCalculator() = default;
@@ -17,6 +16,4 @@ class ControllerCalculator {
   Expression expression_{};
 };
 
-};  // namespace s21
-
-#endif  // CPP_SMART_CALC_V2_SRC_CONTROLLERCALCULATOR_H
+#endif  // SMARTCALC_CPP_SRC_CONTROLLERCALCULATOR_H

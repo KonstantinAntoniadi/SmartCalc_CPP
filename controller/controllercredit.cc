@@ -1,7 +1,5 @@
 #include "controllercredit.h"
 
-namespace s21 {
-
 void ControllerCredit::SetStartValues(const double loan, const double period,
                                       const double rate) {
   credit_.SetStartValues(loan, period, rate);
@@ -20,5 +18,3 @@ double ControllerCredit::GetTotalPayment() { return credit_.GetTotalPayment(); }
 double ControllerCredit::GetFirstPayment() { return credit_.GetFirstPayment(); }
 
 double ControllerCredit::GetLastPayment() { return credit_.GetLastPayment(); }
-
-};  // namespace s21

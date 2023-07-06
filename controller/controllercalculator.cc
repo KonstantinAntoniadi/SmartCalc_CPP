@@ -1,6 +1,5 @@
 #include "controllercalculator.h"
 
-namespace s21 {
 void ControllerCalculator::SetExpression(const std::string &infix) {
   expression_.SetExpression(infix);
 }
@@ -13,5 +12,3 @@ double ControllerCalculator::Calculate(const double x) {
   double res = expression_.Calculate(x);
   return res;
 }
-
-};  // namespace s21

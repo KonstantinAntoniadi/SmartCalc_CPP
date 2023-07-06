@@ -1,5 +1,5 @@
-#ifndef CPP_SMART_CALC_V2_SRC_VIEW_CREDIT_H
-#define CPP_SMART_CALC_V2_SRC_VIEW_CREDIT_H
+#ifndef SMARTCALC_CPP_SRC_VIEW_CREDIT_H
+#define SMARTCALC_CPP_SRC_VIEW_CREDIT_H
 
 #include <QWidget>
 
@@ -8,7 +8,6 @@ namespace Ui {
 class Credit;
 }
 
-namespace s21 {
 class Credit : public QWidget {
   Q_OBJECT
 
@@ -21,8 +20,7 @@ class Credit : public QWidget {
 
  private:
   Ui::Credit *ui_;
-  s21::ControllerCredit controller_credit_{};
+  ControllerCredit controller_credit_{};
 };
-}  // namespace s21
 
-#endif  // CPP_SMART_CALC_V2_SRC_VIEW_CREDIT_H
+#endif  // SMARTCALC_CPP_SRC_VIEW_CREDIT_H

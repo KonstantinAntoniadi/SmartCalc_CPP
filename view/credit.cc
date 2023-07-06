@@ -3,7 +3,6 @@
 #include <QDate>
 
 #include "ui_credit.h"
-namespace s21 {
 Credit::Credit(QWidget *parent) : QWidget(parent), ui_(new Ui::Credit) {
   ui_->setupUi(this);
 }
@@ -39,5 +38,3 @@ void Credit::on_pushButton_calculate_clicked() {
         QString("%L1").arg(controller_credit_.GetTotalPayment(), 0, 'f', 2));
   }
 }
-
-}  // namespace s21

@@ -1,11 +1,9 @@
-#ifndef CPP_SMART_CALC_V2_SRC_MODEL_CREDITCALCULATOR_H
-#define CPP_SMART_CALC_V2_SRC_MODEL_CREDITCALCULATOR_H
+#ifndef SMARTCALC_CPP_SRC_MODEL_CREDITCALCULATOR_H
+#define SMARTCALC_CPP_SRC_MODEL_CREDITCALCULATOR_H
 
 #include <time.h>
 
 #include <cmath>
-
-namespace s21 {
 
 class CreditCalculator {
  public:
@@ -34,6 +32,4 @@ class CreditCalculator {
   static constexpr double months_in_year_ = 12.0;
 };
 
-}  // namespace s21
-
-#endif  // CPP_SMART_CALC_V2_SRC_MODEL_CREDITCALCULATOR_H
+#endif  // SMARTCALC_CPP_SRC_MODEL_CREDITCALCULATOR_H

@@ -18,7 +18,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "$ENV{QT5_DIR}/lib/cmake")
 
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
 
-set(TS_FILES smartcalc_v2_en_US.ts)
+set(TS_FILES smartcalc_en_US.ts)
 
 set(PROJECT_SOURCES
         # icon.icns

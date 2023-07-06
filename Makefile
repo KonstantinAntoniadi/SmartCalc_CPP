@@ -82,11 +82,11 @@ endif
 .PHONY : gcov_report
 
 dist:
-	mkdir SmartCalc-2.0/
-	mkdir SmartCalc-2.0/src
-	cp -r controller model resources test view Makefile CMakeLists.txt smartcalc_v2_en_US.ts README.pdf SmartCalc-2.0/src
-	tar -cvzf SmartCalc-2.0.tar.gz SmartCalc-2.0
-	rm -rf SmartCalc-2.0
+	mkdir SmartCalc/
+	mkdir SmartCalc/src
+	cp -r controller model resources test view Makefile CMakeLists.txt smartcalc_v2_en_US.ts README.pdf SmartCalc/src
+	tar -cvzf SmartCalc.tar.gz SmartCalc
+	rm -rf SmartCalc
 .PHONY : dist
 
 format:
